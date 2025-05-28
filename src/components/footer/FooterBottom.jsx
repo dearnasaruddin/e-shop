@@ -67,9 +67,9 @@ const FooterBottom = () => {
             <div className='mt-18'>
               <h4 className='font-poppins font-semibold text-xl leading-7.5'>Follow Us</h4>
               <ul className='mt-6 font-montserrat font-normal text-base leading-6 flex flex-col gap-y-3'>
-                <li><Link to={"#"}>Twitter</Link></li>
-                <li><Link to={"#"}>Instagram</Link></li>
-                <li><Link to={"#"}>Facebook</Link></li>
+                <li><Link to={"https://x.com/"} target='_blank'>Twitter</Link></li>
+                <li><Link to={"https://www.instagram.com/"} target='_blank'>Instagram</Link></li>
+                <li><Link to={"https://web.facebook.com/"} target='_blank'>Facebook</Link></li>
               </ul>
             </div>
           </div>
