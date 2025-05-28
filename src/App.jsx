@@ -9,18 +9,20 @@ import CheckoutPage from './pages/CheckoutPage';
 import ContactPage from './pages/ContactPage';
 import ProductDetailsPage from './pages/ProductDetailsPage';
 import ProductListPage from './pages/ProductListPage';
+import CommonLayout from './components/commonLayouts/CommonLayout';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/blog" element={<BlogPage />} />
-      <Route path="/checkout" element={<CheckoutPage />} />
-      <Route path="/contact" element={<ContactPage />} />
-      <Route path="/product-details" element={<ProductDetailsPage />} />
-      <Route path="/product-list" element={<ProductListPage />} />
+      <Route path="/" element={<CommonLayout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/product-details" element={<ProductDetailsPage />} />
+        <Route path="/product-list" element={<ProductListPage />} />
+      </Route>
     </Routes>
   )
 }
