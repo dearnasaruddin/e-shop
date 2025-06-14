@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { FaChevronDown } from "react-icons/fa6";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { Link } from 'react-router-dom';
@@ -17,10 +17,30 @@ const TopRightBar = () => {
         { name: 'Spanish', value: 'es', flag: 'https://flagcdn.com/es.svg' },
     ]
 
+    const currencyDropdownRef = useRef(null)
+    const languageDropdownRef = useRef(null)
+
+    const handleCurrencyDropdown = () => {
+        setIsCurrencyDropdownOpen(!isCurrencyDropdownOpen)
+    }
+
     const handleSelectLang = (country) => {
         setSelectedCountry(country)
         setIsLangDropdownOpen(false)
     }
+
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (currencyDropdownRef.current && !currencyDropdownRef.current.contains(e.target)) {
+                setIsCurrencyDropdownOpen(false)
+            }
+            if (languageDropdownRef.current && !languageDropdownRef.current.contains(e.target)) {
+                setIsLangDropdownOpen(false)
+            }
+        }
+
+        document.addEventListener('mousedown', handleClickOutside)
+    })
 
     return (
         <div className='flex items-center gap-x-6 font-montserrat font-normal text-sm leading-5 text-[#303030]'>
@@ -40,7 +60,7 @@ const TopRightBar = () => {
                 </select>
 
                 {/* ================ Custom Dropdown ================ */}
-                <div onClick={() => setIsCurrencyDropdownOpen(!isCurrencyDropdownOpen)} className="relative flex items-center gap-x-2 cursor-pointer">
+                <div onClick={handleCurrencyDropdown} ref={currencyDropdownRef} className="relative flex items-center gap-x-2 cursor-pointer">
 
                     <span>{selectedCurrency ? selectedCurrency : "USD"}</span> <FaChevronDown />
 
@@ -88,7 +108,7 @@ const TopRightBar = () => {
 
                 {/* ====== options ====== */}
                 {isLangDropdownOpen &&
-                    <ul className='w-10/12 absolute top-10.5 left-1/2 -translate-x-1/2 bg-white border border-gray-300 z-10'>
+                    <ul ref={languageDropdownRef} className='w-10/12 absolute top-10.5 left-1/2 -translate-x-1/2 bg-white border border-gray-300 z-10'>
                         {countries.map((country) => (
                             <li onClick={() => handleSelectLang(country)} className='flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer' key={country.value}>
                                 <img className='h-4 w-7' src={country?.flag} alt={country.name} />{country.name}
