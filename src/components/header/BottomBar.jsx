@@ -21,6 +21,10 @@ const BottomBar = () => {
     }
 
     document.addEventListener('mousedown', handleClickOutside)
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
   })
 
   return (
@@ -34,7 +38,7 @@ const BottomBar = () => {
               {/* ======== Product Dropdown ======== */}
 
               {isProductDropdownOpen &&
-                <ul className='absolute top-10.5 -left-4 shadow-xl bg-white font-montserrat font-normal whitespace-nowrap text-base text-[#303030] rounded-lg border border-[#CBCBCB] py-1'>
+                <ul className='absolute top-10.5 -left-4 shadow-xl bg-white font-montserrat font-normal whitespace-nowrap text-base text-secondary rounded-lg border border-[#CBCBCB] py-1'>
                   <li className='py-2 px-4 hover:bg-gray-200'>
                     <Link to={'#'}>All Products</Link>
                   </li>

@@ -9,7 +9,7 @@ const Facility = () => {
     return (
         <div className='my-20'>
             <Container>
-                <div className="flex justify-between items-center font-montserrat font-normal text-base leading-6 text-[#303030]">
+                <div className="flex justify-between items-center font-montserrat font-normal text-base leading-6 text-secondary">
                     <div className='flex items-center gap-x-6'>
                         <HeadphoneIcon />
                         <div>

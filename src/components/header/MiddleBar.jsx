@@ -8,7 +8,7 @@ import CartIcon from '../../icons/CartIcon';
 const MiddleBar = () => {
   return (
     <Container>
-      <div className="flex justify-between items-center py-6 font-montserrat font-normal text-sm leading-5 text-[#303030]">
+      <div className="flex justify-between items-center py-6 font-montserrat font-normal text-sm leading-5 text-secondary">
         <div>
           <Link to={'/'}><img src="logo.svg" alt="logo.svg" /></Link>
         </div>

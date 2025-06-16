@@ -12,7 +12,7 @@ const FooterBottom = () => {
         <div className="flex pb-20 border-b border-[#CBCBCB]">
           <div>
             <Link to={'/'}><img className='mt-2' src="logo.svg" alt="logo.svg" /></Link>
-            <ul className='mt-39.5 font-montserrat font-normal text-base leading-5 text-[#303030]'>
+            <ul className='mt-39.5 font-montserrat font-normal text-base leading-5 text-secondary'>
               <li><Link className='flex items-center gap-x-3' to={"tel:+1 (555) 123-4567"}><ImPhone className='text-[#646464] text-xl' />+1 (555) 123-4567</Link></li>
               <li><Link className='flex items-center gap-x-3 my-3 leading-6' to={"mailto:information@eshop.com"}><BsFillEnvelopeFill className='text-[#646464] text-lg' />information@eshop.com</Link></li>
               <li><Link className='flex items-center gap-x-3' to={""}><FaLocationDot className='text-[#646464] text-lg' />123 Main Street, Suite 105, Anytown USA</Link></li>
@@ -21,7 +21,7 @@ const FooterBottom = () => {
 
           <div className="flex gap-x-24 ml-42 mr-20">
 
-            <div className='text-[#303030]'>
+            <div className='text-secondary'>
               <h4 className='font-poppins font-semibold text-xl leading-7.5'>Links</h4>
               <ul className='mt-6 font-montserrat font-normal text-base leading-6 flex flex-col gap-y-3'>
                 <li><Link to={"#"}>Products List</Link></li>
@@ -32,7 +32,7 @@ const FooterBottom = () => {
               </ul>
             </div>
 
-            <div className='text-[#303030]'>
+            <div className='text-secondary'>
               <h4 className='font-poppins font-semibold text-xl leading-7.5'>Supports</h4>
               <ul className='mt-6 font-montserrat font-normal text-base leading-6 flex flex-col gap-y-3'>
                 <li><Link to={"#"}>About Us</Link></li>
@@ -44,7 +44,7 @@ const FooterBottom = () => {
               </ul>
             </div>
 
-            <div className='text-[#303030]'>
+            <div className='text-secondary'>
               <h4 className='font-poppins font-semibold text-xl leading-7.5'>Categories</h4>
               <ul className='mt-6 font-montserrat font-normal text-base leading-6 flex flex-col gap-y-3'>
                 <li><Link to={"#"}>Computers & Tablets</Link></li>
@@ -59,10 +59,10 @@ const FooterBottom = () => {
 
           </div>
 
-          <div className='text-[#303030]'>
+          <div className='text-secondary'>
             <div>
               <h4 className='font-poppins font-semibold text-xl leading-7.5'>Payments</h4>
-              <img className='mt-6' src="payment.png" alt="payment.png" />
+              <img className='mt-6' src="images/payment.png" alt="payment.png" />
             </div>
             <div className='mt-18'>
               <h4 className='font-poppins font-semibold text-xl leading-7.5'>Follow Us</h4>

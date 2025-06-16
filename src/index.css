@@ -1,7 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-    --font-poppins: "Poppins", "sans-serif";
-    --font-montserrat: "Montserrat", "sans-serif";
-    --color-primary: #FF624C;
+  --font-poppins: "Poppins", "sans-serif";
+  --font-montserrat: "Montserrat", "sans-serif";
+  --color-primary: #FF624C;
+  --color-secondary: #303030;
+}
+
+.iconParent:hover .addtocarticon path {
+  fill: white;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+.slick-prev:before, .slick-next:before {
+  display: none;
+}
+ .featured.slick-slider .slick-track{
+  display: flex;
+  column-gap: 4px ;
+  align-items: start;
 }

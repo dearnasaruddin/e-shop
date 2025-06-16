@@ -40,10 +40,14 @@ const TopRightBar = () => {
         }
 
         document.addEventListener('mousedown', handleClickOutside)
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside)
+        }
     })
 
     return (
-        <div className='flex items-center gap-x-6 font-montserrat font-normal text-sm leading-5 text-[#303030]'>
+        <div className='flex items-center gap-x-6 font-montserrat font-normal text-sm leading-5 text-secondary'>
 
             {/* =================== Currency =================== */}
             <div>
