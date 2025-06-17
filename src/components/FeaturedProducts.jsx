@@ -123,7 +123,7 @@ const FeaturedProducts = () => {
     <Container>
       <div>
         <div className="flex justify-between mb-12">
-          <h2 className='font-poppins font-semibold text-[36px] text-secondary leading-11'>Featured Products</h2>
+          <h2 className='font-poppins font-semibold text-[36px] text-secondary leading-11.5'>Featured Products</h2>
           <Link to={'#'} className='self-end mb-0.5 flex items-center gap-x-4 text-primary font-montserrat font-bold text-base leading-6'>View All<LongArrowRight /></Link>
         </div>
         <div className="px-10">

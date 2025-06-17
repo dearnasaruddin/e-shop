@@ -9,7 +9,7 @@ const CommonLayout = () => {
         <>
             <Header />
             <Outlet />
-            <Footer/>
+            <Footer />
         </>
     )
 }

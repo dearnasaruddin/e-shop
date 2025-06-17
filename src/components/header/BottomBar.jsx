@@ -2,15 +2,24 @@ import React, { useEffect, useRef, useState } from 'react'
 import Container from '../commonLayouts/Container'
 import { Link } from 'react-router-dom'
 import { FaBars, FaChevronDown } from "react-icons/fa6";
+import CategoriesSideBar from '../CategoriesSideBar';
+import { useDispatch } from 'react-redux';
+import { enableSideBar } from '../../slices/categoriesSideBarSlice';
 
 const BottomBar = () => {
 
+
+  const dispatch = useDispatch()
   const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false)
 
   const dropdownRef = useRef(null)
 
   const handleProductDropdown = () => {
     setIsProductDropdownOpen(!isProductDropdownOpen)
+  }
+
+  const handleCategoriesSideBar = () => {
+    dispatch(enableSideBar())
   }
 
   useEffect(() => {
@@ -29,10 +38,11 @@ const BottomBar = () => {
 
   return (
     <div className='bg-primary'>
+      <CategoriesSideBar />
       <Container>
         <div className="flex items-center justify-between py-6 font-montserrat font-bold text-base leading-6 text-white">
           <ul className='flex items-center gap-x-20'>
-            <li><Link to={'#'} className='flex items-center gap-x-4'> <FaBars className='text-xl' /> <span>All Categories</span></Link></li>
+            <li onClick={handleCategoriesSideBar} className='flex items-center gap-x-4 cursor-pointer'> <FaBars className='text-xl' /> <span>All Categories</span></li>
             <li onClick={handleProductDropdown} ref={dropdownRef} className='flex items-center gap-x-2 cursor-pointer relative'>
               <span>Products</span><FaChevronDown />
               {/* ======== Product Dropdown ======== */}
