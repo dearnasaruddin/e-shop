@@ -11,11 +11,6 @@ import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    // <div
-    //   className={className}
-    //   style={{ ...style, display: "block", background: "red" }}
-    //   onClick={onClick}
-    // />
     <div
       className={className}
       style={{ ...style, display: "flex", justifyContent: 'center', alignItems: 'center', color: '#303030', fontSize: '10px', width: '40px', height: '40px', borderRadius: '50%', border: '1px solid #303030', zIndex: '5', right: '-40px' }}
@@ -27,11 +22,6 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-    // <div
-    //   className={className}
-    //   style={{ ...style, display: "block", background: "green" }}
-    //   onClick={onClick}
-    // /> 
     <div
       className={className}
       style={{ ...style, display: "flex", justifyContent: 'center', alignItems: 'center', color: '#303030', fontSize: '10px', width: '40px', height: '40px', borderRadius: '50%', border: '1px solid #303030', zIndex: '5', left: '-40px' }}

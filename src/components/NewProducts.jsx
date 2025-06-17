@@ -130,9 +130,9 @@ const NewProducts = () => {
 
                                 {/* ====== options ====== */}
                                 {isCategoriesDropdownOpen &&
-                                    <ul ref={catagoriesDropdownRef} className='w-full absolute top-10 left-1/2 -translate-x-1/2 py-1 bg-white border border-gray-300 z-10 shadow-xl'>
+                                    <ul ref={catagoriesDropdownRef} className='w-[110%] absolute top-10 -left-5 py-1 bg-white border border-gray-300 z-10 shadow-xl'>
                                         {categories.map((item, index) => (
-                                            <li onClick={() => handleCategoriesDropdown(item)} key={index} className='font-montserrat font-normal text-base capitalize whitespace-nowrap flex items-center gap-2 p-2 hover:bg-gray-100 hover:text-primary hover:font-medium cursor-pointer'>{item}</li>
+                                            <li onClick={() => handleCategoriesDropdown(item)} key={index} className='font-montserrat font-normal text-base capitalize whitespace-nowrap flex items-center gap-2 px-5 py-2 hover:bg-gray-100 hover:text-primary hover:font-medium cursor-pointer'>{item}</li>
                                         ))}
 
                                     </ul>
@@ -143,7 +143,7 @@ const NewProducts = () => {
                     </div>
                     <div className="flex gap-x-6">
                         {dummyProducts.map((item, index) => (
-                            <ProductLayout key={index} catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} productImage={item.productImage} />
+                            <ProductLayout key={index} catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} productImage={item.productImage} newProduct={true} />
                         ))}
                     </div>
                     <div className='flex justify-center mt-16 mb-20'>

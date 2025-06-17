@@ -4,7 +4,7 @@ import { LuHeart } from "react-icons/lu";
 import { GoShareAndroid } from "react-icons/go";
 import AddToCartIcon from '../../icons/AddToCartIcon';
 
-const ProductLayout = ({ catagory, title, rating, totalRating, price, discount, originalPrice, productImage }) => {
+const ProductLayout = ({ catagory, title, rating, totalRating, price, discount, originalPrice, productImage, newProduct=false }) => {
 
   const [ratingValue, setRatingValue] = useState(new Array(+rating).fill(rating))
 
@@ -21,7 +21,7 @@ const ProductLayout = ({ catagory, title, rating, totalRating, price, discount, 
       </div>
       <div className='text-secondary pt-10'>
         <p className='font-montserrat font-normal text-sm uppercase leading-5 tracking-[5px]'>{catagory}</p>
-        <h3 className='font-poppins font-semibold text-xl leading-7.5 mt-4 mb-1 group-hover:text-primary group-hover:underline duration-300'>{title}</h3>
+        <h3 className={`font-poppins font-semibold text-xl leading-7.5 mt-4 mb-1 group-hover:text-primary group-hover:underline duration-300 ${newProduct && 'w-59'}`}>{title}</h3>
         <div className='flex items-center gap-x-2'>
           <div className="flex items-center text-base text-[#FED550]">
             {ratingValue.map((item, index) => (
