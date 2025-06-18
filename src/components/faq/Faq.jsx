@@ -29,9 +29,8 @@ const Faq = () => {
   return (
     <div className='bg-[#F4F4F4] pt-16 pb-17.5'>
       <Container>
-        <div className='flex gap-x-28 relative'>
+        <div className='flex gap-x-28'>
 
-          <img className='absolute top-0 right-0' src="images/dotsShape.png" alt="dotsShape.png" />
 
           <div className='w-231.5 flex flex-col gap-y-6'>
             {accordionData.map((item, index) => (
@@ -39,11 +38,16 @@ const Faq = () => {
             ))}
           </div>
 
+          <div className='grow flex flex-col justify-between'>
+            <div className='ml-auto'>
+              <img src="images/dotsShape.png" alt="dotsShape.png" />
+            </div>
 
-          <div className='place-self-end'>
-            <h2 className='max-w-76.5 font-poppins font-semibold text-4xl leading-11.5 text-secondary'>Frequently Asked Questions</h2>
-            <p className='max-w-98 font-montserrat font-normal text-xl leading-7.5 text-secondary mt-6 mb-16'>Questions that get asked the most by our clients. Get any burning questions?</p>
-            <Button content='Ask A Question' />
+            <div >
+              <h2 className='max-w-76.5 font-poppins font-semibold text-4xl leading-11.5 text-secondary'>Frequently Asked Questions</h2>
+              <p className='max-w-98 font-montserrat font-normal text-xl leading-7.5 text-secondary mt-6 mb-16'>Questions that get asked the most by our clients. Get any burning questions?</p>
+              <Button content='Ask A Question' />
+            </div>
           </div>
 
         </div>

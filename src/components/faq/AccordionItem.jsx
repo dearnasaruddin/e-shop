@@ -2,7 +2,6 @@ import React from 'react'
 import ArrowDownIcon from '../../icons/ArrowDownIcon'
 
 const AccordionItem = ({ title, content, onToggle, isOpen }) => {
-    console.log(isOpen)
     return (
         <div onClick={onToggle} className='w-full py-8 pl-12  bg-white rounded-[25px] text-secondary cursor-pointer'>
 
