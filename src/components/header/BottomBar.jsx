@@ -5,6 +5,7 @@ import { FaBars, FaChevronDown } from "react-icons/fa6";
 import CategoriesSideBar from '../CategoriesSideBar';
 import { useDispatch } from 'react-redux';
 import { enableSideBar } from '../../slices/categoriesSideBarSlice';
+import ArrowDownIcon from '../../icons/ArrowDownIcon';
 
 const BottomBar = () => {
 
@@ -44,7 +45,8 @@ const BottomBar = () => {
           <ul className='flex items-center gap-x-20'>
             <li onClick={handleCategoriesSideBar} className='flex items-center gap-x-4 cursor-pointer'> <FaBars className='text-xl' /> <span>All Categories</span></li>
             <li onClick={handleProductDropdown} ref={dropdownRef} className='flex items-center gap-x-2 cursor-pointer relative'>
-              <span>Products</span><FaChevronDown />
+              {/* <span>Products</span><FaChevronDown /> */}
+              <span>Products</span><ArrowDownIcon color='#ffffff' />
               {/* ======== Product Dropdown ======== */}
 
               {isProductDropdownOpen &&

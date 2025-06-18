@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { FaChevronDown } from "react-icons/fa6";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import ArrowDownIcon from '../../../icons/ArrowDownIcon';
 
 const TopRightBar = () => {
 
@@ -66,7 +66,8 @@ const TopRightBar = () => {
                 {/* ================ Custom Dropdown ================ */}
                 <div onClick={handleCurrencyDropdown} ref={currencyDropdownRef} className="relative flex items-center gap-x-2 cursor-pointer">
 
-                    <span>{selectedCurrency ? selectedCurrency : "USD"}</span> <FaChevronDown />
+                    <span>{selectedCurrency ? selectedCurrency : "USD"}</span>
+                    <ArrowDownIcon/>
 
                     {/* ====== options ====== */}
                     {isCurrencyDropdownOpen &&
@@ -103,7 +104,7 @@ const TopRightBar = () => {
                         <>
                             <img className='h-4 w-7' src={selectedCountry?.flag} alt={selectedCountry.name} />
                             <span>{selectedCountry?.name}</span>
-                            <FaChevronDown />
+                            <ArrowDownIcon/>
                         </>
                         :
                         setSelectedCountry(countries.find((c) => c.value == "en"))

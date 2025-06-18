@@ -6,7 +6,7 @@ import Container from './commonLayouts/Container'
 import ProductLayout from './commonLayouts/ProductLayout'
 import { Link } from 'react-router-dom'
 import LongArrowRight from '../icons/LongArrowRight';
-import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import ArrowDownIcon from '../icons/ArrowDownIcon'
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -15,7 +15,7 @@ function SampleNextArrow(props) {
       className={className}
       style={{ ...style, display: "flex", justifyContent: 'center', alignItems: 'center', color: '#303030', fontSize: '10px', width: '40px', height: '40px', borderRadius: '50%', border: '1px solid #303030', zIndex: '5', right: '-40px' }}
       onClick={onClick}
-    ><SlArrowRight /></div>
+    > <ArrowDownIcon rotate= '270deg'/> </div>
   );
 }
 
@@ -24,9 +24,9 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "flex", justifyContent: 'center', alignItems: 'center', color: '#303030', fontSize: '10px', width: '40px', height: '40px', borderRadius: '50%', border: '1px solid #303030', zIndex: '5', left: '-40px' }}
+      style={{ ...style, display: "flex", justifyContent: 'center', alignItems: 'center', color: '#303030', fontSize: '10px', width: '40px', height: '40px', borderRadius: '50%', border: '1px solid #303030', zIndex: '5', left: '-40px', }}
       onClick={onClick}
-    ><SlArrowLeft /></div>
+    ><ArrowDownIcon rotate= '90deg' /></div>
   );
 }
 
