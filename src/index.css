@@ -24,3 +24,10 @@
   column-gap: 4px ;
   align-items: start;
 }
+ .springSale.slick-slider .slick-slide.slick-active{
+
+  width: 486px !important;
+  /* display: flex;
+  column-gap: 24px ;
+  align-items: start; */
+}

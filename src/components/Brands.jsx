@@ -7,7 +7,7 @@ const Brands = () => {
     return (
         <div className='my-25'>
             <Container>
-                <Marquee pauseOnHover={true}>
+                <Marquee pauseOnHover={true} speed={80}>
                     <div className='flex items-center gap-x-50'>
                         <div>
                             <Link to={'https://www.samsung.com/'} target='_blank'>

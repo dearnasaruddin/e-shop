@@ -15,7 +15,7 @@ const FooterBottom = () => {
             <ul className='mt-39.5 font-montserrat font-normal text-base leading-5 text-secondary'>
               <li><Link className='flex items-center gap-x-3' to={"tel:+1 (555) 123-4567"}><ImPhone className='text-[#646464] text-xl' />+1 (555) 123-4567</Link></li>
               <li><Link className='flex items-center gap-x-3 my-3 leading-6' to={"mailto:information@eshop.com"}><BsFillEnvelopeFill className='text-[#646464] text-lg' />information@eshop.com</Link></li>
-              <li><Link className='flex items-center gap-x-3' to={""}><FaLocationDot className='text-[#646464] text-lg' />123 Main Street, Suite 105, Anytown USA</Link></li>
+              <li><Link className='flex items-center gap-x-3' to={"https://maps.app.goo.gl/K4TP4oxWACSgQAka7"} target='_blank'><FaLocationDot className='text-[#646464] text-lg' />123 Main Street, Suite 105, Anytown USA</Link></li>
             </ul>
           </div>
 

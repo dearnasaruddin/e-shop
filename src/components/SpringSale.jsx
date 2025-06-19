@@ -1,8 +1,39 @@
 import React, { useEffect, useState } from 'react'
 import Container from './commonLayouts/Container'
 import Button from './Button'
+import dummyProducts from '../dummyData/dummyProductsData'
+import ProductLayout from './commonLayouts/ProductLayout'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import ArrowDownIcon from '../icons/ArrowDownIcon'
+
+
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{ ...style, display: "flex", justifyContent: 'center', alignItems: 'center', color: '#303030', fontSize: '10px', width: '70px', height: '70px', borderRadius: '50%', border: '1px solid #303030', zIndex: '5', right: '-18px' }}
+            onClick={onClick}
+        > <ArrowDownIcon rotate='270deg' width='26' height='26' /> </div>
+    );
+}
+
 
 const SpringSale = () => {
+
+    var settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        nextArrow: <SampleNextArrow />,
+    };
+
 
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
 
@@ -31,10 +62,13 @@ const SpringSale = () => {
         return () => clearInterval(timer)
     }, [])
 
+
     return (
         <div className='py-16 bg-[#F4F4F4]'>
             <Container>
-                <div className='flex gap-x-31.5'>
+                <div className='flex gap-x-32'>
+
+                    {/* ========== Counter / Timer ========== */}
                     <div className='mt-42.5'>
                         <h2 className='font-poppins font-bold text-[56px] leading-17 text-secondary'>Spring Sale</h2>
                         <div className='flex items-center gap-x-6 mt-10 mb-18'>
@@ -63,7 +97,20 @@ const SpringSale = () => {
                             <img className='' src="images/dotsShapeWhite.png" alt="dotsShapeWhite.png" />
                         </div>
                     </div>
-                    <div></div>
+
+                    {/* ========== Product Slider ========== */}
+                    <div className='max-w-248 pl-0.5 pr-4.5'>
+                        <Slider className='springSale' {...settings}>
+                            {dummyProducts.map((item, index) => (
+
+                                item.discount &&
+                                <div className='max-w-116'>
+                                    <ProductLayout key={index} catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} productImage={item.productImage} springSale={true} availableQuantity={item.availableQuantity}/>
+                                </div>
+
+                            ))}
+                        </Slider>
+                    </div>
                 </div>
             </Container>
         </div>
