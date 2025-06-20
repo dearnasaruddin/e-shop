@@ -24,9 +24,9 @@ const ProductLayout = ({ catagory, title, rating, totalRating, price, discount, 
 
   useEffect(() => {
 
-    if (0 < availableQuantity && availableQuantity < 100) {
+    if (0 < availableQuantity && availableQuantity <= 93) {
       setDynamicWidth(availableQuantity)
-    } else if (availableQuantity > 100) {
+    } else if (availableQuantity > 93) {
       setDynamicWidth(93)
     }
 
@@ -46,9 +46,9 @@ const ProductLayout = ({ catagory, title, rating, totalRating, price, discount, 
         }
       </div>
       <div className='text-secondary pt-10'>
-        <p className='font-montserrat font-normal text-sm uppercase leading-5 tracking-[5px]'>{catagory}</p>
-        <Link to={'#'} className={`font-poppins font-semibold text-xl leading-7.5 mt-4 mb-1 group-hover:text-primary group-hover:underline duration-300 ${newProduct && 'w-59'}`}>{title}</Link>
-        <div className='flex items-center gap-x-2'>
+        <p className='font-montserrat font-normal text-sm uppercase leading-5 tracking-[5px] mb-4'>{catagory}</p>
+        <Link to={'#'} className={`font-poppins font-semibold text-xl leading-7.5 group-hover:text-primary group-hover:underline duration-300 ${newProduct && 'w-59'}`}>{title}</Link>
+        <div className='flex items-center gap-x-2 mt-1'>
           <div className="flex items-center text-base text-[#FED550]">
             {ratingValue.map((item, index) => (
               springSale ? <IoStarSharp key={index} className='text-white group-hover:text-[#FED550] duration-300' /> : <IoStarSharp key={index} className='text-[#FED550]' />

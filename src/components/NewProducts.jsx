@@ -5,28 +5,28 @@ import { Link } from 'react-router-dom'
 import Button from './Button'
 import ArrowDownIcon from '../icons/ArrowDownIcon'
 import dummyProducts from '../dummyData/dummyProductsData'
+import categories from '../dummyData/categoriesData'
 
 const NewProducts = () => {
+    const [categoryArr, setCategoryArr] = useState(['All Categories'])
     const [isCategoriesDropdownOpen, setIsCategoriesDropdownOpen] = useState(false)
     const [categoriesDropdownText, setCategoriesDropdowntext] = useState('')
     const catagoriesDropdownRef = useRef(null)
 
-    const categories = [
-        'All Categories',
-        'Computers & Tablets',
-        'Mobile & Accessories',
-        'TV & Home Theater',
-        'Audio & Headphones',
-        'Cameras & Camcorders',
-        'Gaming Equipment',
-        'Home Appliances'
-    ]
+
     const handleCategoriesDropdown = (value) => {
         setCategoriesDropdowntext(value)
         setIsCategoriesDropdownOpen(false)
     }
 
     useEffect(() => {
+        let newCategoryArr = [...categories]
+        newCategoryArr.unshift('All Categories')
+        setCategoryArr(newCategoryArr)
+    }, [])
+
+    useEffect(() => {
+
         const handleClickOutside = (e) => {
             if (catagoriesDropdownRef.current && !catagoriesDropdownRef.current.contains(e.target)) {
                 setIsCategoriesDropdownOpen(false)
@@ -72,7 +72,7 @@ const NewProducts = () => {
                                             <ArrowDownIcon />
                                         </>
                                         :
-                                        setCategoriesDropdowntext(categories[0])
+                                        setCategoriesDropdowntext(categoryArr[0])
                                     }
 
                                 </div>
@@ -80,7 +80,7 @@ const NewProducts = () => {
                                 {/* ====== options ====== */}
                                 {isCategoriesDropdownOpen &&
                                     <ul ref={catagoriesDropdownRef} className='w-[110%] absolute top-10 -left-5 py-1 bg-white border border-gray-300 z-10 shadow-xl'>
-                                        {categories.map((item, index) => (
+                                        {categoryArr.map((item, index) => (
                                             <li onClick={() => handleCategoriesDropdown(item)} key={index} className='font-montserrat font-normal text-base capitalize whitespace-nowrap flex items-center gap-2 px-5 py-2 hover:bg-gray-100 hover:text-primary hover:font-medium cursor-pointer'>{item}</li>
                                         ))}
 
@@ -92,7 +92,9 @@ const NewProducts = () => {
                     </div>
                     <div className="flex gap-x-6">
                         {dummyProducts.map((item, index) => (
-                            <ProductLayout key={index} catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} productImage={item.productImage} newProduct={true} />
+                            <div key={index} className='w-71'>
+                                <ProductLayout catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} productImage={item.productImage} newProduct={true} />
+                            </div>
                         ))}
                     </div>
                     <div className='flex justify-center mt-16 mb-20'>

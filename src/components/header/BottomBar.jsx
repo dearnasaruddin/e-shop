@@ -51,20 +51,20 @@ const BottomBar = () => {
 
               {isProductDropdownOpen &&
                 <ul className='absolute top-10.5 -left-4 shadow-xl bg-white font-montserrat font-normal whitespace-nowrap text-base text-secondary rounded-lg border border-[#CBCBCB] py-1'>
-                  <li className='py-2 px-4 hover:bg-gray-200'>
-                    <Link to={'#'}>All Products</Link>
+                  <li className='hover:bg-gray-200'>
+                    <Link className='py-2 px-4 block' to={'/product-list'}>All Products</Link>
                   </li>
-                  <li className='py-2 px-4 hover:bg-gray-200'>
-                    <Link to={'#'}>Featured Products</Link>
+                  <li className=' hover:bg-gray-200'>
+                    <Link className='py-2 px-4 block' to={'#'}>Featured Products</Link>
                   </li>
-                  <li className='py-2 px-4 hover:bg-gray-200'>
-                    <Link to={'#'}>New Products</Link>
+                  <li className=' hover:bg-gray-200'>
+                    <Link className='py-2 px-4 block' to={'#'}>New Products</Link>
                   </li>
-                  <li className='py-2 px-4 hover:bg-gray-200'>
-                    <Link to={'#'}>Spring Sale</Link>
+                  <li className=' hover:bg-gray-200'>
+                    <Link className='py-2 px-4 block' to={'#'}>Spring Sale</Link>
                   </li>
-                  <li className='py-2 px-4 hover:bg-gray-200'>
-                    <Link to={'#'}>Best Seller</Link>
+                  <li className=' hover:bg-gray-200'>
+                    <Link className='py-2 px-4 block' to={'#'}>Best Seller</Link>
                   </li>
                 </ul>
               }

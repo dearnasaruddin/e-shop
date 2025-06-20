@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { IoCloseOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from 'react-redux';
 import { disableSideBar } from '../slices/categoriesSideBarSlice';
+import categories from '../dummyData/categoriesData';
 
 const CategoriesSideBar = () => {
 
@@ -14,15 +15,6 @@ const CategoriesSideBar = () => {
         dispatch(disableSideBar())
     }
 
-    const categories = [
-        'Computers & Tablets',
-        'Mobile & Accessories',
-        'TV & Home Theater',
-        'Audio & Headphones',
-        'Cameras & Camcorders',
-        'Gaming Equipment',
-        'Home Appliances'
-    ]
 
     useEffect(() => {
 
@@ -43,9 +35,9 @@ const CategoriesSideBar = () => {
         <div ref={categoriesRef} className={`absolute w-1/4 h-screen bg-gray-100 z-10 ${selector ? 'left-0' : '-left-full'} top-0 shadow-2xl p-10 duration-300`}>
             <div><IoCloseOutline onClick={handleCategoriesSideBar} className='text-3xl ml-auto text-secondary hover:text-red-500 duration-300 cursor-pointer' /></div>
             <h3 className='font-poppins font-semibold text-2xl'>All Categories</h3>
-            <ul className='mt-6 text-lg capitalize flex flex-col gap-y-3'>
+            <ul className='mt-6 text-lg capitalize'>
                 {categories.map((item, index) => (
-                    <li key={index}><Link className='font-montserrat text-secondary hover:text-primary duration-300' >{item}</Link></li>
+                    <li key={index}><Link className='font-montserrat text-secondary hover:text-primary duration-300 block py-2' >{item}</Link></li>
                 ))}
             </ul>
         </div>
