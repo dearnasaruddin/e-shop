@@ -50,7 +50,7 @@ const BottomBar = () => {
               {/* ======== Product Dropdown ======== */}
 
               {isProductDropdownOpen &&
-                <ul className='absolute top-10.5 -left-4 shadow-xl bg-white font-montserrat font-normal whitespace-nowrap text-base text-secondary rounded-lg border border-[#CBCBCB] py-1'>
+                <ul className='absolute top-10.5 -left-4 z-10 shadow-xl bg-white font-montserrat font-normal whitespace-nowrap text-base text-secondary rounded-lg border border-[#CBCBCB] py-1'>
                   <li className='hover:bg-gray-200'>
                     <Link className='py-2 px-4 block' to={'/product-list'}>All Products</Link>
                   </li>
