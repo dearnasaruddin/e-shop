@@ -11,6 +11,9 @@ const ProductSideBar = () => {
     const [isPriceDropdownOpen, setIsPriceDropdownOpen] = useState(true)
     const [minValue, setMinValue] = useState(500)
     const [maxValue, setMaxValue] = useState(3100)
+    const [isLessBrandBtn, setIsLessBrandBtn] = useState(false)
+
+    const slicedBrands = isLessBrandBtn ? brands : brands.slice(0, 7)
 
     const updateRangeSlider = (type, value) => {
 
@@ -46,7 +49,7 @@ const ProductSideBar = () => {
             } else {
                 setMaxValue(parseValue)
             }
-            
+
             // const newMax = Math.max(parseInt(value), minValue)
             // setMaxValue(newMax)
         }
@@ -97,7 +100,7 @@ const ProductSideBar = () => {
 
                 {isBrandDropdownOpen &&
                     <ul className='mt-5 pb-10 border-b border-[#C3C3C3]'>
-                        {brands.map((item, index) => (
+                        {slicedBrands.map((item, index) => (
                             <li key={index} className='flex items-center relative'>
                                 <input className='appearance-none h-4 w-4.5 checked:bg-primary checked:border-none border border-secondary rounded-xs peer cursor-pointer' type="checkbox" name={item.brandName} id={item.brandName} />
                                 <label htmlFor={item.brandName} className='hidden peer-checked:block absolute top-1/2 left-2 -translate-1/2 text-[12px] text-white cursor-pointer'>
@@ -107,7 +110,7 @@ const ProductSideBar = () => {
 
                             </li>
                         ))}
-                        <span className='font-montserrat font-bold text-base leading-6 text-secondary border-b border-secondary inline-block mt-5 cursor-pointer'>More Brands</span>
+                        <span onClick={() => setIsLessBrandBtn(!isLessBrandBtn)} className='font-montserrat font-bold text-base leading-6 text-secondary border-b border-secondary inline-block mt-5 cursor-pointer'>{isLessBrandBtn ? 'Less Brands' : 'More Brands'}</span>
                     </ul>
                 }
             </div>

@@ -5,7 +5,7 @@ import { GoShareAndroid } from "react-icons/go";
 import AddToCartIcon from '../../icons/AddToCartIcon';
 import { Link } from 'react-router-dom';
 
-const ProductLayout = ({ catagory, title, rating, totalRating, price, discount, originalPrice, productImage, newProduct = false, springSale = false, availableQuantity = false }) => {
+const ProductLayout = ({ catagory = 'watch', title = 'Orange Watch 12 High Quality Health Sensor...', rating = 4, totalRating = 20, price = '44.99', discount = 50, originalPrice = '89.99', productImage, newProduct = false, springSale = false, availableQuantity = false }) => {
 
   const [ratingValue, setRatingValue] = useState(new Array(+rating).fill(rating))
   const [hovertoShowQuantity, setHovertoShowQuantity] = useState(false)
@@ -36,7 +36,7 @@ const ProductLayout = ({ catagory, title, rating, totalRating, price, discount, 
     <div onMouseEnter={handleHoverStart} onMouseLeave={handleHoverEnd} className={` ${springSale ? 'p-10 bg-[#EAEAEA] hover:bg-white' : 'px-5.5 pt-6 pb-11 border border-transparent hover:border-[#CBCBCB]'} rounded-[10px]  duration-300 group cursor-pointer`}>
       <div className='relative'>
         {discount && <span className={`absolute ${springSale ? 'size-25 flex justify-center items-center font-poppins font-semibold text-2xl leading-7.5 rounded-full top-0 right-0' : '-top-2 -right-2 font-montserrat font-bold text-base leading-6 py-2 px-5 rounded-[5px]'} text-white bg-primary`}>{discount}%</span>}
-        <img className='w-full' src={productImage ? productImage : 'productImage.webp'} alt={productImage ? productImage : 'productImage.webp'} />
+        <img className='w-full' src={productImage ? productImage : 'images/productImage.webp'} alt={productImage ? productImage : 'productImage.webp'} />
         {!springSale &&
           <ul className='flex gap-x-4.5 scale-0 group-hover:scale-100 duration-300 absolute left-1/2 -translate-x-1/2 bottom-1.5'>
             <li className='size-12.5 bg-white border border-primary rounded-full flex justify-center items-center text-xl text-primary hover:bg-primary hover:text-white duration-300 cursor-pointer iconParent'><AddToCartIcon color='#FF624C' /></li>

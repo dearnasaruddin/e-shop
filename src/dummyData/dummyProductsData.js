@@ -48,7 +48,7 @@ const dummyProducts = [
         catagory: 'watch',
         title: 'Orange Watch 12 High Quality Health Sensor...',
         rating: 4,
-        totalRating: 20,
+        totalRating: 80,
         price: '44.99',
         discount: 50,
         originalPrice: '89.99',

@@ -1,18 +1,35 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Container from '../components/commonLayouts/Container'
+import dummyProducts from '../dummyData/dummyProductsData'
 import { IoGridOutline } from "react-icons/io5";
 import { FaBars } from "react-icons/fa6";
 import ArrowDownIcon from '../icons/ArrowDownIcon';
 import ProductSideBar from '../components/ProductSideBar';
+import ProductLayout from '../components/commonLayouts/ProductLayout'
+import Pagination from '../components/Pagination';
 
 const ProductListPage = () => {
 
   const [isFilterDropdownOpen, setIsFilterDropdownOpen] = useState(false)
   const [isPriceDropdownOpen, setIsPriceDropdownOpen] = useState(false)
+  const [gridView, setGridView] = useState(true)
+  const [listView, setListView] = useState(false)
   const [filterDropdownText, setFilterDropdownText] = useState('')
   const [priceDropdownText, setPriceDropdowntext] = useState('')
+  const [currentPage, setCurrentPage] = useState(1)
   const filterDropdownRef = useRef(null)
   const priceDropdownRef = useRef(null)
+  const itemPerPage = 16
+
+  const handleView = (value) => {
+    if (value == 'list') {
+      setListView(true)
+      setGridView(false)
+    } else {
+      setGridView(true)
+      setListView(false)
+    }
+  }
 
   const handlePriceDropdown = (value) => {
     setPriceDropdowntext(value)
@@ -41,6 +58,31 @@ const ProductListPage = () => {
     }
   })
 
+  const dummyProductList = []
+
+  let id = 0
+  for (let i = 1; i <= 32; i++) {
+    for (let j = 0; j < dummyProducts.length; j++) {
+      id++
+      dummyProductList.push(
+        {
+          id: id,
+          catagory: dummyProducts[j].catagory,
+          title: dummyProducts[j].title,
+          rating: dummyProducts[j].rating,
+          totalRating: dummyProducts[j].totalRating,
+          price: dummyProducts[j].price,
+          discount: dummyProducts[j].discount,
+          originalPrice: dummyProducts[j].originalPrice,
+          productImage: dummyProducts[j].productImage,
+        }
+      )
+    }
+  }
+
+  const startIndex = currentPage * itemPerPage
+  const currentProducts = dummyProductList.slice(startIndex, startIndex + itemPerPage)
+
   return (
     <div className='mt-16 mb-20'>
       <Container>
@@ -56,7 +98,7 @@ const ProductListPage = () => {
             <div className='pl-6'>
               <h2 className='font-poppins font-semibold text-4xl leading-11.5 text-secondary'>Products</h2>
               <div className='flex items-center justify-between mt-4 mb-12'>
-                <p className='font-montserrat font-normal text-base leading-6 text-secondary'>Showing 1 - 16 of 160 results.</p>
+                <p className='font-montserrat font-normal text-base leading-6 text-secondary'>Showing {(currentPage * itemPerPage) - itemPerPage + 1} - {currentPage * itemPerPage} of {dummyProductList.length} results.</p>
 
                 <div className='flex items-center gap-x-12.5'>
                   {/* ========== Filter option ========== */}
@@ -149,13 +191,27 @@ const ProductListPage = () => {
                   </div>
 
                   <div className='flex items-center gap-x-3'>
-                    <div className='cursor-pointer'><IoGridOutline className='text-2xl text-primary' /></div>
-                    <div className='cursor-pointer'><FaBars className='text-2xl text-[#CBCBCB]' /></div>
+                    <div onClick={() => handleView('grid')} className='cursor-pointer'><IoGridOutline className={`text-2xl ${gridView ? 'text-primary' : 'text-[#CBCBCB]'} `} /></div>
+                    <div onClick={() => handleView('list')} className='cursor-pointer'><FaBars className={`text-2xl ${listView ? 'text-primary' : 'text-[#CBCBCB]'} `} /></div>
                   </div>
                 </div>
               </div>
             </div>
 
+            {/* Product Showcasing */}
+            <div className='w-full'>
+              <div className='flex flex-wrap'>
+                {currentProducts.map((item) => (
+                  <div key={item.id} className='max-w-71'>
+                    <ProductLayout productImage={item.productImage} catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} />
+                  </div>
+                ))}
+              </div>
+              {/* Pagination */}
+              <div className='mt-20'>
+                <Pagination totalItems={dummyProductList.length} itemPerPage={itemPerPage} currentPage={currentPage} onPageChange={setCurrentPage} />
+              </div>
+            </div>
 
           </div>
 
