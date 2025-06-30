@@ -80,8 +80,7 @@ const ProductListPage = () => {
     }
   }
 
-  const startIndex = currentPage * itemPerPage
-  const currentProducts = dummyProductList.slice(startIndex, startIndex + itemPerPage)
+  const currentProducts = dummyProductList.slice((currentPage * itemPerPage) - itemPerPage , currentPage * itemPerPage)
 
   return (
     <div className='mt-16 mb-20'>
@@ -203,7 +202,7 @@ const ProductListPage = () => {
               <div className='flex flex-wrap'>
                 {currentProducts.map((item) => (
                   <div key={item.id} className='max-w-71'>
-                    <ProductLayout productImage={item.productImage} catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} />
+                    <ProductLayout productImage={item.productImage} catagory={item.catagory } title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} />
                   </div>
                 ))}
               </div>

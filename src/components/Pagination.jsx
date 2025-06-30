@@ -9,6 +9,7 @@ const Pagination = ({ totalItems, itemPerPage, currentPage, onPageChange }) => {
 
     let startPage = Math.max(1, currentPage - pagesToShowBeforeAfter)
     let endPage = Math.min(totalPages, currentPage + pagesToShowBeforeAfter)
+    console.log(startPage, endPage)
 
     if (endPage - startPage + 1 < maxPagesToShow) {
         if (startPage > 1) {
@@ -23,12 +24,14 @@ const Pagination = ({ totalItems, itemPerPage, currentPage, onPageChange }) => {
     }
 
     return (
-        <div className='flex justify-center items-center'>
-            <button onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1} className='py-1 px-0.5 rounded-sm cursor-pointer hover:bg-gray-300 bg-gray-200 mx-2'><ArrowDownIcon width='32' height='32' rotate='90deg' /></button>
-            {pageNumbers.map((pageNumber, index) => (
-                <button key={index} onClick={() => onPageChange(pageNumber)} className='py-1 px-3 rounded-sm bg-gray-200 hover:bg-gray-300 mx-2 font-poppins font-semibold text-xl leading-7.5 text-secondary cursor-pointer' >{pageNumber}</button>
-            ))}
-            <button onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages} className='py-1 px-0.5 rounded-sm cursor-pointer hover:bg-gray-300 bg-gray-200 mx-2'><ArrowDownIcon width='32' height='32' rotate='270deg' /></button>
+        <div className='flex justify-center items-center gap-x-9'>
+            <button onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1} className='size-12 flex justify-center items-center rounded-sm cursor-pointer hover:bg-gray-200 mx-2 disabled:hover:bg-transparent disabled:opacity-20 disabled:cursor-not-allowed'><ArrowDownIcon width='32' height='32' rotate='90deg' /></button>
+            <div className='flex justify-center items-center gap-x-7.5'>
+                {pageNumbers.map((pageNumber, index) => (
+                    <button key={index} onClick={() => onPageChange(pageNumber)} className={`size-12 flex justify-center items-center rounded-sm font-poppins font-semibold text-xl leading-7.5 text-secondary cursor-pointer ${currentPage == index + 1 ? 'bg-primary text-white' : 'hover:bg-gray-200'}`} >{pageNumber}</button>
+                ))}
+            </div>
+            <button onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages} className='size-12 flex justify-center items-center rounded-sm cursor-pointer hover:bg-gray-200 mx-2 disabled:hover:bg-transparent disabled:opacity-20 disabled:cursor-not-allowed'><ArrowDownIcon width='32' height='32' rotate='270deg' /></button>
         </div>
     )
 }
