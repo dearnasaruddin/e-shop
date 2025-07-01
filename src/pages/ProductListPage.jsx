@@ -80,7 +80,7 @@ const ProductListPage = () => {
     }
   }
 
-  const currentProducts = dummyProductList.slice((currentPage * itemPerPage) - itemPerPage , currentPage * itemPerPage)
+  const currentProducts = dummyProductList.slice((currentPage * itemPerPage) - itemPerPage, currentPage * itemPerPage)
 
   return (
     <div className='mt-16 mb-20'>
@@ -201,9 +201,14 @@ const ProductListPage = () => {
             <div className='w-full'>
               <div className='flex flex-wrap'>
                 {currentProducts.map((item) => (
-                  <div key={item.id} className='max-w-71'>
-                    <ProductLayout productImage={item.productImage} catagory={item.catagory } title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} />
-                  </div>
+                  gridView ?
+                    <div key={item.id} className='max-w-71'>
+                      <ProductLayout productImage={item.productImage} catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} />
+                    </div>
+                    :
+                    <div className='w-full'>
+                      <ProductLayout productImage={item.productImage} catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} listView={true} />
+                    </div>
                 ))}
               </div>
               {/* Pagination */}

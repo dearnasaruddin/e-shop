@@ -9,7 +9,6 @@ const Pagination = ({ totalItems, itemPerPage, currentPage, onPageChange }) => {
 
     let startPage = Math.max(1, currentPage - pagesToShowBeforeAfter)
     let endPage = Math.min(totalPages, currentPage + pagesToShowBeforeAfter)
-    console.log(startPage, endPage)
 
     if (endPage - startPage + 1 < maxPagesToShow) {
         if (startPage > 1) {

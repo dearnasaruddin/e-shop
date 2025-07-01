@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 import Container from './commonLayouts/Container';
 import { Link } from 'react-router-dom';
 
-const Brands = () => {
+const FeaturedBrands = () => {
     return (
         <div className='my-25'>
             <Container>
@@ -41,4 +41,4 @@ const Brands = () => {
     )
 }
 
-export default Brands
+export default FeaturedBrands
