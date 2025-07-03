@@ -12,6 +12,7 @@ const Button = ({ content = 'Button', font = "Montserrat", weight = "bold", text
       color: textColor,
       lineHeight: leading+"px",
       border: border,
+      cursor: 'pointer'
     }}>{content}</button>
   )
 }

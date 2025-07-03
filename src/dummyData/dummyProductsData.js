@@ -8,7 +8,7 @@ const dummyProducts = [
         price: '48.00',
         discount: 60,
         originalPrice: '118.00',
-        productImage: 'images/headphone.webp',
+        productImage: '/images/headphone.webp',
         availableQuantity: 70
     },
     {
@@ -19,7 +19,7 @@ const dummyProducts = [
         price: '1250.00',
         discount: false,
         originalPrice: false,
-        productImage: 'images/laptop.webp',
+        productImage: '/images/laptop.webp',
         availableQuantity: 20
     },
     {
@@ -30,7 +30,7 @@ const dummyProducts = [
         price: '79.00',
         discount: 30,
         originalPrice: '112.99',
-        productImage: 'images/camera.webp',
+        productImage: '/images/camera.webp',
         availableQuantity: 50
     },
     {
@@ -41,7 +41,7 @@ const dummyProducts = [
         price: '349.00',
         discount: false,
         originalPrice: false,
-        productImage: 'images/television.webp',
+        productImage: '/images/television.webp',
         availableQuantity: 20
     },
     {
@@ -52,7 +52,7 @@ const dummyProducts = [
         price: '44.99',
         discount: 50,
         originalPrice: '89.99',
-        productImage: 'images/productImage.webp',
+        productImage: '/images/productImage.webp',
         availableQuantity: 120
     },
 ]

@@ -10,7 +10,7 @@ const MiddleBar = () => {
     <Container>
       <div className="flex justify-between items-center py-6 font-montserrat font-normal text-sm leading-5 text-secondary">
         <div>
-          <Link to={'/'}><img src="logo.svg" alt="logo.svg" /></Link>
+          <Link to={'/'}><img src="/logo.svg" alt="logo.svg" /></Link>
         </div>
         <div className='flex items-center gap-x-12'>
           <div className='relative'>

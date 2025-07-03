@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import brands from '../dummyData/brandsData';
+import brands from '../../dummyData/brandsData';
 import { IoCheckmarkOutline } from "react-icons/io5";
 
 const ProductSidebarBrands = () => {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ArrowDownIcon from '../icons/ArrowDownIcon';
+import ArrowDownIcon from '../../icons/ArrowDownIcon';
 import ProductSidebarPriceRange from './ProductSidebarPriceRange';
 import ProductSidebarBrands from './ProductSidebarBrands';
 import ProductSidebarCategories from './ProductSidebarCategories';

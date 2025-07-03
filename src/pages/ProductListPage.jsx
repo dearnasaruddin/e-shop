@@ -4,7 +4,7 @@ import dummyProducts from '../dummyData/dummyProductsData'
 import { IoGridOutline } from "react-icons/io5";
 import { FaBars } from "react-icons/fa6";
 import ArrowDownIcon from '../icons/ArrowDownIcon';
-import ProductSideBar from '../components/ProductSideBar';
+import ProductSideBar from '../components/productSideBar/ProductSideBar';
 import ProductLayout from '../components/commonLayouts/ProductLayout'
 import Pagination from '../components/Pagination';
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import categories from '../dummyData/categoriesData';
+import categories from '../../dummyData/categoriesData';
 import { IoCheckmarkOutline } from "react-icons/io5";
 
 const ProductSidebarCategories = () => {
