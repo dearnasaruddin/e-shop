@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Button = ({ content = 'Button', font = "Montserrat", weight = "bold", textSize = "20", leading = "30", textColor = "#ffffff", bg = "#FF624C", paddingY = "16", paddingX = "40", radius = "10", border = 'none' }) => {
+const Button = ({ content = 'Button', width, font = "Montserrat", weight = "bold", textSize = "20", leading = "30", textColor = "#ffffff", bg = "#FF624C", paddingY = "16", paddingX = "40", radius = "10", border = 'none' }) => {
   return (
     <button style={{
+      width: width,
       fontFamily: font,
       fontWeight: weight,
       fontSize: textSize + "px",
