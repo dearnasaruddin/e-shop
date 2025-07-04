@@ -18,7 +18,7 @@ const MiddleBar = () => {
             <IoSearchOutline className='absolute top-1/2 -translate-1/2 right-3.5 text-lg' />
           </div>
           <div className='flex items-center gap-x-22.5'>
-            <div className='flex items-center gap-x-5 relative after:absolute after:w-[1px] after:h-8 after:top-1/2 after:-right-11 after:-translate-y-1/2 after:translate-x-1/2 after:bg-[#979797] cursor-pointer'>
+            <Link to={'/cart'} className='flex items-center gap-x-5 relative after:absolute after:w-[1px] after:h-8 after:top-1/2 after:-right-11 after:-translate-y-1/2 after:translate-x-1/2 after:bg-[#979797] cursor-pointer'>
               <div>
                 <CartIcon />
               </div>
@@ -26,7 +26,7 @@ const MiddleBar = () => {
                 <p className='text-base leading-6'>Cart</p>
                 <span className='font-bold text-base leading-6'>$ 150,00</span>
               </div>
-            </div>
+            </Link>
             <div className='flex items-center gap-x-5.5 cursor-pointer'>
               <div>
                 <AiOutlineUser className='text-[34px]' />

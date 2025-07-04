@@ -27,7 +27,7 @@ const FooterBottom = () => {
                 <li><Link to={"/product-list"}>Products List</Link></li>
                 <li><Link to={"#"}>Order Tracking</Link></li>
                 <li><Link to={"#"}>Products Guide</Link></li>
-                <li><Link to={"#"}>Shopping Cart</Link></li>
+                <li><Link to={"/cart"}>Shopping Cart</Link></li>
                 <li><Link to={"#"}>Tech Blog</Link></li>
               </ul>
             </div>

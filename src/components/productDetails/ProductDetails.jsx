@@ -44,7 +44,7 @@ const ProductDetails = () => {
                 }
                 {activeDetails == 'reviews' &&
                     <div className='text-xl font-poppins font-normal text-[#646464]'>
-                        <p>No Review</p>
+                        <p>No Review Available</p>
                     </div>
                 }
             </div>

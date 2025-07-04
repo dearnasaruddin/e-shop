@@ -7,6 +7,7 @@ import ContactPage from './pages/ContactPage';
 import ProductDetailsPage from './pages/ProductDetailsPage';
 import ProductListPage from './pages/ProductListPage';
 import CommonLayout from './components/commonLayouts/CommonLayout';
+import CartPage from './pages/CartPage';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/product-details" element={<ProductDetailsPage />} />
         <Route path="/product-list" element={<ProductListPage />} />
+        <Route path="/cart" element={<CartPage />} />
       </Route>
     </Routes>
   )

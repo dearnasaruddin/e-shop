@@ -32,7 +32,7 @@ const CategoriesSideBar = () => {
     })
 
     return (
-        <div ref={categoriesRef} className={`absolute w-1/4 h-screen bg-gray-100 z-10 ${selector ? 'left-0' : '-left-full'} top-0 shadow-2xl p-10 duration-300`}>
+        <div ref={categoriesRef} className={`fixed w-1/4 h-screen bg-gray-100 z-10 ${selector ? 'left-0' : '-left-full'} top-0 shadow-2xl p-10 duration-300`}>
             <div><IoCloseOutline onClick={handleCategoriesSideBar} className='text-3xl ml-auto text-secondary hover:text-red-500 duration-300 cursor-pointer' /></div>
             <h3 className='font-poppins font-semibold text-2xl'>All Categories</h3>
             <ul className='mt-6 text-lg capitalize'>
