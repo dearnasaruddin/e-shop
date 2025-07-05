@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Container from '../components/commonLayouts/Container'
 import dummyProducts from '../dummyData/dummyProductsData'
 import ProductLayout from '../components/commonLayouts/ProductLayout'
@@ -12,12 +12,15 @@ import DeliveryIcon from '../icons/DeliveryIcon'
 import SecurityIcon from '../icons/SecurityIcon'
 import HeadphoneIcon from '../icons/HeadphoneIcon'
 import AddToCartIcon from '../icons/AddToCartIcon'
-// import { FaPlus } from 'react-icons/fa'
 import { FiMinus, FiPlus } from 'react-icons/fi'
 import ProductDetails from '../components/productDetails/ProductDetails'
+import { IoCloseOutline } from "react-icons/io5";
+import Slider from "react-slick";
 
 const ProductDetailsPage = () => {
 
+  let [activeModal, setActiveModal] = useState(false)
+  let [modalImgPath, setModalImgPath] = useState(false)
   let [quantity, setQuantity] = useState(1)
   const handleQuantity = (type) => {
     if (type == 'plus') {
@@ -30,6 +33,34 @@ const ProductDetailsPage = () => {
       }
     }
   }
+  const [nav1, setNav1] = useState(null);
+  const [nav2, setNav2] = useState(null);
+  let sliderRef1 = useRef(null);
+  let sliderRef2 = useRef(null);
+
+  useEffect(() => {
+    setNav1(sliderRef1);
+    setNav2(sliderRef2);
+  }, []);
+
+  var settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // autoplay: true,
+    // autoplaySpeed: 3000,
+  };
+  var settingsTwo = {
+
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    focusOnSelect: true,
+  };
+
+
 
   return (
     <div>
@@ -47,14 +78,46 @@ const ProductDetailsPage = () => {
           <div className='flex gap-x-14 mb-13'>
             {/* ====== Product Images ====== */}
             <div>
-              <div className='w-208 h-135 rounded-3xl overflow-hidden bg-[#D9D9D9] relative'>
-                <img src="#" alt="" />
-                <EnlargeIcon className={'absolute right-6 top-2 cursor-pointer'} />
+              <div className='w-208 h-135 rounded-3xl overflow-hidden relative'>
+                <span onClick={() => setActiveModal(true)}><EnlargeIcon className='absolute right-6 top-2 cursor-pointer z-20' /></span>
+                <Slider {...settings} asNavFor={nav2} ref={slider => (sliderRef1 = slider)}>
+                  <div>
+                    <div onMouseEnter={()=>setModalImgPath("/images/productImage.webp")} className='flex justify-center items-center relative'>
+                      <img className='w-3/4 object-center' src="/images/productImage.webp" alt="productImage" />
+                    </div>
+                  </div>
+                  <div>
+                    <div onMouseEnter={()=>setModalImgPath("/images/camera.webp")} className='flex justify-center items-center relative'>
+                      <img className='w-3/4 object-center' src="/images/camera.webp" alt="camera" />
+                    </div>
+                  </div>
+                  <div>
+                    <div onMouseEnter={()=>setModalImgPath("/images/laptop.webp")} className='flex justify-center items-center relative'>
+                      <img className='w-3/4 object-center' src="/images/laptop.webp" alt="laptop" />
+                    </div>
+                  </div>
+                </Slider>
+
               </div>
-              <div className='flex gap-x-6 mt-8'>
-                <div className='w-23.5 h-20.5 rounded-[10px] bg-[#D9D9D9] overflow-hidden cursor-pointer'></div>
-                <div className='w-23.5 h-20.5 rounded-[10px] bg-[#D9D9D9] overflow-hidden cursor-pointer'></div>
-                <div className='w-23.5 h-20.5 rounded-[10px] bg-[#D9D9D9] overflow-hidden cursor-pointer'></div>
+              <div className='h-20.5 w-82.5 mt-8 secondSlider overflow-hidden'>
+
+                <Slider {...settingsTwo} asNavFor={nav1} ref={slider => (sliderRef2 = slider)}>
+                  <div>
+                    <div onClick={() => setModalImgPath("/images/productImage.webp")} className='flex overflow-hidden justify-center items-center mx-3'>
+                      <img className='border border-[#AFAFAF] w-23.5 h-20.5 object-cover rounded-[10px] p-3' src="/images/productImage.webp" alt="productImage" />
+                    </div>
+                  </div>
+                  <div>
+                    <div onClick={() => setModalImgPath("/images/camera.webp")} className='flex overflow-hidden justify-center items-center mx-3'>
+                      <img className='border border-[#AFAFAF] w-23.5 h-20.5 object-cover rounded-[10px] p-3' src="/images/camera.webp" alt="camera" />
+                    </div>
+                  </div>
+                  <div>
+                    <div onClick={() => setModalImgPath("/images/laptop.webp")} className='flex overflow-hidden justify-center items-center mx-3'>
+                      <img className='border border-[#AFAFAF] w-23.5 h-20.5 object-cover rounded-[10px] p-3' src="/images/laptop.webp" alt="laptop" />
+                    </div>
+                  </div>
+                </Slider>
               </div>
             </div>
             {/* ====== Product Info ====== */}
@@ -137,7 +200,7 @@ const ProductDetailsPage = () => {
 
         {/* Product Details */}
         <div className='mt-25 pb-20 border-b border-[#CBCBCB]'>
-          <ProductDetails/>
+          <ProductDetails />
         </div>
         {/* ========= Related Products ========= */}
         <div className='my-16'>
@@ -154,6 +217,13 @@ const ProductDetailsPage = () => {
           </div>
         </div>
       </Container>
+      {/* ======== Full Screen Img Modal ======== */}
+      {activeModal &&
+        <div className='fixed top-0 left-0 h-screen w-full bg-black/80 flex justify-center items-center z-50'>
+          <IoCloseOutline onClick={() => setActiveModal(false)} className='text-primary bg-black/40 text-4xl absolute top-10 right-10' />
+          <img className='w-200 object-contain' src={modalImgPath} alt={modalImgPath} />
+        </div>
+      }
     </div>
   )
 }
