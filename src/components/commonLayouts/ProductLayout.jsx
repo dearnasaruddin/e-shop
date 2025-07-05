@@ -33,7 +33,7 @@ const ProductLayout = ({ catagory = 'watch', title = 'Orange Watch 12 High Quali
   }, [availableQuantity])
 
   return (
-    <div onMouseEnter={handleHoverStart} onMouseLeave={handleHoverEnd} className={` ${springSale ? 'p-10 bg-[#EAEAEA] hover:bg-white' : 'border border-transparent hover:border-[#CBCBCB]'} rounded-[10px]  duration-300 group cursor-pointer ${listView ? 'flex gap-12 px-12 py-5' : 'px-5.5 pt-6 pb-11'} relative`}>
+    <div onMouseEnter={handleHoverStart} onMouseLeave={handleHoverEnd} className={` ${springSale ? '!p-10 bg-[#EAEAEA] hover:bg-white' : 'border border-transparent hover:border-[#CBCBCB]'} rounded-[10px]  duration-300 group cursor-pointer ${listView ? 'flex gap-12 px-12 py-5' : 'px-5.5 pt-6 pb-11'} relative`}>
 
       {/* Image part */}
       <div className='relative'>
@@ -44,9 +44,12 @@ const ProductLayout = ({ catagory = 'watch', title = 'Orange Watch 12 High Quali
 
 
       {/* details part */}
-      <div className='text-secondary pt-10' >
+      <div className={`text-secondary ${!listView && 'pt-10'}`} >
         <p className='font-montserrat font-normal text-sm uppercase leading-5 tracking-[5px] mb-4'>{catagory}</p>
         <Link to={'#'} className={`font-poppins font-semibold text-xl leading-7.5 group-hover:text-primary group-hover:underline duration-300 ${newProduct && 'w-59'}`}>{title}</Link>
+        {listView && 
+        <p className='font-montserrat max-w-150 mt-1 leading-6'>consectetur adipisicing elit. Selaborum maiores repellendus aliquam sit modi vel voluptatum inventore ea excepturi magnam dicta!</p>
+        }
         <div className='flex items-center gap-x-2 mt-1'>
           <div className="flex items-center text-base text-[#FED550]">
             {ratingValue.map((item, index) => (

@@ -14,7 +14,7 @@ function SampleNextArrow(props) {
     return (
         <div
             className={className}
-            style={{ ...style, display: "flex", justifyContent: 'center', alignItems: 'center', color: '#303030', fontSize: '10px', width: '70px', height: '70px', borderRadius: '50%', border: '1px solid #303030', zIndex: '5', right: '-18px' }}
+            style={{ ...style, display: "flex", justifyContent: 'center', alignItems: 'center', color: '#303030', fontSize: '10px', width: '70px', height: '70px', borderRadius: '50%', border: '1px solid #303030', zIndex: '5', right: '-18px', background: '#F4F4F4' }}
             onClick={onClick}
         > <ArrowDownIcon rotate='270deg' width='26' height='26' /> </div>
     );

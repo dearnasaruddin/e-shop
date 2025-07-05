@@ -18,25 +18,19 @@ const Pagination = ({ totalItems, itemPerPage, currentPage, onPageChange }) => {
     }
 
     const pageNumbers = []
-    // for (let i = startPage; i <= endPage; i++) {
-    //     pageNumbers.push(i)
-    // }
 
-
-
-    if (currentPage > 3 && currentPage < totalPages - 3) {
-
+    if (currentPage > 4 && currentPage < totalPages - 3) {
         for (let i = currentPage - 2; i <= currentPage + 2; i++) {
             pageNumbers.push(i)
         }
 
-        if (currentPage > 3) {
+        if (currentPage > 4) {
             pageNumbers.unshift('...')
         }
         if (currentPage < totalPages - 3) {
             pageNumbers.push('...')
         }
-    } else if (currentPage > 3) {
+    } else if (currentPage > 4) {
         for (let i = currentPage - 2; i <endPage; i++) {
             pageNumbers.push(i)
         }
@@ -46,16 +40,11 @@ const Pagination = ({ totalItems, itemPerPage, currentPage, onPageChange }) => {
             for (let i = 1 + 1; i <= currentPage + 3; i++) {
                 pageNumbers.push(i)
             }
-        } else if (currentPage == 2) {
+        } else if (currentPage => 2) {
             for (let i = 1 + 1; i <= currentPage + 2; i++) {
                 pageNumbers.push(i)
             }
-        } else {
-            for (let i = 1 + 1; i <= currentPage + 1; i++) {
-                pageNumbers.push(i)
-            }
-
-        }
+        } 
         pageNumbers.push('...')
     }
 
@@ -67,7 +56,7 @@ const Pagination = ({ totalItems, itemPerPage, currentPage, onPageChange }) => {
             <div className='flex justify-center items-center gap-x-7.5'>
                 <button onClick={() => onPageChange(1)} className={`size-12 flex justify-center items-center rounded-sm font-poppins font-semibold text-xl leading-7.5 text-secondary cursor-pointer ${currentPage == 1 ? 'bg-primary text-white' : 'hover:bg-gray-200'}`}>1</button>
                 {pageNumbers.map((pageNumber, index) => (
-                    <button key={index} onClick={() => onPageChange(pageNumber)} className={`size-12 flex justify-center items-center rounded-sm font-poppins font-semibold text-xl leading-7.5 text-secondary cursor-pointer ${currentPage == pageNumber ? 'bg-primary text-white' : 'hover:bg-gray-200'}`} >{pageNumber}</button>
+                    <button key={index} disabled={pageNumber == '...'} onClick={() => onPageChange(pageNumber)} className={`size-12 flex justify-center items-center rounded-sm font-poppins font-semibold text-xl leading-7.5 text-secondary  ${currentPage == pageNumber ? 'bg-primary text-white cursor-pointer' : pageNumber != '...' && 'cursor-pointer hover:bg-gray-200'}`} >{pageNumber}</button>
                 ))}
                 <button onClick={() => onPageChange(totalPages)} className={`size-12 flex justify-center items-center rounded-sm font-poppins font-semibold text-xl leading-7.5 text-secondary cursor-pointer ${currentPage == totalPages ? 'bg-primary text-white' : 'hover:bg-gray-200'}`}>{totalPages}</button>
             </div>

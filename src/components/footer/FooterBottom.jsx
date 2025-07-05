@@ -24,36 +24,36 @@ const FooterBottom = () => {
             <div className='text-secondary'>
               <h4 className='font-poppins font-semibold text-xl leading-7.5'>Links</h4>
               <ul className='mt-6 font-montserrat font-normal text-base leading-6 flex flex-col gap-y-3'>
-                <li><Link to={"/product-list"}>Products List</Link></li>
-                <li><Link to={"#"}>Order Tracking</Link></li>
-                <li><Link to={"#"}>Products Guide</Link></li>
-                <li><Link to={"/cart"}>Shopping Cart</Link></li>
-                <li><Link to={"#"}>Tech Blog</Link></li>
+                <li><Link className='hover:text-primary' to={"/product-list"}>Products List</Link></li>
+                <li><Link className='hover:text-primary' to={"#"}>Order Tracking</Link></li>
+                <li><Link className='hover:text-primary' to={"#"}>Products Guide</Link></li>
+                <li><Link className='hover:text-primary' to={"/cart"}>Shopping Cart</Link></li>
+                <li><Link className='hover:text-primary' to={"#"}>Tech Blog</Link></li>
               </ul>
             </div>
 
             <div className='text-secondary'>
               <h4 className='font-poppins font-semibold text-xl leading-7.5'>Supports</h4>
               <ul className='mt-6 font-montserrat font-normal text-base leading-6 flex flex-col gap-y-3'>
-                <li><Link to={"#"}>About Us</Link></li>
-                <li><Link to={"#"}>Privacy Policy</Link></li>
-                <li><Link to={"#"}>Return Policy</Link></li>
-                <li><Link to={"#"}>Help Centre</Link></li>
-                <li><Link to={"#"}>Store Locations</Link></li>
-                <li><Link to={"#"}>Careers</Link></li>
+                <li><Link className='hover:text-primary' to={"#"}>About Us</Link></li>
+                <li><Link className='hover:text-primary' to={"#"}>Privacy Policy</Link></li>
+                <li><Link className='hover:text-primary' to={"#"}>Return Policy</Link></li>
+                <li><Link className='hover:text-primary' to={"#"}>Help Centre</Link></li>
+                <li><Link className='hover:text-primary' to={"#"}>Store Locations</Link></li>
+                <li><Link className='hover:text-primary' to={"#"}>Careers</Link></li>
               </ul>
             </div>
 
             <div className='text-secondary'>
               <h4 className='font-poppins font-semibold text-xl leading-7.5'>Categories</h4>
               <ul className='mt-6 font-montserrat font-normal text-base leading-6 flex flex-col gap-y-3'>
-                <li><Link to={"#"}>Computers & Tablets</Link></li>
-                <li><Link to={"#"}>Mobile Phones & Accessories</Link></li>
-                <li><Link to={"#"}>TV & Home Theater</Link></li>
-                <li><Link to={"#"}>Audio & Headphones</Link></li>
-                <li><Link to={"#"}>Cameras & Camcorders</Link></li>
-                <li><Link to={"#"}>Gaming Equipment</Link></li>
-                <li><Link to={"#"}>Home Appliances</Link></li>
+                <li><Link className='hover:text-primary' to={"#"}>Computers & Tablets</Link></li>
+                <li><Link className='hover:text-primary' to={"#"}>Mobile Phones & Accessories</Link></li>
+                <li><Link className='hover:text-primary' to={"#"}>TV & Home Theater</Link></li>
+                <li><Link className='hover:text-primary' to={"#"}>Audio & Headphones</Link></li>
+                <li><Link className='hover:text-primary' to={"#"}>Cameras & Camcorders</Link></li>
+                <li><Link className='hover:text-primary' to={"#"}>Gaming Equipment</Link></li>
+                <li><Link className='hover:text-primary' to={"#"}>Home Appliances</Link></li>
               </ul>
             </div>
 
@@ -67,9 +67,9 @@ const FooterBottom = () => {
             <div className='mt-18'>
               <h4 className='font-poppins font-semibold text-xl leading-7.5'>Follow Us</h4>
               <ul className='mt-6 font-montserrat font-normal text-base leading-6 flex flex-col gap-y-3'>
-                <li><Link to={"https://x.com/"} target='_blank'>Twitter</Link></li>
-                <li><Link to={"https://www.instagram.com/"} target='_blank'>Instagram</Link></li>
-                <li><Link to={"https://web.facebook.com/"} target='_blank'>Facebook</Link></li>
+                <li><Link className='hover:text-primary' to={"https://x.com/"} target='_blank'>Twitter</Link></li>
+                <li><Link className='hover:text-primary' to={"https://www.instagram.com/"} target='_blank'>Instagram</Link></li>
+                <li><Link className='hover:text-primary' to={"https://web.facebook.com/"} target='_blank'>Facebook</Link></li>
               </ul>
             </div>
           </div>
@@ -78,9 +78,9 @@ const FooterBottom = () => {
         <div className='flex justify-between items-center text-[#646464] font-montserrat font-normal text-sm leading-5 pt-2 pb-20'>
           <p>Copyright © 2023 E-Shop. All Rights Reserved.</p>
           <ul className='flex gap-x-5'>
-            <li><Link to={""}>Privacy Policy</Link></li>
-            <li className="relative before:absolute after:absolute before:h-3.5 after:h-3.5 before:w-[1px] after:w-[1px] before:top-1/2 after:top-1/2 before:-translate-y-1/2 after:-translate-y-1/2 before:-left-2.5 after:-right-2.5 before:bg-[#646464] after:bg-[#646464]"><Link to={""}>Terms & Condition</Link></li>
-            <li><Link to={""}>Sitemap</Link></li>
+            <li><Link className='hover:text-primary' to={""}>Privacy Policy</Link></li>
+            <li className="relative before:absolute after:absolute before:h-3.5 after:h-3.5 before:w-[1px] after:w-[1px] before:top-1/2 after:top-1/2 before:-translate-y-1/2 after:-translate-y-1/2 before:-left-2.5 after:-right-2.5 before:bg-[#646464] after:bg-[#646464]"><Link className='hover:text-primary' to={""}>Terms & Condition</Link></li>
+            <li><Link className='hover:text-primary' to={""}>Sitemap</Link></li>
           </ul>
         </div>
       </Container>
