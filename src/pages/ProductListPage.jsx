@@ -211,6 +211,7 @@ const ProductListPage = () => {
                     </div>
                 ))}
               </div>
+              
               {/* Pagination */}
               <div className='mt-20'>
                 <Pagination totalItems={dummyProductList.length} itemPerPage={itemPerPage} currentPage={currentPage} onPageChange={setCurrentPage} />
