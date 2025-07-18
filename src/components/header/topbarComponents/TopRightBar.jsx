@@ -47,7 +47,7 @@ const TopRightBar = () => {
     })
 
     return (
-        <div className='flex items-center gap-x-6 font-montserrat font-normal text-sm leading-5 text-secondary'>
+        <div className='flex items-center md:justify-start md:gap-x-6 font-montserrat font-normal text-sm leading-5 text-secondary mt-3 md:mt-0'>
 
             {/* =================== Currency =================== */}
             <div>
@@ -71,7 +71,7 @@ const TopRightBar = () => {
 
                     {/* ====== options ====== */}
                     {isCurrencyDropdownOpen &&
-                        <ul className='w-18 absolute top-10.5 -left-2 bg-white border border-gray-300 z-10'>
+                        <ul className='w-18 absolute top-10.5 left-0 md:-left-2 bg-white border border-gray-300 z-10'>
                             <li onClick={() => setSelectedCurrency("USD")} className='flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer'>USD</li>
                             <li onClick={() => setSelectedCurrency("BDT")} className='flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer'>BDT</li>
                         </ul>
@@ -82,7 +82,7 @@ const TopRightBar = () => {
 
 
             {/* =================== Language =================== */}
-            <div className='w-full px-6 relative before:absolute before:h-8 before:w-[1px] before:-left-0 before:top-1/2 before:-translate-y-1/2 before:bg-[#CBCBCB] after:absolute after:h-8 after:w-[1px] after:-right-0 after:top-1/2 after:-translate-y-1/2 after:bg-[#CBCBCB] cursor-pointer'>
+            <div className='w-40 md:w-full px-6 relative before:absolute before:h-5 md:before:h-8 before:w-[1px] before:left-2 md:before:-left-0 before:top-1/2 before:-translate-y-1/2 before:bg-[#CBCBCB] md:after:absolute md:after:h-8 md:after:w-[1px] md:after:-right-0 md:after:top-1/2 md:after:-translate-y-1/2 md:after:bg-[#CBCBCB] '>
                 <select
                     className='hidden'
                     name="country"
@@ -99,7 +99,7 @@ const TopRightBar = () => {
 
 
                 {/* ================ Custom Dropdown ================ */}
-                <div onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)} className="relative flex items-center gap-x-2">
+                <div onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)} className="relative flex items-center gap-x-2 cursor-pointer">
                     {selectedCountry ?
                         <>
                             <img className='h-4 w-7' src={selectedCountry?.flag} alt={selectedCountry.name} />
@@ -113,7 +113,7 @@ const TopRightBar = () => {
 
                 {/* ====== options ====== */}
                 {isLangDropdownOpen &&
-                    <ul ref={languageDropdownRef} className='w-10/12 absolute top-10.5 left-1/2 -translate-x-1/2 bg-white border border-gray-300 z-10'>
+                    <ul ref={languageDropdownRef} className='md:w-10/12 absolute top-10.5 md:left-1/2 md:-translate-x-1/2 bg-white border border-gray-300 z-10'>
                         {countries.map((country) => (
                             <li onClick={() => handleSelectLang(country)} className='flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer' key={country.value}>
                                 <img className='h-4 w-7' src={country?.flag} alt={country.name} />{country.name}
@@ -126,7 +126,7 @@ const TopRightBar = () => {
 
 
             {/* =================== Social Media =================== */}
-            <div className='flex gap-x-6 items-center text-base'>
+            <div className='flex gap-x-6 items-center text-base ml-auto md:ml-0'>
                 <Link to={'https://web.facebook.com/'} target='_blank'><FaFacebookF /></Link>
                 <Link to={'https://x.com/'} target='_blank'><FaTwitter /></Link>
                 <Link to={'https://www.instagram.com/'} target='_blank'><FaInstagram /></Link>

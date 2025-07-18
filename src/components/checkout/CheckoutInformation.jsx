@@ -9,6 +9,7 @@ const CheckoutInformation = () => {
 
     let [activeCountry, setActiveCountry] = useState(false)
     let [selectedCountry, setSelectedCountry] = useState('')
+    let [searchCountry, setSearchCountry] = useState([])
     let [activeState, setActiveState] = useState(false)
     let [selectedState, setSelectedState] = useState('')
     let [activeCity, setActiveCity] = useState(false)
@@ -55,6 +56,14 @@ const CheckoutInformation = () => {
     let cities = states[0]?.states.filter((item) => item.state == selectedState)
 
 
+    let [inputValue, setInputValue] = useState('')
+    let handleInputValue = (value) => {
+        const searchResult = countries.filter((item) => item.countryName.toLowerCase().includes(value.toLowerCase()))
+        setSearchCountry(searchResult)
+        // setInputValue(value)
+    }
+
+    console.log(searchCountry)
     return (
         < div >
             <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-secondary mb-10' > Billing Details</h3 >
@@ -80,7 +89,7 @@ const CheckoutInformation = () => {
                 </div>
                 <div className='flex gap-x-4 mt-8'>
                     <div className='grow relative'>
-                        <InputBox value={selectedCountry} label='Country' required={true} placeholder='Indonesia' />
+                        <InputBox value={selectedCountry} label='Country' required={true} placeholder='Indonesia' handleInputValue={handleInputValue} />
 
                         {/* Countries Dropdown */}
                         <span onClick={() => setActiveCountry(!activeCountry)} className='absolute bottom-7 right-6.5 cursor-pointer'><ArrowDownIcon width='24' height='24' /></span>
@@ -92,7 +101,7 @@ const CheckoutInformation = () => {
 
                     </div>
                     <div className='grow relative'>
-                        <InputBox label='State' value={selectedState} required={true} placeholder='Kalimantan Timur' />
+                        <InputBox label='State' value={selectedState} required={true} placeholder='Kalimantan Timur' handleInputValue={handleInputValue} />
 
                         {/* State Dropdown */}
                         <span onClick={() => setActiveState(!activeState)} className='absolute bottom-7 right-6.5 cursor-pointer'><ArrowDownIcon width='24' height='24' /></span>
@@ -109,12 +118,12 @@ const CheckoutInformation = () => {
                 </div>
                 <div className='flex gap-x-4 my-8'>
                     <div className='grow relative'>
-                        <InputBox label='City' value={selectedCity} required={true} placeholder='Samarinda' />
+                        <InputBox label='City' value={selectedCity} required={true} placeholder='Samarinda' handleInputValue={handleInputValue} />
 
                         {/* City Dropdown */}
                         <span onClick={() => setActiveCity(!activeCity)} className='absolute bottom-7 right-6.5 cursor-pointer'><ArrowDownIcon width='24' height='24' /></span>
                         {activeCity &&
-                            <ul ref={cityDropdownRef} className={`max-h-56 absolute ${ selectedState ? '-bottom-52 right-6 py-1.5 border-[#CBCBCB] text-secondary overflow-auto' : '-bottom-6 right-6 border-red-500 text-red-500 overflow-hidden'} z-10 font-montserrat  bg-white shadow-2xl border  rounded-md`}>
+                            <ul ref={cityDropdownRef} className={`max-h-56 absolute ${selectedState ? '-bottom-52 right-6 py-1.5 border-[#CBCBCB] text-secondary overflow-auto' : '-bottom-6 right-6 border-red-500 text-red-500 overflow-hidden'} z-10 font-montserrat  bg-white shadow-2xl border  rounded-md`}>
                                 {selectedState ?
                                     cities[0].cities.map((item, index) => <li onClick={() => handleSelectedCity(item)} key={index} className='py-2.5 pl-5 pr-12 hover:bg-gray-300 cursor-pointer'>{item}</li>)
                                     :

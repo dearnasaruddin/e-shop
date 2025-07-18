@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Banner = () => {
     return (
-        <div className='mt-8'>
+        <div className='mt-1 sm:mt-8'>
             <Container>
                 <Link to={'/'}><img src="images/banner.webp" alt="" /></Link>
             </Container>

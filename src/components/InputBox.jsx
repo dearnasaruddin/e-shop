@@ -1,13 +1,8 @@
 import React, { useState } from 'react'
 import { FaStarOfLife } from 'react-icons/fa6'
 
-const InputBox = ({ label = 'Name', placeholder = 'Enter your', type = 'text', required = false, textArea = false, minHeight = '240px', value }) => {
+const InputBox = ({ label = 'Name', placeholder = 'Enter your', type = 'text', required = false, textArea = false, minHeight = '240px', value, handleInputValue }) => {
 
-    let [inputValue, setInputValue] = useState('')
-    let handleInputValue = (e) => {
-        // value = ''
-        setInputValue(e)
-    }
 
     return (
         <>
@@ -15,7 +10,7 @@ const InputBox = ({ label = 'Name', placeholder = 'Enter your', type = 'text', r
             {textArea ?
                 <textarea id={label} style={{ minHeight: minHeight }} className='w-full py-6 px-8 font-montserrat font-normal text-xl leading-7.5 text-[#646464] border border-[#CBCBCB] rounded-[10px]' type="text" placeholder={placeholder} />
                 :
-                <input onChange={(e) => handleInputValue(e.target.value)} value={inputValue ? inputValue : value} id={label} className='w-full py-6 px-8 font-montserrat font-normal text-xl leading-7.5 placeholder:text-[#646464] text-black border border-[#CBCBCB] rounded-[10px]' type={type} placeholder={placeholder} />
+                <input onChange={(e) => handleInputValue(e.target.value)} value={value} id={label} className='w-full py-6 px-8 font-montserrat font-normal text-xl leading-7.5 placeholder:text-[#646464] text-black border border-[#CBCBCB] rounded-[10px]' type={type} placeholder={placeholder} />
             }
         </ >
     )

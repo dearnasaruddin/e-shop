@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
-import categoriesSideBarSlice from './slices/categoriesSideBarSlice'
+import categoriesSideBarReducer from './slices/categoriesSideBarSlice'
+import  navSideBarReducer  from './slices/navSideBarSlice'
 
 export const store = configureStore({
     reducer: {
-        handleCategoriesActive: categoriesSideBarSlice
+        handleCategoriesSideBar: categoriesSideBarReducer,
+        handleNavSideBar: navSideBarReducer
     },
 })

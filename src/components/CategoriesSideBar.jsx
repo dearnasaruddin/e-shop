@@ -9,7 +9,7 @@ const CategoriesSideBar = () => {
 
     const categoriesRef = useRef(null)
     const dispatch = useDispatch()
-    const selector = useSelector((state) => state.handleCategoriesActive.value)
+    const selector = useSelector((state) => state.handleCategoriesSideBar.value)
 
     const handleCategoriesSideBar = () => {
         dispatch(disableSideBar())

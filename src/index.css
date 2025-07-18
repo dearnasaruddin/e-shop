@@ -5,6 +5,8 @@
   --font-montserrat: "Montserrat", "sans-serif";
   --color-primary: #FF624C;
   --color-secondary: #303030;
+  --breakpoint-xxs: 375px;
+  --breakpoint-xs: 480px;
 }
 
 .iconParent:hover .addtocarticon path {
@@ -51,5 +53,5 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .secondSlider .slick-current img {
-  border: 2px solid #FF624C ;
+  border: 2px solid #FF624C;
 }
