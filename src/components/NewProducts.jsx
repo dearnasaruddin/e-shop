@@ -44,11 +44,11 @@ const NewProducts = () => {
         <div>
             <Container>
                 <div>
-                    <div className="flex justify-between items-center mb-12">
-                        <h2 className='font-poppins font-semibold text-[36px] text-secondary leading-11.6'>New Products</h2>
+                    <div className="md:flex justify-between items-center mb-6 md:mb-12">
+                        <h2 className='font-poppins font-semibold text-3xl md:text-4xl mb-2.5 md:mb-0 text-secondary leading-11.6'>New Products</h2>
                         <div className='flex items-center gap-x-4'>
                             <p className='font-montserrat font-normal text-base leading-6 text-secondary'>Sort by</p>
-                            <div className='w-58.5 relative cursor-pointer'>
+                            <div className='md:w-58.5 relative cursor-pointer'>
                                 {/* <select
                                     className='hidden'
                                     name="country"
@@ -79,7 +79,7 @@ const NewProducts = () => {
 
                                 {/* ====== options ====== */}
                                 {isCategoriesDropdownOpen &&
-                                    <ul ref={catagoriesDropdownRef} className='w-[110%] absolute top-10 -left-5 py-1 bg-white border border-gray-300 z-10 shadow-xl'>
+                                    <ul ref={catagoriesDropdownRef} className='min-w-58 md:w-[110%] absolute top-10 -left-5 py-1 bg-white border border-gray-300 z-10 shadow-xl'>
                                         {categoryArr.map((item, index) => (
                                             <li onClick={() => handleCategoriesDropdown(item)} key={index} className='font-montserrat font-normal text-base capitalize whitespace-nowrap flex items-center gap-2 px-5 py-2 hover:bg-gray-100 hover:text-primary hover:font-medium cursor-pointer'>{item}</li>
                                         ))}
@@ -90,14 +90,16 @@ const NewProducts = () => {
 
                         </div>
                     </div>
-                    <div className="flex gap-x-6">
+                    {/* ======= Product Showcasing ======= */}
+                    <div className="flex flex-wrap md:flex-nowrap gap-1 md:gap-x-6">
                         {dummyProducts.map((item, index) => (
-                            <div key={index} className='w-71'>
+                            <div key={index} className='max-w-[49%] md:w-71 '>
                                 <ProductLayout catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} productImage={item.productImage} newProduct={true} />
                             </div>
                         ))}
                     </div>
-                    <div className='flex justify-center mt-16 mb-20'>
+                    {/* ======= Load More Button ======= */}
+                    <div className='flex justify-center mt-6 md:mt-16 mb-8 md:mb-20'>
                         <Button content='Load More' bg='transparent' textColor='#FF624C' border='1px solid #FF624C' />
                     </div>
                 </div>

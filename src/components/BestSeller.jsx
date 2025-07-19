@@ -70,23 +70,23 @@ const BestSeller = () => {
     ]
 
     return (
-        <div className='my-20'>
+        <div className='my-10 md:my-20'>
             <Container>
-                <div className="flex justify-between">
-                    <div className='max-w-227'>
-                        <div className="flex justify-between mb-12">
-                            <h2 className='font-poppins font-semibold text-[36px] text-secondary leading-11.5'>Best Seller</h2>
+                <div className="md:flex justify-between">
+                    <div className='md:max-w-227'>
+                        <div className="flex justify-between mb-8 md:mb-12">
+                            <h2 className='font-poppins font-semibold text-3xl md:text-4xl text-secondary md:leading-11.5'>Best Seller</h2>
                             <Link to={'#'} className='self-end mb-0.5 flex items-center gap-x-4 text-primary font-montserrat font-bold text-base leading-6'>View All<LongArrowRight /></Link>
                         </div>
-                        <div className=' flex flex-wrap gap-x-6'>
+                        <div className='flex flex-wrap gap-1 md:gap-x-6'>
                             {dummyProducts.map((item, index) => (
-                                <div key={index} className='max-w-71.5'>
+                                <div key={index} className='max-w-[49%] md:max-w-71.5'>
                                     <ProductLayout catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} productImage={item.productImage} />
                                 </div>
                             ))}
                         </div>
                     </div>
-                    <div className='w-136'>
+                    <div className='md:w-136 hidden md:block'>
                         <Link> <img className='w-full' src="images/bestSeller.webp" alt="bestSeller.webp" /></Link>
                     </div>
                 </div>

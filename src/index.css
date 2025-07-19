@@ -29,9 +29,6 @@
   align-items: start;
 }
 
-.springSale.slick-slider .slick-slide.slick-active {
-  width: 486px !important;
-}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

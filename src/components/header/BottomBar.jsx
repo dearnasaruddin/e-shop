@@ -88,7 +88,7 @@ const BottomBar = () => {
 
 
 
-      <div className={`bg-white h-screen w-full fixed top-0 z-10 pl-6 pt-10 pr-14 sm:hidden ${selector ? 'left-0' : '-left-full'} duration-200`}>
+      <div className={`bg-white h-screen w-full fixed top-0 z-50 pl-6 pt-10 pr-14 sm:hidden ${selector ? 'left-0' : '-left-full'} duration-200`}>
         <IoCloseOutline onClick={() => dispatch(disableNavSideBar())} className='absolute top-5 right-6 text-3xl cursor-pointer' />
         <div className="font-montserrat font-bold text-base leading-6 text-secondary">
           <ul className=''>

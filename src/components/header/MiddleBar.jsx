@@ -27,6 +27,18 @@ const MiddleBar = () => {
     }
   })
 
+  // useEffect(() => {
+  //   const handleScroll = (e) => {
+  //     console.log(e)
+  //   }
+
+  //   document.addEventListener('scroll', handleScroll)
+
+  //   return () => {
+  //     document.removeEventListener('scroll', handleScroll)
+  //   }
+  // })
+
   const handleSearch = () => {
     setActiveSearch(true)
   }
@@ -36,6 +48,7 @@ const MiddleBar = () => {
   }
 
   return (
+    // <div className='sticky top-0 left-0 bg-white shadow-lg z-50'>
     <div>
       <Container>
         <div className="flex justify-between items-center py-2 md:py-6 font-montserrat font-normal text-sm leading-5 text-secondary">
