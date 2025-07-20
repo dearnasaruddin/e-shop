@@ -45,7 +45,7 @@ const Faq = () => {
 
             <div >
               <h2 className='md:max-w-76.5 font-poppins font-semibold text-3xl md:text-4xl leading-11.5 text-secondary'>Frequently Asked Questions</h2>
-              <p className='max-w-78 md:max-w-98 font-montserrat font-normal text-lg md:text-xl md:leading-7.5 text-secondary mt-3 md:mt-6 mb-6 md:mb-16'>Questions that get asked the most by our clients. Get any burning questions?</p>
+              <p className='max-w-68 md:max-w-98 font-montserrat font-normal text-base md:text-xl leading-7 md:leading-7.5 text-secondary mt-3 md:mt-6 mb-6 md:mb-16'>Questions that get asked the most by our clients. Get any burning questions?</p>
               <Button content='Ask A Question' />
             </div>
           </div>
