@@ -80,7 +80,7 @@ const SpringSale = () => {
                     {/* ========== Counter / Timer ========== */}
                     <div className='md:mt-42.5'>
                         <h2 className='font-poppins font-bold text-4xl md:text-[56px] md:leading-17 text-secondary'>Spring Sale</h2>
-                        <div className='flex items-center gap-x-3 md:gap-x-6 mt-10 md:mb-18'>
+                        <div className='flex items-center gap-x-1 xxs:gap-x-3 md:gap-x-6 mt-10 md:mb-18'>
                             <div className='text-center'>
                                 <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary'>{timeLeft.days}</h3>
                                 <p className='font-montserrat font-normal text-base leading-6 text-secondary mt-2'>Days</p>
