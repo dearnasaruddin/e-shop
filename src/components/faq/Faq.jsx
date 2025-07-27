@@ -32,7 +32,7 @@ const Faq = () => {
         <div className='flex md:gap-x-28 gap-y-12 md:gap-y-0 max-md:flex-col-reverse'>
 
 
-          <div className='md:w-231.5 flex flex-col gap-y-3 md:gap-y-6'>
+          <div className='md:w-231.5 flex flex-col gap-y-4 md:gap-y-6'>
             {accordionData.map((item, index) => (
               <AccordionItem key={index} title={item.title} content={item.content} onToggle={() => setOpenAccordion(openAccordion === index ? null : index)} isOpen={openAccordion === index} />
             ))}
