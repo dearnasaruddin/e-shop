@@ -206,7 +206,7 @@ const ProductDetailsPage = () => {
         <div className='my-16'>
           <div className="flex justify-between items-center mb-12">
             <h2 className='font-poppins font-semibold text-[36px] text-secondary leading-11.6'>Related Products</h2>
-            <Link to={'#'} className='self-end mb-0.5 flex items-center gap-x-4 text-primary font-montserrat font-bold text-base leading-6'>View All<LongArrowRight /></Link>
+            <Link to={'/product-list'} className='self-end mb-0.5 flex items-center gap-x-4 text-primary font-montserrat font-bold text-base leading-6'>View All<LongArrowRight /></Link>
           </div>
           <div className="flex gap-x-6">
             {dummyProducts.map((item, index) => (

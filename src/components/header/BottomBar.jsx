@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Container from '../commonLayouts/Container'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { FaBars } from "react-icons/fa6";
 import CategoriesSideBar from '../CategoriesSideBar';
 import { useDispatch, useSelector } from 'react-redux';
@@ -15,8 +15,9 @@ const BottomBar = () => {
   const dispatch = useDispatch()
   const selector = useSelector((state) => state.handleNavSideBar.value)
   const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false)
-  const [isCategoriesDropdownOpen, setIsCtegoriesDropdownOpen] = useState(false)
+  const [isCategoriesDropdownOpen, setIsCategoriesDropdownOpen] = useState(false)
   const dropdownRef = useRef(null)
+  const { hash, pathname } = useLocation();
 
   const handleProductDropdown = () => {
     setIsProductDropdownOpen(!isProductDropdownOpen)
@@ -38,37 +39,49 @@ const BottomBar = () => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
-  })
+  }, [dropdownRef])
+
+  // ==================== Scroll to Section & Smooth Scrolling =======================
+  useEffect(() => {
+    if (hash) {
+      const sectionElement = document.querySelector(hash);
+      if (sectionElement) {
+        sectionElement.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [hash, pathname])
 
   return (
     <>
-      <div className='bg-primary hidden sm:block'>
+      <div className='bg-primary hidden sm:block sm:sticky sm:top-0 sm:z-20'>
         <CategoriesSideBar />
         <Container>
           <div className="flex items-center justify-between py-6 font-montserrat font-bold text-base leading-6 text-white">
             <ul className='flex items-center gap-x-20'>
               <li onClick={handleCategoriesSideBar} className='flex items-center gap-x-4 cursor-pointer'> <FaBars className='text-xl' /> <span>All Categories</span></li>
-              <li onClick={handleProductDropdown} ref={dropdownRef} className='flex items-center gap-x-2 cursor-pointer relative'>
+              <li onClick={handleProductDropdown} className='flex items-center gap-x-2 cursor-pointer relative'>
                 {/* <span>Products</span><FaChevronDown /> */}
                 <span>Products</span><ArrowDownIcon color='#ffffff' />
                 {/* ======== Product Dropdown ======== */}
 
                 {isProductDropdownOpen &&
-                  <ul className='absolute top-10.5 -left-4 z-10 shadow-xl bg-white font-montserrat font-normal whitespace-nowrap text-base text-secondary rounded-lg border border-[#CBCBCB] py-1'>
+                  <ul ref={dropdownRef} className='absolute top-10.5 -left-4 z-10 shadow-xl bg-white font-montserrat font-normal whitespace-nowrap text-base text-secondary rounded-lg border border-[#CBCBCB] py-1'>
                     <li className='hover:bg-gray-200'>
                       <Link className='py-2 px-4 block' to={'/product-list'}>All Products</Link>
                     </li>
                     <li className=' hover:bg-gray-200'>
-                      <Link className='py-2 px-4 block' to={'#'}>Featured Products</Link>
+                      <Link className='py-2 px-4 block' to={'#featured-products'}>Featured Products</Link>
                     </li>
                     <li className=' hover:bg-gray-200'>
-                      <Link className='py-2 px-4 block' to={'#'}>New Products</Link>
+                      <Link className='py-2 px-4 block' to={'#new-products'}>New Products</Link>
                     </li>
                     <li className=' hover:bg-gray-200'>
-                      <Link className='py-2 px-4 block' to={'#'}>Spring Sale</Link>
+                      <Link className='py-2 px-4 block' to={'#spring-sale'}>Spring Sale</Link>
                     </li>
                     <li className=' hover:bg-gray-200'>
-                      <Link className='py-2 px-4 block' to={'#'}>Best Seller</Link>
+                      <Link className='py-2 px-4 block' to={'#best-seller'}>Best Seller</Link>
                     </li>
                   </ul>
                 }
@@ -92,7 +105,7 @@ const BottomBar = () => {
         <IoCloseOutline onClick={() => dispatch(disableNavSideBar())} className='absolute top-5 right-6 text-3xl cursor-pointer' />
         <div className="font-montserrat font-bold text-base leading-6 text-secondary">
           <ul className=''>
-            <li onClick={() => setIsCtegoriesDropdownOpen(!isCategoriesDropdownOpen)} className='flex items-center gap-x-2 cursor-pointer relative hover:bg-gray-200 py-2 px-4'> <span>All Categories</span><ArrowDownIcon /></li>
+            <li onClick={() => setIsCategoriesDropdownOpen(!isCategoriesDropdownOpen)} className='flex items-center gap-x-2 cursor-pointer relative hover:bg-gray-200 py-2 px-4'> <span>All Categories</span><ArrowDownIcon /></li>
 
             {/* ======== Categories Dropdown ======== */}
             {isCategoriesDropdownOpen &&

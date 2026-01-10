@@ -73,7 +73,7 @@ const SpringSale = () => {
 
 
     return (
-        <div className='pt-10 pb-14 md:py-16 bg-[#F4F4F4]'>
+        <section id='spring-sale' className='pt-10 pb-14 md:py-16 bg-[#F4F4F4]'>
             <Container>
                 <div className='md:flex gap-x-32'>
 
@@ -126,7 +126,7 @@ const SpringSale = () => {
                     </div>
                 </div>
             </Container>
-        </div>
+        </section>
     )
 }
 

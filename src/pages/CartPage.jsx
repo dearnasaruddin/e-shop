@@ -42,8 +42,8 @@ const CartPage = () => {
                             </div>
                         </div>
                         <div className='flex gap-x-4 justify-end mt-8'>
-                            <Button content='Continue Shopping' bg='transperant' textColor='#303030' font='Poppins' weight='600' />
-                            <Button content='Update Cart' />
+                           <Link to={'/product-list'}><Button content='Continue Shopping' bg='transparent' textColor='#303030' font='Poppins' weight='600' /></Link>
+                           <Link to={'/checkout'}><Button content='Checkout' /></Link>
                         </div>
                     </div>
                 </Container>

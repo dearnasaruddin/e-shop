@@ -41,7 +41,7 @@ const NewProducts = () => {
     })
 
     return (
-        <div>
+        <section id='new-products'>
             <Container>
                 <div>
                     <div className="md:flex justify-between items-center mb-6 md:mb-12">
@@ -104,7 +104,7 @@ const NewProducts = () => {
                     </div>
                 </div>
             </Container>
-        </div>
+        </section>
     )
 }
 

@@ -47,7 +47,7 @@ const ProductLayout = ({ catagory = 'watch', title = 'Orange Watch 12 High Quali
       <div className={`text-secondary ${!listView && 'md:pt-10'}`} >
         <p className='font-montserrat font-normal text-xs md:text-sm uppercase leading-5 tracking-[2px] md:tracking-[5px] md:mb-4'>{catagory}</p>
 
-        <Link to={'#'} className={`font-poppins font-medium md:font-semibold text-base md:text-xl md:leading-7.5 line-clamp-2 md:line-clamp-none group-hover:text-primary group-hover:underline duration-300 ${newProduct && 'md:w-59'}`}>{title}</Link>
+        <Link to={'/product-details'} className={`font-poppins font-medium md:font-semibold text-base md:text-xl md:leading-7.5 line-clamp-2 md:line-clamp-none group-hover:text-primary group-hover:underline duration-300 ${newProduct && 'md:w-59'}`}>{title}</Link>
 
         {/* ===== Product Short Description for list view ===== */}
         {listView &&
