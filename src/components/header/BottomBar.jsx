@@ -111,7 +111,7 @@ const BottomBar = () => {
             {isCategoriesDropdownOpen &&
               <ul className='pl-4'>
                 {categories.map((item, index) => (
-                  <li key={index}><Link className='font-montserrat font-normal text-base text-secondary hover:bg-gray-200 duration-300 block py-2 px-4' >{item}</Link></li>
+                  <li key={index}><Link onClick={() => dispatch(disableNavSideBar())} className='font-montserrat font-normal text-base text-secondary hover:bg-gray-200 duration-300 block py-2 px-4' >{item}</Link></li>
                 ))}
               </ul>
             }
@@ -123,29 +123,29 @@ const BottomBar = () => {
             {isProductDropdownOpen &&
               <ul className='font-montserrat font-normal whitespace-nowrap text-base text-secondary pl-4'>
                 <li className='hover:bg-gray-200'>
-                  <Link className='py-2 px-4 block' to={'/product-list'}>All Products</Link>
+                  <Link onClick={() => dispatch(disableNavSideBar())} className='py-2 px-4 block' to={'/product-list'}>All Products</Link>
                 </li>
                 <li className=' hover:bg-gray-200'>
-                  <Link className='py-2 px-4 block' to={'#'}>Featured Products</Link>
+                  <Link onClick={() => dispatch(disableNavSideBar())} className='py-2 px-4 block' to={'#'}>Featured Products</Link>
                 </li>
                 <li className=' hover:bg-gray-200'>
-                  <Link className='py-2 px-4 block' to={'#'}>New Products</Link>
+                  <Link onClick={() => dispatch(disableNavSideBar())} className='py-2 px-4 block' to={'#'}>New Products</Link>
                 </li>
                 <li className=' hover:bg-gray-200'>
-                  <Link className='py-2 px-4 block' to={'#'}>Spring Sale</Link>
+                  <Link onClick={() => dispatch(disableNavSideBar())} className='py-2 px-4 block' to={'#'}>Spring Sale</Link>
                 </li>
                 <li className=' hover:bg-gray-200'>
-                  <Link className='py-2 px-4 block' to={'#'}>Best Seller</Link>
+                  <Link onClick={() => dispatch(disableNavSideBar())} className='py-2 px-4 block' to={'#'}>Best Seller</Link>
                 </li>
               </ul>
             }
-            <li><Link to={'/blog'} className='block hover:bg-gray-200 py-2 px-4'>Blog</Link></li>
-            <li><Link to={'/contact'} className='block hover:bg-gray-200 py-2 px-4'>Contact</Link></li>
+            <li><Link onClick={() => dispatch(disableNavSideBar())} to={'/blog'} className='block hover:bg-gray-200 py-2 px-4'>Blog</Link></li>
+            <li><Link onClick={() => dispatch(disableNavSideBar())} to={'/contact'} className='block hover:bg-gray-200 py-2 px-4'>Contact</Link></li>
           </ul>
           <ul className=''>
-            <li><Link to={'#'} className='block hover:bg-gray-200 py-2 px-4'>LIMITED SALE 👋🏻</Link></li>
-            <li><Link to={'#'} className='block hover:bg-gray-200 py-2 px-4'>Best Seller</Link></li>
-            <li><Link to={'#'} className='block hover:bg-gray-200 py-2 px-4'>New Arrival</Link></li>
+            <li><Link onClick={() => dispatch(disableNavSideBar())} to={'#'} className='block hover:bg-gray-200 py-2 px-4'>LIMITED SALE 👋🏻</Link></li>
+            <li><Link onClick={() => dispatch(disableNavSideBar())} to={'#'} className='block hover:bg-gray-200 py-2 px-4'>Best Seller</Link></li>
+            <li><Link onClick={() => dispatch(disableNavSideBar())} to={'#'} className='block hover:bg-gray-200 py-2 px-4'>New Arrival</Link></li>
           </ul>
         </div>
       </div>

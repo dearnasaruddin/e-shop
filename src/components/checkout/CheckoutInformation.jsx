@@ -137,7 +137,7 @@ const CheckoutInformation = () => {
                     </div>
                 </div>
                 <div>
-                    <InputBox label='Order Notes' placeholder='Enter your order notes ...' textArea={true} minHeight='190px' />
+                    <InputBox label='Order Notes' placeholder='Enter your order notes ...' textArea={true} />
                 </div>
             </div>
         </div >
