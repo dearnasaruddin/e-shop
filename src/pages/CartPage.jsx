@@ -8,40 +8,40 @@ import Facility from '../components/Facility'
 const CartPage = () => {
     return (
         <>
-            <div className='pb-25 border-b border-[#CBCBCB]'>
+            <div className='lg:pb-25 border-b border-[#CBCBCB]'>
                 <Container>
                     <div>
                         {/* ====== Path ====== */}
-                        <ul className='flex gap-x-9.5 font-montserrat font-normal text-base leading-6 mb-12 mt-16'>
-                            <li><Link className='relative after:absolute after:top-1/2 after:-right-4.5 after:-translate-y-1/2 after:w-[1px] after:h-4.5 after:bg-secondary' to={'/'}>Home</Link></li>
+                        <ul className='flex gap-x-6 lg:gap-x-9.5 font-montserrat font-normal text-base leading-6 mb-8 lg:mb-12 mt-6 lg:mt-16'>
+                            <li><Link className='relative after:absolute after:top-1/2 after:-right-3 lg:after:-right-4.5 after:-translate-y-1/2 after:w-[1px] after:h-4.5 after:bg-secondary' to={'/'}>Home</Link></li>
                             <li><Link className='font-bold' to={'/cart'}>Cart</Link></li>
                         </ul>
-                        <h1 className='font-poppins font-bold text-[56px] leading-17 text-secondary'>Your Cart</h1>
-                        <div className='flex py-8 pl-14 bg-[#F4F4F4] font-montserrat font-bold text-base leading-6 uppercase text-secondary rounded-2xl mt-7 mb-8'>
+                        <h1 className='font-poppins font-bold text-3xl lg:text-[56px] lg:leading-17 text-secondary max-sm:mb-6'>Your Cart</h1>
+                        <div className='max-sm:hidden flex max-lg:justify-between py-3 lg:py-8 pl-4 lg:pl-14 max-lg:pr-4 bg-[#F4F4F4] font-montserrat font-bold text-base leading-6 uppercase text-secondary rounded-lg lg:rounded-2xl mt-7 mb-8'>
                             <h6>PRODUCT</h6>
-                            <h6 className='ml-152'>PRICE</h6>
-                            <h6 className='ml-42.5'>QTY</h6>
-                            <h6 className='ml-51'>TOTAL</h6>
+                            <h6 className='lg:ml-152'>PRICE</h6>
+                            <h6 className='lg:ml-42.5'>QTY</h6>
+                            <h6 className='lg:ml-51'>TOTAL</h6>
                         </div>
                         <CartItem />
                         <CartItem />
                         <CartItem />
                         <CartItem />
                         <CartItem />
-                        <div className='flex justify-between items-center'>
-                            <div className='relative'>
-                                <input type="text" className='w-154.5 py-9 pl-9 pr-48 border border-[#CBCBCB] rounded-[10px] font-montserrat font-normal text-base leading-6 text-[#646464]' placeholder='Enter coupon code (ex: FIRSTPAY)' />
-                                <button className='absolute top-1/2 -translate-y-1/2 right-9 font-poppins font-semibold text-xl leading-7.5 text-secondary underline cursor-pointer'>Apply Code</button>
+                        <div className='flex justify-between items-center max-sm:gap-3 flex-wrap'>
+                            <div className='relative max-sm:w-full'>
+                                <input type="text" className='w-full lg:w-154.5 py-4 lg:py-9 max-sm:pl-3 max-sm:pr-30 lg:pl-9 lg:pr-48 border border-[#CBCBCB] rounded-[10px] font-montserrat font-normal text-base leading-6 text-[#646464]' placeholder='Enter coupon code (ex: FIRSTPAY)' />
+                                <button className='absolute top-1/2 -translate-y-1/2 right-3 lg:right-9 font-poppins font-semibold text-base lg:text-xl lg:leading-7.5 text-secondary underline cursor-pointer'>Apply Code</button>
                             </div>
-                            <div className='py-8 px-9 flex gap-x-44 justify-between items-center bg-[#F4F4F4] rounded-[10px]'>
-                                <h4 className='uppercase font-montserrat font-bold text-base leading-6 text-secondary'>Sub Total</h4>
-                                <div className='flex gap-x-6'>
-                                    <h5 className='font-poppins font-semibold text-2xl leading-7.5 text-primary'>$7,733.00</h5>
+                            <div className='py-1.5 lg:py-8 px-4 lg:px-9 max-sm:w-full flex lg:gap-x-44 justify-between items-center bg-[#F4F4F4] rounded-[10px]'>
+                                <h4 className='uppercase grow font-montserrat font-bold text-base leading-6 text-secondary'>Sub Total</h4>
+                                <div className='flex max-sm:flex-col lg:gap-x-6'>
+                                    <h5 className='font-poppins font-semibold text-xl lg:text-2xl lg:leading-7.5 text-primary'>$7,733.00</h5>
                                     <p className='font-montserrat font-normal text-sm leading-5 text-secondary place-self-end mb-0.5'>( excl. shipping fee )</p>
                                 </div>
                             </div>
                         </div>
-                        <div className='flex gap-x-4 justify-end mt-8'>
+                        <div className='flex max-sm:items-center gap-x-4 justify-center lg:justify-end lg:mt-8'>
                            <Link to={'/product-list'}><Button content='Continue Shopping' bg='transparent' textColor='#303030' font='Poppins' weight='600' /></Link>
                            <Link to={'/checkout'}><Button content='Checkout' /></Link>
                         </div>
