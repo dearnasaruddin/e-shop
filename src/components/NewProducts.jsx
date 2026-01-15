@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Container from './commonLayouts/Container'
 import ProductLayout from './commonLayouts/ProductLayout'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import Button from './Button'
 import ArrowDownIcon from '../icons/ArrowDownIcon'
 import dummyProducts from '../dummyData/dummyProductsData'
@@ -12,7 +12,7 @@ const NewProducts = () => {
     const [isCategoriesDropdownOpen, setIsCategoriesDropdownOpen] = useState(false)
     const [categoriesDropdownText, setCategoriesDropdowntext] = useState('')
     const catagoriesDropdownRef = useRef(null)
-
+    const { pathname } = useLocation()
 
     const handleCategoriesDropdown = (value) => {
         setCategoriesDropdowntext(value)
@@ -41,10 +41,10 @@ const NewProducts = () => {
     })
 
     return (
-        <section id='new-products'>
+        <section id={`${pathname != '/product-details' ? 'new-products' : ''}`}>
             <Container>
                 <div>
-                    <div className="md:flex justify-between items-center mb-6 md:mb-12">
+                    <div className={`${pathname == '/product-details' ? 'hidden' : 'md:flex justify-between items-center mb-6 md:mb-12'}`}>
                         <h2 className='font-poppins font-semibold text-3xl md:text-4xl mb-2.5 md:mb-0 text-secondary leading-11.6'>New Products</h2>
                         <div className='flex items-center gap-x-4'>
                             <p className='font-montserrat font-normal text-base leading-6 text-secondary'>Sort by</p>
@@ -99,7 +99,7 @@ const NewProducts = () => {
                         ))}
                     </div>
                     {/* ======= Load More Button ======= */}
-                    <div className='flex justify-center mt-6 md:mt-16 mb-8 md:mb-20'>
+                    <div className={`flex justify-center mt-6 md:mt-16 mb-8 md:mb-20 ${pathname == '/product-details' && 'hidden'}`}>
                         <Button content='Load More' bg='transparent' textColor='#FF624C' border='1px solid #FF624C' />
                     </div>
                 </div>
