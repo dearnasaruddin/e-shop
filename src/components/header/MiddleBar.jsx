@@ -48,7 +48,7 @@ const MiddleBar = () => {
   }
 
   return (
-    <div className='max-sm:sticky sm:static max-sm:top-0 max-sm:left-0 max-sm:bg-secondary sm:bg-white shadow-lg max-sm:z-50'>
+    <div className='max-sm:sticky sm:static max-sm:top-0 max-sm:left-0 max-sm:bg-secondary sm:bg-white shadow-lg max-sm:z-20'>
       <Container>
         <div className="flex justify-between items-center py-3.5 sm:py-2 md:py-6 font-montserrat font-normal text-sm leading-5 max-sm:text-white sm:text-secondary">
           {/* ======= Logo ======= */}

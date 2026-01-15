@@ -15,6 +15,7 @@ const BottomBar = () => {
   const dispatch = useDispatch()
   const selector = useSelector((state) => state.handleNavSideBar.value)
   const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false)
+  const [isProductDropdownOpenForMobile, setIsProductDropdownOpenForMobile] = useState(true)
   const [isCategoriesDropdownOpen, setIsCategoriesDropdownOpen] = useState(false)
   const dropdownRef = useRef(null)
   const { hash, pathname } = useLocation();
@@ -100,6 +101,7 @@ const BottomBar = () => {
       </div>
 
 
+      {/* ============= Nav Sidebar for mobile devices ============= */}
 
       <div className={`bg-white h-screen w-full fixed top-0 z-50 pl-6 pt-10 pr-14 sm:hidden ${selector ? 'left-0' : '-left-full'} duration-200`}>
         <IoCloseOutline onClick={() => dispatch(disableNavSideBar())} className='absolute top-5 right-6 text-3xl cursor-pointer' />
@@ -115,12 +117,12 @@ const BottomBar = () => {
                 ))}
               </ul>
             }
-            <li onClick={handleProductDropdown} ref={dropdownRef} className='flex items-center gap-x-2 cursor-pointer relative hover:bg-gray-200 py-2 px-4'>
+            <li onClick={()=>setIsProductDropdownOpenForMobile(!isProductDropdownOpenForMobile)} className='flex items-center gap-x-2 cursor-pointer relative hover:bg-gray-200 py-2 px-4'>
               <span>Products</span><ArrowDownIcon />
             </li>
 
             {/* ======== Product Dropdown ======== */}
-            {isProductDropdownOpen &&
+            {isProductDropdownOpenForMobile &&
               <ul className='font-montserrat font-normal whitespace-nowrap text-base text-secondary pl-4'>
                 <li className='hover:bg-gray-200'>
                   <Link onClick={() => dispatch(disableNavSideBar())} className='py-2 px-4 block' to={'/product-list'}>All Products</Link>

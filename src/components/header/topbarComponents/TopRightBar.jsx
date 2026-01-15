@@ -71,7 +71,7 @@ const TopRightBar = () => {
 
                     {/* ====== options ====== */}
                     {isCurrencyDropdownOpen &&
-                        <ul className='w-18 absolute top-10.5 left-0 md:-left-2 bg-white border border-gray-300 z-10'>
+                        <ul className='w-18 absolute top-10.5 left-0 md:-left-2 bg-white border border-gray-300 z-50'>
                             <li onClick={() => setSelectedCurrency("USD")} className='flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer'>USD</li>
                             <li onClick={() => setSelectedCurrency("BDT")} className='flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer'>BDT</li>
                         </ul>
@@ -113,7 +113,7 @@ const TopRightBar = () => {
 
                 {/* ====== options ====== */}
                 {isLangDropdownOpen &&
-                    <ul ref={languageDropdownRef} className='md:w-10/12 absolute top-10.5 md:left-1/2 md:-translate-x-1/2 bg-white border border-gray-300 z-10'>
+                    <ul ref={languageDropdownRef} className='md:w-10/12 absolute top-10.5 md:left-1/2 md:-translate-x-1/2 bg-white border border-gray-300 z-50'>
                         {countries.map((country) => (
                             <li onClick={() => handleSelectLang(country)} className='flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer' key={country.value}>
                                 <img className='h-4 w-7' src={country?.flag} alt={country.name} />{country.name}
