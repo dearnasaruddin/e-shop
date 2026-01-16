@@ -7,6 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ArrowDownIcon from '../icons/ArrowDownIcon'
+import useSaleCountdown from '../hooks/useSaleCountdown'
 
 
 function SampleNextArrow(props) {
@@ -44,32 +45,7 @@ const SpringSale = () => {
     };
 
 
-    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
-
-    function calculateTimeLeft() {
-        let saleEndDate = new Date('Jul 31, 2025 11:59 PM +06').getTime()
-        let now = new Date().getTime()
-        let difference = saleEndDate - now
-
-        if (difference < 1000) {
-            return { days: '00', hours: '00', minutes: '00', seconds: '00' }
-        }
-
-        return {
-            days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-            hours: Math.floor(difference % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)),
-            minutes: Math.floor(difference % (1000 * 60 * 60) / (1000 * 60)),
-            seconds: Math.floor(difference % (1000 * 60) / 1000)
-        }
-    }
-
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setTimeLeft(calculateTimeLeft())
-        }, 1000);
-
-        return () => clearInterval(timer)
-    }, [])
+const {days, hours, minutes, seconds} = useSaleCountdown()
 
 
     return (
@@ -82,22 +58,22 @@ const SpringSale = () => {
                         <h2 className='font-poppins font-bold text-4xl md:text-[56px] md:leading-17 text-secondary'>Spring Sale</h2>
                         <div className='flex items-center gap-x-1 xxs:gap-x-3 md:gap-x-6 mt-10 md:mb-18'>
                             <div className='text-center'>
-                                <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary'>{timeLeft.days}</h3>
+                                <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary'>{days}</h3>
                                 <p className='font-montserrat font-normal text-base leading-6 text-secondary mt-2'>Days</p>
                             </div>
                             <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary place-self-start'>:</h3>
                             <div className='text-center'>
-                                <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary'>{timeLeft.hours}</h3>
+                                <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary'>{hours}</h3>
                                 <p className='font-montserrat font-normal text-base leading-6 text-secondary mt-2'>Hours</p>
                             </div>
                             <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary place-self-start'>:</h3>
                             <div className='text-center'>
-                                <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary'>{timeLeft.minutes}</h3>
+                                <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary'>{minutes}</h3>
                                 <p className='font-montserrat font-normal text-base leading-6 text-secondary mt-2'>Minutes</p>
                             </div>
                             <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary place-self-start'>:</h3>
                             <div className='text-center'>
-                                <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary'>{timeLeft.seconds}</h3>
+                                <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary'>{seconds}</h3>
                                 <p className='font-montserrat font-normal text-base leading-6 text-secondary mt-2'>Seconds</p>
                             </div>
                         </div>
