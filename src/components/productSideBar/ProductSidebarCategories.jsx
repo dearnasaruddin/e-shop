@@ -1,10 +1,9 @@
-import React from 'react'
 import categories from '../../dummyData/categoriesData';
 import { IoCheckmarkOutline } from "react-icons/io5";
 
 const ProductSidebarCategories = () => {
     return (
-        <ul className='mt-5 pb-10 border-b border-[#C3C3C3]'>
+        <ul className='max-sm:w-screen max-sm:absolute max-sm:top-60 max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:z-10 max-sm:bg-[#F4F4F4] max-sm:p-5 mt-5 pb-10 lg:border-b border-[#C3C3C3]'>
             {categories.map((item, index) => (
                 <li key={index} className='flex items-center relative'>
                     <input className='appearance-none h-4 w-4.5 checked:bg-primary checked:border-none border border-secondary rounded-xs peer cursor-pointer' type="checkbox" name={item} id={item} />

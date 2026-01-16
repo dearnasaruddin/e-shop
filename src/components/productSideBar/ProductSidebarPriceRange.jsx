@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from "react"
 
 const ProductSidebarPriceRange = () => {
 
@@ -48,15 +48,15 @@ const ProductSidebarPriceRange = () => {
     const minPercent = (minValue / 5000) * 100
     const maxPercent = (maxValue / 5000) * 100
     return (
-        <>
-            <div className='flex justify-center gap-x-3 mt-6 '>
+        <div className="max-sm:w-screen max-sm:absolute max-sm:top-64 max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:z-10 max-sm:bg-[#F4F4F4] max-sm:p-5">
+            <div className=' flex justify-center gap-x-3 mt-6'>
                 <div className='relative'>
-                    <input onChange={(e) => updateRangeSlider('min', e.target.value)} className='font-montserrat font-normal text-base leading-6 text-secondary w-31 h-18.5 border border-[#929292] rounded-[10px] text-center !appearance-none' type="number" min={0} max={5000} value={minValue} />
-                    <span className='font-montserrat font-normal text-base leading-6 text-secondary absolute top-6.5 left-7.5'>$</span>
+                    <input onChange={(e) => updateRangeSlider('min', e.target.value)} className='font-montserrat font-normal text-base leading-6 text-secondary w-24 lg:w-31 h-12 lg:h-18.5 border border-[#929292] rounded-[10px] text-center !appearance-none' type="number" min={0} max={5000} value={minValue} />
+                    <span className='font-montserrat font-normal text-base leading-6 text-secondary absolute top-3.5 lg:top-6.5 left-4 lg:left-7.5'>$</span>
                 </div>
                 <div className='relative'>
-                    <input onChange={(e) => updateRangeSlider('max', e.target.value)} className='font-montserrat font-normal text-base leading-6 text-secondary w-31 h-18.5 border border-[#929292] rounded-[10px] text-center !appearance-none' type="number" min={0} max={5000} value={maxValue} />
-                    <span className='font-montserrat font-normal text-base leading-6 text-secondary absolute top-6.5 left-7.5'>$</span>
+                    <input onChange={(e) => updateRangeSlider('max', e.target.value)} className='font-montserrat font-normal text-base leading-6 text-secondary w-24 lg:w-31 h-12 lg:h-18.5 border border-[#929292] rounded-[10px] text-center !appearance-none' type="number" min={0} max={5000} value={maxValue} />
+                    <span className='font-montserrat font-normal text-base leading-6 text-secondary absolute top-3.5 lg:top-6.5 left-4 lg:left-7.5'>$</span>
                 </div>
             </div>
 
@@ -67,7 +67,7 @@ const ProductSidebarPriceRange = () => {
                     <input onChange={(e) => updateRangeSlider('max', e.target.value)} type="range" min={0} max={5000} value={maxValue} className='w-full h-full bg-transparent pointer-events-none appearance-none absolute top-1/2 -translate-y-1/2' />
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
