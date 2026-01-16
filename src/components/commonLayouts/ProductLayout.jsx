@@ -33,7 +33,7 @@ const ProductLayout = ({ catagory = 'watch', title = 'Orange Watch 12 High Quali
   }, [availableQuantity])
 
   return (
-    <div onMouseEnter={handleHoverStart} onMouseLeave={handleHoverEnd} className={` ${springSale ? 'p-3 md:!p-10 bg-[#EAEAEA] hover:bg-white' : 'border border-[#CBCBCB] md:border-transparent hover:border-[#CBCBCB]'} rounded-[10px]  duration-300 group cursor-pointer ${listView ? 'flex gap-12 px-12 py-5' : 'px-2 md:px-5.5 md:pt-6 pb-2 md:pb-11'} relative`}>
+    <div onMouseEnter={handleHoverStart} onMouseLeave={handleHoverEnd} className={` ${springSale ? 'p-3 md:!p-10 bg-[#EAEAEA] hover:bg-white' : 'border border-[#CBCBCB] md:border-transparent hover:border-[#CBCBCB]'} rounded-[10px]  duration-300 group cursor-pointer ${listView ? 'flex gap-6 lg:gap-12 px-2 lg:px-12 py-2 lg:py-5' : 'px-2 md:px-5.5 md:pt-6 pb-2 md:pb-11'} relative`}>
 
       {/* =========== Image & Discount part =========== */}
       <div className='relative'>
@@ -51,7 +51,7 @@ const ProductLayout = ({ catagory = 'watch', title = 'Orange Watch 12 High Quali
 
         {/* ===== Product Short Description for list view ===== */}
         {listView &&
-          <p className='font-montserrat max-w-150 mt-1 leading-6'>consectetur adipisicing elit. Selaborum maiores repellendus aliquam sit modi vel voluptatum inventore ea excepturi magnam dicta!</p>
+          <p className='max-sm:hidden font-montserrat max-w-150 mt-1 leading-6'>consectetur adipisicing elit. Selaborum maiores repellendus aliquam sit modi vel voluptatum inventore ea excepturi magnam dicta!</p>
         }
 
         {/* ==== Rating ==== */}
