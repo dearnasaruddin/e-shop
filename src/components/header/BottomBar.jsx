@@ -75,26 +75,26 @@ const BottomBar = () => {
                     <li className=' hover:bg-gray-200'>
                       <Link className='py-2 px-4 block' to={'#featured-products'}>Featured Products</Link>
                     </li>
-                    <li className=' hover:bg-gray-200'>
+                    {/* <li className=' hover:bg-gray-200'>
                       <Link className='py-2 px-4 block' to={'#new-products'}>New Products</Link>
-                    </li>
+                    </li> */}
                     <li className=' hover:bg-gray-200'>
                       <Link className='py-2 px-4 block' to={'#spring-sale'}>Spring Sale</Link>
                     </li>
-                    <li className=' hover:bg-gray-200'>
+                    {/* <li className=' hover:bg-gray-200'>
                       <Link className='py-2 px-4 block' to={'#best-seller'}>Best Seller</Link>
-                    </li>
+                    </li> */}
                   </ul>
                 }
 
               </li>
-              <li><Link to={'/blog'}>Blog</Link></li>
+              {/* <li><Link to={'/blog'}>Blog</Link></li> */}
               <li><Link to={'/contact'}>Contact</Link></li>
             </ul>
             <ul className='flex items-center gap-x-20'>
-              <li><Link to={'#'}>LIMITED SALE 👋🏻</Link></li>
-              <li><Link to={'#'}>Best Seller</Link></li>
-              <li><Link to={'#'}>New Arrival</Link></li>
+              {/* <li><Link to={'#'}>LIMITED SALE 👋🏻</Link></li> */}
+              <li><Link to={'#best-seller'}>Best Seller</Link></li>
+              <li><Link to={'#new-products'}>New Arrival</Link></li>
             </ul>
           </div>
         </Container>
@@ -130,22 +130,22 @@ const BottomBar = () => {
                 <li className=' hover:bg-gray-200'>
                   <Link onClick={() => dispatch(disableNavSideBar())} className='py-2 px-4 block' to={'#'}>Featured Products</Link>
                 </li>
-                <li className=' hover:bg-gray-200'>
+                {/* <li className=' hover:bg-gray-200'>
                   <Link onClick={() => dispatch(disableNavSideBar())} className='py-2 px-4 block' to={'#'}>New Products</Link>
-                </li>
+                </li> */}
                 <li className=' hover:bg-gray-200'>
                   <Link onClick={() => dispatch(disableNavSideBar())} className='py-2 px-4 block' to={'#'}>Spring Sale</Link>
                 </li>
-                <li className=' hover:bg-gray-200'>
+                {/* <li className=' hover:bg-gray-200'>
                   <Link onClick={() => dispatch(disableNavSideBar())} className='py-2 px-4 block' to={'#'}>Best Seller</Link>
-                </li>
+                </li> */}
               </ul>
             }
-            <li><Link onClick={() => dispatch(disableNavSideBar())} to={'/blog'} className='block hover:bg-gray-200 py-2 px-4'>Blog</Link></li>
+            {/* <li><Link onClick={() => dispatch(disableNavSideBar())} to={'/blog'} className='block hover:bg-gray-200 py-2 px-4'>Blog</Link></li> */}
             <li><Link onClick={() => dispatch(disableNavSideBar())} to={'/contact'} className='block hover:bg-gray-200 py-2 px-4'>Contact</Link></li>
           </ul>
           <ul className=''>
-            <li><Link onClick={() => dispatch(disableNavSideBar())} to={'#'} className='block hover:bg-gray-200 py-2 px-4'>LIMITED SALE 👋🏻</Link></li>
+            {/* <li><Link onClick={() => dispatch(disableNavSideBar())} to={'#'} className='block hover:bg-gray-200 py-2 px-4'>LIMITED SALE 👋🏻</Link></li> */}
             <li><Link onClick={() => dispatch(disableNavSideBar())} to={'#'} className='block hover:bg-gray-200 py-2 px-4'>Best Seller</Link></li>
             <li><Link onClick={() => dispatch(disableNavSideBar())} to={'#'} className='block hover:bg-gray-200 py-2 px-4'>New Arrival</Link></li>
           </ul>

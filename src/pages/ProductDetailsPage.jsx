@@ -76,8 +76,8 @@ const ProductDetailsPage = () => {
           <div className='flex max-sm:flex-wrap lg:gap-x-14 lg:mb-13'>
             {/* ====== Product Images ====== */}
             <div>
-              <div className='w-screen lg:w-208 lg:h-135 rounded-2xl lg:rounded-3xl lg:overflow-hidden relative'>
-                <span onClick={() => setActiveModal(true)}><EnlargeIcon className='size-6 lg:size-8 absolute right-8 lg:right-6 top-2 cursor-pointer z-20' /></span>
+              <div className='w-[90vw] lg:w-208 lg:h-135 rounded-2xl lg:rounded-3xl lg:overflow-hidden relative'>
+                <span onClick={() => setActiveModal(true)}><EnlargeIcon className='size-6 lg:size-8 absolute right-8 lg:right-6 top-2 cursor-pointer z-10' /></span>
                 <Slider {...settings} asNavFor={nav2} ref={slider => (sliderRef1 = slider)}>
                   <div>
                     <div onMouseEnter={()=>setModalImgPath("/images/productImage.webp")} className='flex justify-center items-center relative'>

@@ -27,7 +27,7 @@ const CheckoutShipping = () => {
 
 
                     <h3 className='font-poppins font-semibold text-xl lg:text-2xl leading-11.5 text-secondary mt-12'>Delivery Address</h3>
-                    <div class="text-base lg:text-lg max-sm:space-y-1 max-sm:mt-4">
+                    <div className="text-base lg:text-lg max-sm:space-y-1 max-sm:mt-4">
                         <p className='max-lg:font-semibold'>
                             Amelia Robert Watson
                         </p>
@@ -43,7 +43,7 @@ const CheckoutShipping = () => {
                         <Link className='text-primary font-semibold' to={'#'}> Change</Link>
                     </div>
                     <div className='mt-12'>
-                        <label for="delivery-notes">Delivery Instructions (optional)</label> <br />
+                        <label htmlFor="delivery-notes">Delivery Instructions (optional)</label> <br />
                         <textarea className='w-full lg:w-140 lg:min-h-50 rounded-xl max-lg:text-base lg:rounded-2xl border p-6 border-[#c3c3c3] mt-5' id="delivery-notes" placeholder="Enter any specific delivery instructions..."></textarea>
                     </div>
                 </div>
