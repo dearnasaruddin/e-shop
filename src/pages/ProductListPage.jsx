@@ -211,7 +211,7 @@ const ProductListPage = () => {
                       <ProductLayout productImage={item.productImage} catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} />
                     </div>
                     :
-                    <div className='w-full'>
+                    <div key={item.id} className='w-full'>
                       <ProductLayout productImage={item.productImage} catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} listView={true} />
                     </div>
                 ))}

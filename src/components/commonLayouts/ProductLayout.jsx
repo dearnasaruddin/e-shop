@@ -33,7 +33,7 @@ const ProductLayout = ({ catagory = 'watch', title = 'Orange Watch 12 High Quali
   }, [availableQuantity])
 
   return (
-    <div onMouseEnter={handleHoverStart} onMouseLeave={handleHoverEnd} className={` ${springSale ? 'p-3 md:!p-10 bg-[#EAEAEA] hover:bg-white' : 'border border-[#CBCBCB] md:border-transparent hover:border-[#CBCBCB]'} rounded-md sm:rounded-[10px]  duration-300 group cursor-pointer ${listView ? 'flex gap-6 lg:gap-12 px-2 lg:px-12 pt-2 lg:py-5' : 'px-2 md:px-5.5 md:pt-6 pb-2 md:pb-11'} relative`}>
+    <div onMouseEnter={handleHoverStart} onMouseLeave={handleHoverEnd} className={` ${springSale ? 'p-3 md:!p-10 bg-[#EAEAEA] hover:bg-white' : 'border border-[#CBCBCB] md:border-transparent hover:border-[#CBCBCB]'} rounded-md sm:rounded-[10px]  duration-300 group cursor-pointer ${listView ? 'flex items-center gap-6 lg:gap-12 px-2 lg:px-12 py-1 lg:py-5' : 'px-2 md:px-5.5 md:pt-6 pb-2 md:pb-11'} relative`}>
 
       {/* =========== Image & Discount part =========== */}
       <div className='relative'>
@@ -47,7 +47,7 @@ const ProductLayout = ({ catagory = 'watch', title = 'Orange Watch 12 High Quali
       <div className={`text-secondary ${!listView && 'md:pt-10'}`} >
         <p className='font-montserrat font-normal text-xs md:text-sm uppercase leading-5 tracking-[2px] md:tracking-[5px] md:mb-4'>{catagory}</p>
 
-        <Link to={'/product-details'} className={`font-poppins font-medium md:font-semibold text-base md:text-xl md:leading-7.5 line-clamp-2 md:line-clamp-none group-hover:text-primary group-hover:underline duration-300 ${newProduct && 'md:w-59'}`}>{title}</Link>
+        <Link to={'/product-details'} className={`font-poppins font-normal sm:font-medium md:font-semibold text-base md:text-xl md:leading-7.5 line-clamp-2 md:line-clamp-none group-hover:text-primary group-hover:underline duration-300 ${newProduct && 'md:w-59'}`}>{title}</Link>
 
         {/* ===== Product Short Description for list view ===== */}
         {listView &&
@@ -66,7 +66,7 @@ const ProductLayout = ({ catagory = 'watch', title = 'Orange Watch 12 High Quali
 
         {/* ==== Price ==== */}
         <div className='md:mt-5 flex gap-x-2'>
-          <p className={`font-poppins font-semibold ${discount ? 'text-primary' : 'text-secondary'} text-xl md:text-2xl md:leading-7.5`}>${price}</p>
+          <p className={`font-poppins font-semibold ${discount ? 'text-primary' : 'text-secondary'} text-lg sm:text-xl md:text-2xl md:leading-7.5`}>${price}</p>
           {originalPrice && <span className='self-end font-montserrat font-normal text-sm md:text-base mb-0.5 md:leading-6 text-[#979797] line-through'>${originalPrice}</span>}
         </div>
 

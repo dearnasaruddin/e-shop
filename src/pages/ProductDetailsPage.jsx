@@ -66,18 +66,18 @@ const ProductDetailsPage = () => {
         <div className='mt-6 lg:mt-16'>
 
           {/* ====== Breadcrumb ====== */}
-          <ul className='flex flex-wrap gap-x-6 lg:gap-x-9.5 font-montserrat font-normal text-base leading-6 mb-4 lg:mb-12'>
+          <ul className='flex flex-wrap gap-x-6 lg:gap-x-9.5 font-montserrat font-normal text-sm sm:text-base leading-6 mb-4 lg:mb-12'>
             <li><Link className='relative after:absolute after:top-1/2 after:-right-3 lg:after:-right-4.5 after:-translate-y-1/2 after:w-[1px] after:h-4.5 after:bg-secondary' to={'#'}>Home</Link></li>
             <li><Link className='relative after:absolute after:top-1/2 after:-right-3 lg:after:-right-4.5 after:-translate-y-1/2 after:w-[1px] after:h-4.5 after:bg-secondary' to={'#'}>Computers & Tablets</Link></li>
             <li><Link className='relative after:absolute after:top-1/2 after:-right-3 lg:after:-right-4.5 after:-translate-y-1/2 after:w-[1px] after:h-4.5 after:bg-secondary' to={'#'}>Laptop</Link></li>
             <li><Link className='font-bold' to={'#'}>NexSUS ROCK Strix Scar 17 Gaming Laptop</Link></li>
           </ul>
 
-          <div className='flex max-sm:flex-wrap lg:gap-x-14 lg:mb-13'>
+          <div className='flex max-sm:flex-wrap max-sm:gap-4 lg:gap-x-14 lg:mb-13'>
             {/* ====== Product Images ====== */}
             <div>
               <div className='w-[90vw] lg:w-208 lg:h-135 rounded-2xl lg:rounded-3xl lg:overflow-hidden relative'>
-                <span onClick={() => setActiveModal(true)}><EnlargeIcon className='size-6 lg:size-8 absolute right-8 lg:right-6 top-2 cursor-pointer z-10' /></span>
+                <span onClick={() => setActiveModal(true)}><EnlargeIcon className='size-5 sm:size-6 lg:size-8 absolute right-8 lg:right-6 top-2 cursor-pointer z-10' /></span>
                 <Slider {...settings} asNavFor={nav2} ref={slider => (sliderRef1 = slider)}>
                   <div>
                     <div onMouseEnter={() => setModalImgPath("/images/productImage.webp")} className='flex justify-center items-center relative'>
@@ -130,25 +130,25 @@ const ProductDetailsPage = () => {
                 </div>
                 <span className='font-montserrat font-normal lg:text-xl lg:leading-7.5'>( 142 )</span>
               </div>
-              <h1 className='font-poppins font-semibold text-2xl lg:text-4xl lg:leading-11.5 text-secondary mt-4 pb-2 lg:pb-6 border-b border-[#CBCBCB]'>NexSUS ROCK Strix Scar 17 Gaming Laptop 15.7” 1TB SSD 16GB RAM Pro</h1>
+              <h1 className='font-poppins font-semibold text-lg sm:text-2xl lg:text-4xl lg:leading-11.5 text-secondary sm:mt-4 pb-2 lg:pb-6 border-b border-[#CBCBCB]'>NexSUS ROCK Strix Scar 17 Gaming Laptop 15.7” 1TB SSD 16GB RAM Pro</h1>
               <div className='flex gap-x-2 lg:gap-x-4.5 mt-2 lg:mt-6 lg:mb-12'>
                 <p className='font-poppins font-bold text-primary text-2xl lg:text-[56px] lg:leading-17'>$2,999.99</p>
                 <span className='self-end font-montserrat font-normal text-sm lg:text-xl lg:leading-7.5 text-[#979797] line-through mb-4'>$5,499.99</span>
               </div>
-              <ul className='font-poppins font-normal lg:space-y-4 lg:mb-4 text-lg lg:text-xl lg:leading-7.5 text-secondary'>
+              <ul className='font-poppins font-normal lg:space-y-4 lg:mb-4 text-base sm:text-lg lg:text-xl lg:leading-7.5 text-secondary'>
                 <li><span className='w-24 lg:w-42.5 inline-block font-semibold'>Brand</span>NexSUS Tech Company</li>
                 <li><span className='w-24 lg:w-42.5 inline-block font-semibold'>Size</span>15.7 x 11.1 x 1.0 inches (W x D x H)</li>
                 <li><span className='w-24 lg:w-42.5 inline-block font-semibold'>Weight</span>6.28 pounds</li>
                 <li><span className='w-24 lg:w-42.5 inline-block font-semibold'>Delivery</span>Worldwide</li>
               </ul>
               {/* variant */}
-              <div className='flex lg:gap-x-23.5'>
-                <div className='font-poppins text-lg lg:text-xl lg:leading-7.5 text-secondary font-semibold'>Variant</div>
+              <div className='flex gap-8 lg:gap-x-23.5'>
+                <div className='font-poppins text-base sm:text-lg lg:text-xl lg:leading-7.5 text-secondary font-semibold'>Variant</div>
                 <div className='flex flex-wrap gap-x-1 gap-y-2'>
-                  <Button content='Off White' className='px-8 text-base leading-6 bg-transparent text-secondary border border-[#979797] rounded-md' />
-                  <Button content='Space Gray' className='px-8 text-base leading-6 bg-transparent text-primary border border-[#FFB0A5] rounded-md' />
-                  <Button content='Jet Black' className='px-8 text-base leading-6 bg-transparent text-secondary border border-[#979797] rounded-md' />
-                  <Button content='Cinnamon Red' className='px-8 text-base leading-6 bg-transparent text-[#CBCBCB] border border-[#CBCBCB] rounded-md' />
+                  <Button content='Off White' className='px-2 lg:px-8 py-2 max-sm:font-medium lg:text-base lg:leading-6 bg-transparent text-secondary border border-[#979797] rounded-md' />
+                  <Button content='Space Gray' className='px-2 lg:px-8 py-2 max-sm:font-medium lg:text-base lg:leading-6 bg-transparent text-primary border border-[#FFB0A5] rounded-md' />
+                  <Button content='Jet Black' className='px-2 lg:px-8 py-2 max-sm:font-medium lg:text-base lg:leading-6 bg-transparent text-secondary border border-[#979797] rounded-md' />
+                  <Button content='Cinnamon Red' className='px-2 lg:px-8 py-2 max-sm:font-medium lg:text-base lg:leading-6 bg-transparent text-[#CBCBCB] border border-[#CBCBCB] rounded-md' />
                 </div>
               </div>
             </div>
@@ -166,7 +166,7 @@ const ProductDetailsPage = () => {
               </div>
               <div className='flex items-center gap-x-4'>
                 <Button content='Buy Now' />
-                <div className='p-4 border rounded-[10px] border-primary cursor-pointer'><AddToCartIcon className='size-7' color='#FF624c' /></div>
+                <div className='py-1 max-sm:px-2 lg:p-4 border rounded-md lg:rounded-[10px] border-primary cursor-pointer'><AddToCartIcon className='size-7' color='#FF624c' /></div>
               </div>
 
             </div>
