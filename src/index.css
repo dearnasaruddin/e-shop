@@ -6,7 +6,7 @@
   --color-primary: #FF624C;
   --color-secondary: #303030;
   --breakpoint-xxs: 375px;
-  --breakpoint-xs: 480px;
+  --breakpoint-xs: 400px;
 }
 
 .iconParent:hover .addtocarticon path {
