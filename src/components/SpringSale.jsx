@@ -56,28 +56,28 @@ const {days, hours, minutes, seconds} = useSaleCountdown()
                     {/* ========== Counter / Timer ========== */}
                     <div className='md:mt-42.5'>
                         <h2 className='font-poppins font-bold text-4xl md:text-[56px] md:leading-17 text-secondary'>Spring Sale</h2>
-                        <div className='flex items-center gap-x-1 xxs:gap-x-3 md:gap-x-6 mt-10 md:mb-18'>
+                        <div className='flex items-center gap-x-1 xxs:gap-x-2.5 md:gap-x-6 mt-4 md:mt-10 md:mb-18'>
                             <div className='text-center'>
-                                <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary'>{days}</h3>
-                                <p className='font-montserrat font-normal text-base leading-6 text-secondary mt-2'>Days</p>
+                                <h3 className='font-poppins font-semibold text-2xl lg:text-4xl leading-11.5 text-primary'>{days}</h3>
+                                <p className='font-montserrat font-normal text-base leading-6 text-secondary lg:mt-2'>Days</p>
                             </div>
-                            <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary place-self-start'>:</h3>
+                            <h3 className='font-poppins font-semibold text-2xl lg:text-4xl leading-11.5 text-primary place-self-start'>:</h3>
                             <div className='text-center'>
-                                <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary'>{hours}</h3>
-                                <p className='font-montserrat font-normal text-base leading-6 text-secondary mt-2'>Hours</p>
+                                <h3 className='font-poppins font-semibold text-2xl lg:text-4xl leading-11.5 text-primary'>{hours}</h3>
+                                <p className='font-montserrat font-normal text-base leading-6 text-secondary lg:mt-2'>Hours</p>
                             </div>
-                            <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary place-self-start'>:</h3>
+                            <h3 className='font-poppins font-semibold text-2xl lg:text-4xl leading-11.5 text-primary place-self-start'>:</h3>
                             <div className='text-center'>
-                                <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary'>{minutes}</h3>
-                                <p className='font-montserrat font-normal text-base leading-6 text-secondary mt-2'>Minutes</p>
+                                <h3 className='font-poppins font-semibold text-2xl lg:text-4xl leading-11.5 text-primary'>{minutes}</h3>
+                                <p className='font-montserrat font-normal text-base leading-6 text-secondary lg:mt-2'>Minutes</p>
                             </div>
-                            <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary place-self-start'>:</h3>
+                            <h3 className='font-poppins font-semibold text-2xl lg:text-4xl leading-11.5 text-primary place-self-start'>:</h3>
                             <div className='text-center'>
-                                <h3 className='font-poppins font-semibold text-4xl leading-11.5 text-primary'>{seconds}</h3>
-                                <p className='font-montserrat font-normal text-base leading-6 text-secondary mt-2'>Seconds</p>
+                                <h3 className='font-poppins font-semibold text-2xl lg:text-4xl leading-11.5 text-primary'>{seconds}</h3>
+                                <p className='font-montserrat font-normal text-base leading-6 text-secondary lg:mt-2'>Seconds</p>
                             </div>
-                        </div>
-                        <div className='my-8 md:my-0'>
+                     </div>
+                        <div className='my-6 md:my-0'>
                             <Button content='Shop Now' />
                         </div>
                         <div className='mt-22.5 hidden md:block'>

@@ -8,7 +8,7 @@ import Facility from '../components/Facility'
 const CartPage = () => {
     return (
         <>
-            <div className='lg:pb-25 border-b border-[#CBCBCB]'>
+            <div className='pb-6 lg:pb-25 border-b border-[#CBCBCB]'>
                 <Container>
                     <div>
                         {/* ====== Path ====== */}
@@ -41,7 +41,7 @@ const CartPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='flex max-sm:items-center gap-x-4 justify-center lg:justify-end lg:mt-8'>
+                        <div className='flex max-sm:items-center gap-x-4 justify-center lg:justify-end max-sm:py-4 lg:mt-8'>
                            <Link to={'/product-list'}><Button content='Continue Shopping' className='bg-transparent text-secondary font-poppins font-semibold' /></Link>
                            <Link to={'/checkout'}><Button content='Checkout' /></Link>
                         </div>

@@ -33,11 +33,11 @@ const ProductLayout = ({ catagory = 'watch', title = 'Orange Watch 12 High Quali
   }, [availableQuantity])
 
   return (
-    <div onMouseEnter={handleHoverStart} onMouseLeave={handleHoverEnd} className={` ${springSale ? 'p-3 md:!p-10 bg-[#EAEAEA] hover:bg-white' : 'border border-[#CBCBCB] md:border-transparent hover:border-[#CBCBCB]'} rounded-[10px]  duration-300 group cursor-pointer ${listView ? 'flex gap-6 lg:gap-12 px-2 lg:px-12 py-2 lg:py-5' : 'px-2 md:px-5.5 md:pt-6 pb-2 md:pb-11'} relative`}>
+    <div onMouseEnter={handleHoverStart} onMouseLeave={handleHoverEnd} className={` ${springSale ? 'p-3 md:!p-10 bg-[#EAEAEA] hover:bg-white' : 'border border-[#CBCBCB] md:border-transparent hover:border-[#CBCBCB]'} rounded-md sm:rounded-[10px]  duration-300 group cursor-pointer ${listView ? 'flex gap-6 lg:gap-12 px-2 lg:px-12 pt-2 lg:py-5' : 'px-2 md:px-5.5 md:pt-6 pb-2 md:pb-11'} relative`}>
 
       {/* =========== Image & Discount part =========== */}
       <div className='relative'>
-        {discount && <span className={`absolute ${springSale ? 'size-10 md:size-25 flex justify-center items-center font-poppins font-semibold text-sm md:text-2xl md:leading-7.5 rounded-full top-0 right-0' : 'top-2 md:-top-2 right-0 md:-right-2 font-montserrat font-semibold md:font-bold text-sm md:text-base leading-6 py-1 md:py-2 px-3 md:px-5 rounded-[5px]'} text-white bg-primary`}>{discount}%</span>}
+        {discount && <span className={`absolute ${springSale ? 'size-10 md:size-25 flex justify-center items-center font-poppins font-semibold text-sm md:text-2xl md:leading-7.5 rounded-full top-0 right-0' : 'top-2 md:-top-2 right-0 md:-right-2 font-montserrat font-semibold md:font-bold text-sm md:text-base leading-6 py-0.5 md:py-2 px-2 md:px-5 rounded-[5px]'} text-white bg-primary`}>{discount}%</span>}
         <img className='w-full' src={productImage ? productImage : 'images/productImage.webp'} alt={productImage ? productImage : 'productImage.webp'} />
 
       </div>

@@ -52,7 +52,7 @@ const OrderSummary = () => {
                 <p className='font-bold'>$10.00</p>
             </div>
             <div className='py-3 lg:py-5 px-4 lg:px-6 rounded-[10px] bg-white'>
-                <div className='flex max-sm:justify-between lg:gap-x-80 font-montserrat font-bold text-xl leading-7.5 text-secondary lg:mb-6'>
+                <div className='flex max-sm:justify-between lg:gap-x-80 font-montserrat font-bold lg:text-xl leading-7.5 text-secondary mb-3 lg:mb-6'>
                     <h6 className='mt-0.5'>Total</h6>
                     <p>${
                         new Intl.NumberFormat('en-US').format((orderSummaryData.reduce((total, item) => {
@@ -60,7 +60,7 @@ const OrderSummary = () => {
                         }, 0)) + 10)
                     }</p>
                 </div>
-                <Button content='Order Now' className='w-full py-6'/>
+                <Button content='Order Now' className='w-full py-2.5 lg:py-6'/>
             </div>
         </div>
     )

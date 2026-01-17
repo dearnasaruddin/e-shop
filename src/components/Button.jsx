@@ -8,14 +8,16 @@ const Button = ({
     font-montserrat
     font-bold
     text-white
-    bg-[#FF624C]
-    text-[16px]
+    bg-primary
+    text-sm
+    sm:text-base
     px-5
-    py-2
-    sm:text-[20px]
+    py-2.5
+    sm:text-xl
     sm:px-10
     sm:py-4
-    rounded-[10px]
+    rounded-sm
+    sm:rounded-[10px]
     cursor-pointer
     transition
   `
