@@ -60,7 +60,7 @@ const OrderSummary = () => {
                         }, 0)) + 10)
                     }</p>
                 </div>
-                <Button content='Order Now' paddingY='24' width={'100%'} />
+                <Button content='Order Now' className='w-full py-6'/>
             </div>
         </div>
     )

@@ -80,17 +80,17 @@ const ProductDetailsPage = () => {
                 <span onClick={() => setActiveModal(true)}><EnlargeIcon className='size-6 lg:size-8 absolute right-8 lg:right-6 top-2 cursor-pointer z-10' /></span>
                 <Slider {...settings} asNavFor={nav2} ref={slider => (sliderRef1 = slider)}>
                   <div>
-                    <div onMouseEnter={()=>setModalImgPath("/images/productImage.webp")} className='flex justify-center items-center relative'>
+                    <div onMouseEnter={() => setModalImgPath("/images/productImage.webp")} className='flex justify-center items-center relative'>
                       <img className='w-3/4 object-center' src="/images/productImage.webp" alt="productImage" />
                     </div>
                   </div>
                   <div>
-                    <div onMouseEnter={()=>setModalImgPath("/images/camera.webp")} className='flex justify-center items-center relative'>
+                    <div onMouseEnter={() => setModalImgPath("/images/camera.webp")} className='flex justify-center items-center relative'>
                       <img className='w-3/4 object-center' src="/images/camera.webp" alt="camera" />
                     </div>
                   </div>
                   <div>
-                    <div onMouseEnter={()=>setModalImgPath("/images/laptop.webp")} className='flex justify-center items-center relative'>
+                    <div onMouseEnter={() => setModalImgPath("/images/laptop.webp")} className='flex justify-center items-center relative'>
                       <img className='w-3/4 object-center' src="/images/laptop.webp" alt="laptop" />
                     </div>
                   </div>
@@ -145,10 +145,10 @@ const ProductDetailsPage = () => {
               <div className='flex lg:gap-x-23.5'>
                 <div className='font-poppins text-lg lg:text-xl lg:leading-7.5 text-secondary font-semibold'>Variant</div>
                 <div className='flex flex-wrap gap-x-1 gap-y-2'>
-                  <Button content='Off White' paddingX='32' textSize='16' leading='24' bg='transperant' textColor='#303030' radius='5' border='1px solid #979797' />
-                  <Button content='Space Gray' paddingX='32' textSize='16' leading='24' bg='transperant' textColor='#FF624C' radius='5' border='1px solid #FFB0A5' />
-                  <Button content='Jet Black' paddingX='32' textSize='16' leading='24' bg='transperant' textColor='#303030' radius='5' border='1px solid #979797' />
-                  <Button content='Cinnamon Red' paddingX='32' textSize='16' leading='24' bg='transperant' textColor='#CBCBCB' radius='5' border='1px solid #CBCBCB' />
+                  <Button content='Off White' className='px-8 text-base leading-6 bg-transparent text-secondary border border-[#979797] rounded-md' />
+                  <Button content='Space Gray' className='px-8 text-base leading-6 bg-transparent text-primary border border-[#FFB0A5] rounded-md' />
+                  <Button content='Jet Black' className='px-8 text-base leading-6 bg-transparent text-secondary border border-[#979797] rounded-md' />
+                  <Button content='Cinnamon Red' className='px-8 text-base leading-6 bg-transparent text-[#CBCBCB] border border-[#CBCBCB] rounded-md' />
                 </div>
               </div>
             </div>

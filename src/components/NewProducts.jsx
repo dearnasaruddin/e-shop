@@ -100,7 +100,7 @@ const NewProducts = () => {
                     </div>
                     {/* ======= Load More Button ======= */}
                     <div className={`flex justify-center mt-6 md:mt-16 mb-8 md:mb-20 ${pathname == '/product-details' && 'hidden'}`}>
-                        <Button content='Load More' bg='transparent' textColor='#FF624C' border='1px solid #FF624C' />
+                        <Button content='Load More'  className='bg-transparent text-primary border border-primary' />
                     </div>
                 </div>
             </Container>

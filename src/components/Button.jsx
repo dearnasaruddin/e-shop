@@ -1,38 +1,29 @@
-import React, { useState } from 'react'
+import { twMerge } from 'tailwind-merge'
 
-const Button = ({ content = 'Button', width, font = "Montserrat", weight = "bold", textSize = "20", leading = "30", textColor = "#ffffff", bg = "#FF624C", paddingY = "16", paddingX = "40", radius = "10", border = 'none' }) => {
-
-  let [screenSize, setScreenSize] = useState(window.screen.width > 576)
-
+const Button = ({
+  content = 'Button',
+  className = '',
+}) => {
+  const baseClasses = `
+    font-montserrat
+    font-bold
+    text-white
+    bg-[#FF624C]
+    text-[16px]
+    px-5
+    py-2
+    sm:text-[20px]
+    sm:px-10
+    sm:py-4
+    rounded-[10px]
+    cursor-pointer
+    transition
+  `
 
   return (
-    <button style={screenSize ? {
-      width: width,
-      fontFamily: font,
-      fontWeight: weight,
-      fontSize: textSize + "px",
-      padding: paddingY + "px" + " " + paddingX + "px",
-      borderRadius: radius + "px",
-      background: bg,
-      color: textColor,
-      lineHeight: leading + "px",
-      border: border,
-      cursor: 'pointer'
-    } :
-      {
-        width: width,
-        fontFamily: font,
-        fontWeight: 600,
-        fontSize: 16 + "px",
-        padding: '8px 20px',
-        borderRadius: radius + "px",
-        background: bg,
-        color: textColor,
-        lineHeight: leading + "px",
-        border: border,
-        cursor: 'pointer'
-      }
-    }>{content}</button>
+    <button className={twMerge(baseClasses, className)}>
+      {content}
+    </button>
   )
 }
 

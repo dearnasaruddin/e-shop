@@ -14,7 +14,7 @@ const FooterTop = () => {
                     <h3 className='font-poppins font-semibold text-2xl max-sm:max-w-50 max-sm:mx-auto lg:text-4xl lg:leading-11.5 text-secondary mb-6 lg:mb-14 text-center'>Subscribe to get our updates</h3>
                     <div className='flex justify-center gap-x-4'>
                         <input type="email" name="" id="" className='lg:w-201.5 border border-[#CBCBCB] lg:py-5.5 lg:px-10 rounded-[10px] font-montserrat font-normal text-base leading-6 text-[#646464]' placeholder='Enter your email address ...' />
-                        <Button content='Subscribe' paddingY='20' />
+                        <Button content='Subscribe' className='py-5' />
                     </div>
                 </div>
                 :

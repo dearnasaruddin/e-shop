@@ -42,7 +42,7 @@ const CartPage = () => {
                             </div>
                         </div>
                         <div className='flex max-sm:items-center gap-x-4 justify-center lg:justify-end lg:mt-8'>
-                           <Link to={'/product-list'}><Button content='Continue Shopping' bg='transparent' textColor='#303030' font='Poppins' weight='600' /></Link>
+                           <Link to={'/product-list'}><Button content='Continue Shopping' className='bg-transparent text-secondary font-poppins font-semibold' /></Link>
                            <Link to={'/checkout'}><Button content='Checkout' /></Link>
                         </div>
                     </div>
