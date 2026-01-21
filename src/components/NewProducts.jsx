@@ -11,7 +11,7 @@ const NewProducts = () => {
     const [categoryArr, setCategoryArr] = useState(['All Categories'])
     const [isCategoriesDropdownOpen, setIsCategoriesDropdownOpen] = useState(false)
     const [categoriesDropdownText, setCategoriesDropdowntext] = useState('')
-    const catagoriesDropdownRef = useRef(null)
+    const categoriesDropdownRef = useRef(null)
     const { pathname } = useLocation()
 
     const handleCategoriesDropdown = (value) => {
@@ -28,7 +28,7 @@ const NewProducts = () => {
     useEffect(() => {
 
         const handleClickOutside = (e) => {
-            if (catagoriesDropdownRef.current && !catagoriesDropdownRef.current.contains(e.target)) {
+            if (categoriesDropdownRef.current && !categoriesDropdownRef.current.contains(e.target)) {
                 setIsCategoriesDropdownOpen(false)
             }
         }
@@ -44,7 +44,7 @@ const NewProducts = () => {
         <section id={`${pathname != '/product-details' ? 'new-products' : ''}`}>
             <Container>
                 <div>
-                    <div className={`${pathname == '/product-details' ? 'hidden' : 'md:flex justify-between items-center mb-6 md:mb-12'}`}>
+                    <div className={`${pathname == '/product-details' ? 'hidden' : 'sm:flex justify-between items-center mb-6 md:mb-12'}`}>
                         <h2 className='font-poppins font-semibold text-3xl md:text-4xl mb-2.5 md:mb-0 text-secondary leading-11.6'>New Products</h2>
                         <div className='flex items-center gap-x-4'>
                             <p className='font-montserrat font-normal text-base leading-6 text-secondary'>Sort by</p>
@@ -79,7 +79,7 @@ const NewProducts = () => {
 
                                 {/* ====== options ====== */}
                                 {isCategoriesDropdownOpen &&
-                                    <ul ref={catagoriesDropdownRef} className='min-w-58 md:w-[110%] absolute top-10 -left-5 py-1 bg-white border border-gray-300 z-10 shadow-xl'>
+                                    <ul ref={categoriesDropdownRef} className='min-w-58 md:w-[110%] absolute top-10 sm:max-md:left-auto sm:max-md:right-0 -left-5 py-1 bg-white border border-gray-300 z-10 shadow-xl'>
                                         {categoryArr.map((item, index) => (
                                             <li onClick={() => handleCategoriesDropdown(item)} key={index} className='font-montserrat font-normal text-base capitalize whitespace-nowrap flex items-center gap-2 px-5 py-2 hover:bg-gray-100 hover:text-primary hover:font-medium cursor-pointer'>{item}</li>
                                         ))}
@@ -93,7 +93,7 @@ const NewProducts = () => {
                     {/* ======= Product Showcasing ======= */}
                     <div className="flex flex-wrap md:flex-nowrap gap-1 md:gap-x-6">
                         {dummyProducts.map((item, index) => (
-                            <div key={index} className='max-w-[49%] md:w-71 '>
+                            <div key={index} className='max-sm:max-w-[49%] sm:max-w-[32.9%] md:w-71'>
                                 <ProductLayout catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} productImage={item.productImage} newProduct={true} />
                             </div>
                         ))}

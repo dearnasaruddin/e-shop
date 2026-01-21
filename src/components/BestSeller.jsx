@@ -80,7 +80,7 @@ const BestSeller = () => {
                         </div>
                         <div className='flex flex-wrap gap-1 md:gap-x-6'>
                             {dummyProducts.map((item, index) => (
-                                <div key={index} className='max-w-[49%] md:max-w-71.5'>
+                                <div key={index} className='max-sm:max-w-[49%] sm:max-w-[32.9%] md:max-w-71.5'>
                                     <ProductLayout category={item.category} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} productImage={item.productImage} />
                                 </div>
                             ))}

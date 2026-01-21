@@ -59,8 +59,8 @@ const BottomBar = () => {
       <div className='bg-primary hidden sm:block sm:sticky sm:top-0 sm:z-20'>
         <CategoriesSideBar />
         <Container>
-          <div className="flex items-center justify-between py-6 font-montserrat font-bold text-base leading-6 text-white">
-            <ul className='flex items-center gap-x-20'>
+          <div className="flex items-center justify-between py-3.5 md:py-6 font-montserrat font-bold text-base gap-x-6 sm:max-md:text-sm leading-6 text-white">
+            <ul className='flex items-center sm:max-md:gap-x-6 md:gap-x-20'>
               <li onClick={handleCategoriesSideBar} className='flex items-center gap-x-4 cursor-pointer'> <FaBars className='text-xl' /> <span>All Categories</span></li>
               <li onClick={handleProductDropdown} className='flex items-center gap-x-2 cursor-pointer relative'>
                 {/* <span>Products</span><FaChevronDown /> */}
@@ -68,7 +68,7 @@ const BottomBar = () => {
                 {/* ======== Product Dropdown ======== */}
 
                 {isProductDropdownOpen &&
-                  <ul ref={dropdownRef} className='absolute top-10.5 -left-4 z-10 shadow-xl bg-white font-montserrat font-normal whitespace-nowrap text-base text-secondary rounded-lg border border-[#CBCBCB] py-1'>
+                  <ul ref={dropdownRef} className='absolute top-8 md:top-10.5 -left-4 z-10 shadow-xl bg-white font-montserrat font-normal whitespace-nowrap text-sm md:text-base text-secondary rounded-lg border border-[#CBCBCB] py-1'>
                     <li className='hover:bg-gray-200'>
                       <Link className='py-2 px-4 block' to={'/product-list'}>All Products</Link>
                     </li>
@@ -91,7 +91,7 @@ const BottomBar = () => {
               {/* <li><Link to={'/blog'}>Blog</Link></li> */}
               <li><Link to={'/contact'}>Contact</Link></li>
             </ul>
-            <ul className='flex items-center gap-x-20'>
+            <ul className='flex items-center sm:max-md:gap-x-6 md:gap-x-20'>
               {/* <li><Link to={'#'}>LIMITED SALE 👋🏻</Link></li> */}
               <li><Link to={'#best-seller'}>Best Seller</Link></li>
               <li><Link to={'#new-products'}>New Arrival</Link></li>

@@ -41,11 +41,19 @@ const SpringSale = () => {
                     dots: true
                 }
             },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3,
+                    arrows: false,
+                    dots: true
+                }
+            },
         ]
     };
 
 
-const {days, hours, minutes, seconds} = useSaleCountdown()
+    const { days, hours, minutes, seconds } = useSaleCountdown()
 
 
     return (
@@ -76,7 +84,7 @@ const {days, hours, minutes, seconds} = useSaleCountdown()
                                 <h3 className='font-poppins font-semibold text-2xl lg:text-4xl leading-11.5 text-primary'>{seconds}</h3>
                                 <p className='font-montserrat font-normal text-base leading-6 text-secondary lg:mt-2'>Seconds</p>
                             </div>
-                     </div>
+                        </div>
                         <div className='my-6 md:my-0'>
                             <Button content='Shop Now' />
                         </div>
@@ -91,7 +99,7 @@ const {days, hours, minutes, seconds} = useSaleCountdown()
                             {dummyProducts.map((item, index) => (
 
                                 item.discount &&
-                                <div className=' md:max-w-116'>
+                                <div className='md:max-w-116'>
                                     <div className='mx-1 md:mx-0'>
                                         <ProductLayout key={index} catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} productImage={item.productImage} springSale={true} availableQuantity={item.availableQuantity} />
                                     </div>

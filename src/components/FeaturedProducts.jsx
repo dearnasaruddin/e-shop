@@ -47,19 +47,19 @@ const FeaturedProducts = () => {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 640,
         settings: {
           slidesToShow: 2,
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 767,
         settings: {
           slidesToShow: 3,
         }
       },
       {
-        breakpoint: 900,
+        breakpoint: 1023,
         settings: {
           slidesToShow: 4,
         }

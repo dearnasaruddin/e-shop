@@ -19,7 +19,7 @@ const FooterBottom = () => {
             </ul>
           </div>
 
-          <div className="flex flex-wrap justify-between md:justify-start md:flex-nowrap md:gap-x-24 md:ml-42 md:mr-20 mt-6 md:mt-0">
+          <div className="flex flex-wrap max-md:grow justify-between md:justify-start md:flex-nowrap md:gap-x-24 md:ml-42 md:mr-20 mt-6 md:mt-0">
 
             <div className='text-secondary'>
               <h4 className='font-poppins font-semibold text-xl leading-7.5'>Links</h4>
@@ -59,12 +59,12 @@ const FooterBottom = () => {
 
           </div>
 
-          <div className='text-secondary mt-6 md:mt-0'>
+          <div className='sm:max-md:flex sm:max-md:justify-between sm:max-md:gap-6 sm:max-md:w-full text-secondary mt-6 md:mt-0'>
             <div>
               <h4 className='font-poppins font-semibold text-xl leading-7.5'>Payments</h4>
               <img className='mt-6' src="images/payment.png" alt="payment.png" />
             </div>
-            <div className='mt-8  md:mt-18 mb-6 md:mb-0'>
+            <div className='max-sm:mt-8 sm:max-md:basis-64  md:mt-18 mb-6 md:mb-0'>
               <h4 className='font-poppins font-semibold text-xl leading-7.5'>Follow Us</h4>
               <ul className='mt-3 md:mt-6 font-montserrat font-normal text-base leading-6 flex md:flex-col gap-y-2 md:gap-y-3 justify-between md:justify-start'>
                 <li><Link className='hover:text-primary' to={"https://x.com/"} target='_blank'>Twitter</Link></li>
