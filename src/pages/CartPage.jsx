@@ -30,7 +30,7 @@ const CartPage = () => {
                         <CartItem />
                         <div className='flex justify-between items-center max-sm:gap-3 flex-wrap'>
                             <div className='relative max-sm:w-full'>
-                                <input type="text" className='w-full lg:w-154.5 py-4 lg:py-9 max-sm:pl-3 max-sm:pr-30 lg:pl-9 lg:pr-48 border border-[#CBCBCB] rounded-[10px] font-montserrat font-normal text-base leading-6 text-[#646464]' placeholder='Enter coupon code (ex: FIRSTPAY)' />
+                                <input type="text" className='w-full lg:w-154.5 py-4 lg:py-9 max-sm:pl-3 max-sm:pr-30 lg:pl-9 lg:pr-48 border border-[#CBCBCB] rounded-[10px] font-montserrat font-normal text-sm lg:text-base leading-6 text-[#646464]' placeholder='Enter coupon code (ex: FIRSTPAY)' />
                                 <button className='absolute top-1/2 -translate-y-1/2 right-3 lg:right-9 font-poppins font-semibold text-base lg:text-xl lg:leading-7.5 text-secondary underline cursor-pointer'>Apply Code</button>
                             </div>
                             <div className='py-1.5 lg:py-8 px-4 lg:px-9 max-sm:w-full flex lg:gap-x-44 justify-between items-center bg-[#F4F4F4] rounded-[10px]'>
