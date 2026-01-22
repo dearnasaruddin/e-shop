@@ -32,10 +32,10 @@ const CategoriesSideBar = () => {
     })
 
     return (
-        <div ref={categoriesRef} className={`fixed w-1/4 sm:max-md:w-2/5 h-screen bg-gray-100 z-10 ${selector ? 'left-0' : '-left-full'} top-0 shadow-2xl p-10 sm:max-md:p-5 duration-300`}>
-            <div><IoCloseOutline onClick={handleCategoriesSideBar} className='text-2xl md:text-3xl ml-auto text-secondary hover:text-red-500 duration-300 cursor-pointer' /></div>
-            <h3 className='font-poppins font-semibold text-xl md:text-2xl'>All Categories</h3>
-            <ul className='mt-6 sm:max-md:mt-4 text-lg sm:max-md:text-sm capitalize'>
+        <div ref={categoriesRef} className={`fixed w-1/4 sm:max-md:w-2/5 md:max-lg:w-2/7 h-screen bg-gray-100 z-10 ${selector ? 'left-0' : '-left-full'} top-0 shadow-2xl p-10 sm:max-lg:p-5 duration-300`}>
+            <div><IoCloseOutline onClick={handleCategoriesSideBar} className='text-2xl lg:text-3xl ml-auto text-secondary hover:text-red-500 duration-300 cursor-pointer' /></div>
+            <h3 className='font-poppins font-semibold text-xl lg:text-2xl'>All Categories</h3>
+            <ul className='mt-6 sm:max-lg:mt-4 text-lg sm:max-lg:text-sm capitalize'>
                 {categories.map((item, index) => (
                     <li key={index}><Link className='font-montserrat text-secondary hover:text-primary duration-300 block py-1 md:py-2' >{item}</Link></li>
                 ))}

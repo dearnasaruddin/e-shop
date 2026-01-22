@@ -7,9 +7,9 @@ import { FaLocationDot } from "react-icons/fa6";
 
 const FooterBottom = () => {
   return (
-    <footer className='mt-10 md:mt-25'>
+    <footer className='mt-10 lg:mt-25'>
       <Container>
-        <div className="flex flex-wrap md:flex-nowrap md:pb-20 border-b border-[#CBCBCB]">
+        <div className="flex flex-wrap md:flex-nowrap md:pb-6 lg:pb-20 border-b border-[#CBCBCB]">
           <div>
             <Link to={'/'}><img className='mt-2' src="/logo.svg" alt="logo.svg" /></Link>
             <ul className='mt-6 md:mt-39.5 font-montserrat font-normal text-base leading-5 text-secondary'>
@@ -19,7 +19,7 @@ const FooterBottom = () => {
             </ul>
           </div>
 
-          <div className="flex flex-wrap max-md:grow justify-between md:justify-start md:flex-nowrap md:gap-x-24 md:ml-42 md:mr-20 mt-6 md:mt-0">
+          <div className="flex flex-wrap max-lg:grow justify-between lg:justify-start md:flex-nowrap md:gap-x-4 lg:gap-x-10 xl:gap-x-24 lg:ml-10 xl:ml-42 lg:mr-10 xl:mr-20 mt-6 md:mt-0">
 
             <div className='text-secondary'>
               <h4 className='font-poppins font-semibold text-xl leading-7.5'>Links</h4>
@@ -59,12 +59,12 @@ const FooterBottom = () => {
 
           </div>
 
-          <div className='sm:max-md:flex sm:max-md:justify-between sm:max-md:gap-6 sm:max-md:w-full text-secondary mt-6 md:mt-0'>
+          <div className='sm:max-md:flex sm:max-md:justify-between sm:max-md:gap-6 sm:max-md:w-full text-secondary mt-6 md:mt-0 md:max-lg:ml-4'>
             <div>
               <h4 className='font-poppins font-semibold text-xl leading-7.5'>Payments</h4>
               <img className='mt-6' src="images/payment.png" alt="payment.png" />
             </div>
-            <div className='max-sm:mt-8 sm:max-md:basis-64  md:mt-18 mb-6 md:mb-0'>
+            <div className='max-sm:mt-8 sm:max-md:basis-64 md:mt-12 lg:mt-18 mb-6 md:mb-0'>
               <h4 className='font-poppins font-semibold text-xl leading-7.5'>Follow Us</h4>
               <ul className='mt-3 md:mt-6 font-montserrat font-normal text-base leading-6 flex md:flex-col gap-y-2 md:gap-y-3 justify-between md:justify-start'>
                 <li><Link className='hover:text-primary' to={"https://x.com/"} target='_blank'>Twitter</Link></li>
@@ -75,7 +75,7 @@ const FooterBottom = () => {
           </div>
         </div>
 
-        <div className='flex flex-wrap md:flex-nowrap justify-center gap-y-2 md:gap-y-0 md:justify-between items-center text-[#646464] font-montserrat font-normal text-sm leading-5 pt-2 pb-5 md:pb-20'>
+        <div className='flex flex-wrap md:flex-nowrap justify-center gap-y-2 md:gap-y-0 md:justify-between items-center text-[#646464] font-montserrat font-normal text-sm leading-5 pt-2 pb-5 lg:pb-20'>
           <p>Copyright © 2023 E-Shop. All Rights Reserved.</p>
           <ul className='flex gap-x-5'>
             <li><Link className='hover:text-primary' to={""}>Privacy Policy</Link></li>

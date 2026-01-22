@@ -11,14 +11,14 @@ const Button = ({
     bg-primary
     text-sm
     sm:text-base
-    md:text-xl
+    lg:text-xl
     px-5
-    md:px-10
+    lg:px-10
     py-2.5
-    md:py-4
+    lg:py-4
     rounded-sm
     sm:rounded-lg
-    md:rounded-[10px]
+    lg:rounded-[10px]
     cursor-pointer
     transition
   `

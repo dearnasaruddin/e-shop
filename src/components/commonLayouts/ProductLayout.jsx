@@ -33,21 +33,21 @@ const ProductLayout = ({ catagory = 'watch', title = 'Orange Watch 12 High Quali
   }, [availableQuantity])
 
   return (
-    <div onMouseEnter={handleHoverStart} onMouseLeave={handleHoverEnd} className={` ${springSale ? 'p-3 md:!p-10 bg-[#EAEAEA] hover:bg-white' : 'border border-[#CBCBCB] md:border-transparent hover:border-[#CBCBCB]'} rounded-md sm:rounded-[10px]  duration-300 group cursor-pointer ${listView ? 'flex items-center gap-6 lg:gap-12 px-2 lg:px-12 py-1 lg:py-5' : 'px-2 md:px-5.5 md:pt-6 pb-2 md:pb-11'} relative`}>
+    <div onMouseEnter={handleHoverStart} onMouseLeave={handleHoverEnd} className={` ${springSale ? 'p-3 md:!p-10 bg-[#EAEAEA] hover:bg-white' : 'border border-[#CBCBCB] lg:border-transparent hover:border-[#CBCBCB]'} rounded-md sm:rounded-[10px]  duration-300 group cursor-pointer ${listView ? 'flex items-center gap-6 lg:gap-12 px-2 lg:px-12 py-1 lg:py-5' : 'px-2 lg:px-5.5 lg:pt-6 pb-2 lg:pb-11'} relative`}>
 
       {/* =========== Image & Discount part =========== */}
       <div className='relative'>
-        {discount && <span className={`absolute ${springSale ? 'size-10 md:size-25 flex justify-center items-center font-poppins font-semibold text-sm md:text-2xl md:leading-7.5 rounded-full top-0 right-0' : 'top-2 md:-top-2 right-0 md:-right-2 font-montserrat font-semibold md:font-bold text-sm md:text-base leading-6 py-0.5 md:py-2 px-2 md:px-5 rounded-[5px]'} text-white bg-primary`}>{discount}%</span>}
+        {discount && <span className={`absolute ${springSale ? 'size-10 md:size-25 flex justify-center items-center font-poppins font-semibold text-sm lg:text-2xl lg:leading-7.5 rounded-full top-0 right-0' : 'top-2 lg:-top-2 right-0 md:-right-2 font-montserrat font-semibold xl:font-bold text-sm lg:text-base leading-6 py-0.5 xl:py-2 px-2 xl:px-5 rounded-[5px]'} text-white bg-primary`}>{discount}%</span>}
         <img className='w-full' src={productImage ? productImage : 'images/productImage.webp'} alt={productImage ? productImage : 'productImage.webp'} />
 
       </div>
 
 
       {/* =========== details part =========== */}
-      <div className={`text-secondary ${!listView && 'md:pt-10'}`} >
-        <p className='font-montserrat font-normal text-xs md:text-sm uppercase leading-5 tracking-[2px] md:tracking-[5px] md:mb-4'>{catagory}</p>
+      <div className={`text-secondary ${!listView && 'lg:pt-3 xl:pt-10'}`} >
+        <p className='font-montserrat font-normal text-xs md:text-sm uppercase leading-5 tracking-[2px] xl:tracking-[5px] lg:mb-2 xl:mb-4'>{catagory}</p>
 
-        <Link to={'/product-details'} className={`font-poppins font-normal sm:font-medium md:font-semibold text-base md:text-xl md:leading-7.5 line-clamp-2 md:line-clamp-none group-hover:text-primary group-hover:underline duration-300 ${newProduct && 'md:w-59'}`}>{title}</Link>
+        <Link to={'/product-details'} className={`font-poppins font-normal sm:font-medium lg:font-semibold text-base xl:text-xl xl:leading-7.5 line-clamp-2 xl:line-clamp-none group-hover:text-primary group-hover:underline duration-300 ${newProduct && 'md:w-59'}`}>{title}</Link>
 
         {/* ===== Product Short Description for list view ===== */}
         {listView &&
@@ -55,19 +55,19 @@ const ProductLayout = ({ catagory = 'watch', title = 'Orange Watch 12 High Quali
         }
 
         {/* ==== Rating ==== */}
-        <div className='flex items-center gap-x-2 md:mt-1'>
+        <div className='flex items-center gap-x-2 lg:mt-1'>
           <div className="flex items-center text-base text-[#FED550]">
             {ratingValue.map((item, index) => (
               springSale ? <IoStarSharp key={index} className='text-white group-hover:text-[#FED550] duration-300' /> : <IoStarSharp key={index} className='text-[#FED550]' />
             ))}
           </div>
-          <span className='font-montserrat font-normal text-sm md:text-base leading-6'>( {totalRating} )</span>
+          <span className='font-montserrat font-normal text-sm lg:text-base leading-6'>( {totalRating} )</span>
         </div>
 
         {/* ==== Price ==== */}
-        <div className='md:mt-5 flex gap-x-2'>
-          <p className={`font-poppins font-semibold ${discount ? 'text-primary' : 'text-secondary'} text-lg sm:text-xl md:text-2xl md:leading-7.5`}>${price}</p>
-          {originalPrice && <span className='self-end font-montserrat font-normal text-sm md:text-base mb-0.5 md:leading-6 text-[#979797] line-through'>${originalPrice}</span>}
+        <div className='lg:mt-1 xl:mt-5 flex gap-x-2'>
+          <p className={`font-poppins font-semibold ${discount ? 'text-primary' : 'text-secondary'} text-lg sm:text-xl xl:text-2xl xl:leading-7.5`}>${price}</p>
+          {originalPrice && <span className='self-end font-montserrat font-normal text-sm xl:text-base mb-0.5 md:leading-6 text-[#979797] line-through'>${originalPrice}</span>}
         </div>
 
         {/* ======= Stock part of Spring Sale ======= */}
@@ -81,10 +81,10 @@ const ProductLayout = ({ catagory = 'watch', title = 'Orange Watch 12 High Quali
 
       {/* ========= Cart, wishlist & Share Buttons ========= */}
       {!springSale &&
-        <ul className={`flex gap-4.5 max-md:hidden  ${listView ? 'flex-col justify-center ml-auto' : 'group-hover:scale-100 absolute top-45.5 left-1/2 -translate-x-1/2 scale-0'} duration-300`}>
-          <li className='size-12.5 bg-white border border-primary rounded-full flex justify-center items-center text-xl text-primary hover:bg-primary hover:text-white duration-300 cursor-pointer iconParent'><AddToCartIcon color='#FF624C' /></li>
-          <li className='size-12.5 bg-white border border-primary rounded-full flex justify-center items-center text-xl text-primary hover:bg-primary hover:text-white duration-300 cursor-pointer'><LuHeart /></li>
-          <li className='size-12.5 bg-white border border-primary rounded-full flex justify-center items-center text-xl text-primary hover:bg-primary hover:text-white duration-300 cursor-pointer'><GoShareAndroid /></li>
+        <ul className={`flex gap-2 lg:gap-4.5 max-md:hidden  ${listView ? 'flex-col justify-center ml-auto' : 'group-hover:scale-100 absolute top-28 lg:top-45.5 left-1/2 -translate-x-1/2 scale-0'} duration-300`}>
+          <li className='size-8 lg:size-12.5 bg-white border border-primary rounded-full flex justify-center items-center text-xl text-primary hover:bg-primary hover:text-white duration-300 cursor-pointer iconParent'><AddToCartIcon color='#FF624C' /></li>
+          <li className='size-8 lg:size-12.5 bg-white border border-primary rounded-full flex justify-center items-center text-xl text-primary hover:bg-primary hover:text-white duration-300 cursor-pointer'><LuHeart /></li>
+          <li className='size-8 lg:size-12.5 bg-white border border-primary rounded-full flex justify-center items-center text-xl text-primary hover:bg-primary hover:text-white duration-300 cursor-pointer'><GoShareAndroid /></li>
         </ul>
       }
     </div>

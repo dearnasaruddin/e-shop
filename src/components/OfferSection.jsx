@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom'
 
 const OfferSection = () => {
     return (
-        <div className='my-8 md:my-20'>
+        <div className='my-8 lg:my-20'>
             <Container>
-                <div className='sm:flex sm:max-lg:gap-4 justify-between items-center max-sm:space-y-3'>
+                <div className='sm:flex sm:max-xl:gap-4 justify-between items-center max-sm:space-y-3'>
                     <div>
-                        <Link to={'#'}><img src="images/offerOneImage.webp" alt="offerOneImage.webp" /></Link>
+                        <Link to={'/product-list'}><img src="images/offerOneImage.webp" alt="offerOneImage.webp" /></Link>
                     </div>
                     <div>
-                        <Link to={'#'}><img src="images/offerTwoImage.webp" alt="offerTwoImage.webp" /></Link>
+                        <Link to={'/product-list'}><img src="images/offerTwoImage.webp" alt="offerTwoImage.webp" /></Link>
                     </div>
                 </div>
             </Container>

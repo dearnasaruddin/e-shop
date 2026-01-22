@@ -6,7 +6,7 @@ import TopRightBar from './topbarComponents/TopRightBar'
 
 const TopBar = () => {
   return (
-    <div className='border-b border-[#CBCBCB] md:py-4 py-3'>
+    <div className='border-b border-[#CBCBCB] lg:py-4 py-3'>
       <Container>
         <div className="md:flex justify-between items-center">
           <TopLeftBar />

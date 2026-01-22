@@ -29,23 +29,23 @@ const Faq = () => {
   return (
     <div className='bg-[#F4F4F4] pt-8 md:pt-16 pb-12 md:pb-17.5'>
       <Container>
-        <div className='flex md:gap-x-28 gap-y-12 md:gap-y-0 max-md:flex-col-reverse'>
+        <div className='flex md:gap-x-8 lg:gap-x-28 gap-y-12 md:gap-y-0 max-md:flex-col-reverse'>
 
 
-          <div className='md:w-231.5 flex flex-col gap-y-4 md:gap-y-6'>
+          <div className='md:w-124 lg:w-231.5 flex flex-col gap-y-4 lg:gap-y-6'>
             {accordionData.map((item, index) => (
               <AccordionItem key={index} title={item.title} content={item.content} onToggle={() => setOpenAccordion(openAccordion === index ? null : index)} isOpen={openAccordion === index} />
             ))}
           </div>
 
           <div className='grow flex flex-col justify-between'>
-            <div className='ml-auto hidden md:block'>
+            <div className='ml-auto hidden md:block md:max-lg:w-1/3'>
               <img src="images/dotsShape.png" alt="dotsShape.png" />
             </div>
 
             <div >
-              <h2 className='md:max-w-76.5 font-poppins font-semibold text-3xl md:text-4xl leading-11.5 text-secondary'>Frequently Asked Questions</h2>
-              <p className='max-w-68 md:max-w-98 font-montserrat font-normal text-base md:text-xl leading-7 md:leading-7.5 text-secondary mt-3 md:mt-6 mb-6 md:mb-16'>Questions that get asked the most by our clients. Get any burning questions?</p>
+              <h2 className='md:max-w-64 lg:max-w-76.5 font-poppins font-semibold text-3xl lg:text-4xl lg:leading-11.5 text-secondary'>Frequently Asked Questions</h2>
+              <p className='max-w-68 lg:max-w-98 font-montserrat font-normal text-base lg:text-xl leading-7 lg:leading-7.5 text-secondary mt-3 lg:mt-6 mb-6 lg:mb-16'>Questions that get asked the most by our clients. Get any burning questions?</p>
               <Button content='Ask A Question' />
             </div>
           </div>

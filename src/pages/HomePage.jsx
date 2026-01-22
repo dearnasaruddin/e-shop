@@ -16,8 +16,8 @@ const HomePage = () => {
       <Facility />
       <FeaturedProducts/>
       <OfferSection/>
-      <NewProducts/>
-      <SpringSale/>
+      {/* <NewProducts/> */}
+      {/* <SpringSale/> */}
       <BestSeller/>
       <Faq/>
       <FeaturedBrands/>

@@ -70,23 +70,23 @@ const BestSeller = () => {
     ]
 
     return (
-        <section id='best-seller' className='my-10 md:my-20'>
+        <section id='best-seller' className='my-10 lg:my-20'>
             <Container>
                 <div className="md:flex justify-between">
-                    <div className='md:max-w-227'>
+                    <div className='lg:max-w-180 xl:max-w-227'>
                         <div className="flex justify-between mb-8 md:mb-12">
                             <h2 className='font-poppins font-semibold text-3xl md:text-4xl text-secondary md:leading-11.5'>Best Seller</h2>
                             <Link to={'/product-list'} className='self-end mb-0.5 flex items-center gap-x-4 text-primary font-montserrat font-bold text-base leading-6'>View All<LongArrowRight /></Link>
                         </div>
-                        <div className='flex flex-wrap gap-1 md:gap-x-6'>
+                        <div className='flex flex-wrap gap-1 md:gap-2.5 lg:gap-x-6'>
                             {dummyProducts.map((item, index) => (
-                                <div key={index} className='max-sm:max-w-[49%] sm:max-w-[32.9%] md:max-w-71.5'>
+                                <div key={index} className='max-sm:max-w-[49%] sm:max-w-[32.9%] md:max-w-[24%] lg:max-w-[30%] xl:max-w-71.5'>
                                     <ProductLayout category={item.category} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} productImage={item.productImage} />
                                 </div>
                             ))}
                         </div>
                     </div>
-                    <div className='md:w-136 hidden md:block'>
+                    <div className='xl:w-136 hidden lg:block lg:max-xl:grow'>
                         <Link> <img className='w-full' src="images/bestSeller.webp" alt="bestSeller.webp" /></Link>
                     </div>
                 </div>
