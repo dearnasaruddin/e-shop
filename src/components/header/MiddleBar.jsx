@@ -64,11 +64,11 @@ const MiddleBar = () => {
             </span>
 
             {/* ======= Input ======= */}
-            <div className={`${activeSearch && 'w-full sm:w-auto absolute top-0 left-1/2 md:left-0  -translate-x-1/2 sm:translate-0 z-10 px-2.5 sm:px-0 max-sm:py-2 bg-white sm:bg-transparent'}`}>
+            <div className={`${activeSearch ? 'w-full sm:w-auto absolute top-0 left-1/2 md:left-0  -translate-x-1/2 sm:translate-0 z-10 px-2.5 sm:px-0 max-sm:py-2 bg-white sm:bg-transparent': ''}`}>
 
               <div ref={searchRef} className={`${activeSearch ? 'w-full sm:w-auto' : 'relative'}`}>
 
-                <input className={`sm:max-w-56 md:w-83 border border-[#979797] py-3 sm:py-2.5 lg:py-4.5 max-md:pl-4 max-md:pr-10 md:px-6 rounded-lg lg:rounded-[10px] ${activeSearch ? 'inline-block w-full max-sm:shadow-2xl max-sm:text-secondary' : 'max-sm:hidden'} sm:block`} placeholder='Search Products ...' type="text" />
+                <input className={`sm:max-md:max-w-56 md:w-83 border border-[#979797] py-3 sm:py-2.5 lg:py-4.5 max-md:pl-4 max-md:pr-10 md:px-6 rounded-lg lg:rounded-[10px] ${activeSearch ? 'inline-block w-full max-sm:shadow-2xl max-sm:text-secondary' : 'max-sm:hidden'} sm:block`} placeholder='Search Products ...' type="search" />
 
                 <IoSearchOutline onClick={handleSearch} className={`${activeSearch ? 'absolute -translate-y-1/2 right-6 sm:right-0 pb-1 sm:pb-0' : 'right-0'} sm:hidden sm:absolute top-1/2 sm:-translate-1/2 md:right-3.5 text-3xl sm:text-2xl md:text-lg mt-0.5 sm:mt-0 cursor-pointer`} />
 
