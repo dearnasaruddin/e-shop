@@ -6,7 +6,7 @@ const AccordionItem = ({ title, content, onToggle, isOpen }) => {
         <div onClick={onToggle} className='w-full py-4 lg:py-8 pl-3 lg:pl-12 pr-2 md:pr-0  bg-white rounded-2xl lg:rounded-[25px] text-secondary cursor-pointer'>
 
             <button className='w-full flex items-center gap-x-3 lg:gap-x-8 font-poppins font-semibold text-sm md:text-base lg:text-2xl lg:leading-7.5 text-left cursor-pointer'>
-                <span className={`max-md:place-self-start flex shrink-0 justify-center items-center size-6 lg:size-8 rounded-full duration-300 border border-primary ${isOpen ? 'bg-transparent' : 'bg-primary'} `}>{isOpen ? <ArrowDownIcon color='#FF624C' width='14' height='14' /> : <ArrowDownIcon color='#ffffff' rotate='-90deg' width='14' height='14' />}</span>
+                <span className={`max-md:place-self-start flex shrink-0 justify-center items-center size-6 lg:size-8 rounded-full duration-300 border border-primary ${isOpen ? 'bg-transparent' : 'bg-primary'} `}>{isOpen ? <ArrowDownIcon className='fill-primary size-3.5' /> : <ArrowDownIcon className='fill-white -rotate-90 size-3.5' />}</span>
                 {title}
             </button>
 

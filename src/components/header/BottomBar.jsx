@@ -64,7 +64,7 @@ const BottomBar = () => {
               <li onClick={handleCategoriesSideBar} className='flex items-center gap-x-4 cursor-pointer'> <FaBars className='text-xl' /> <span>All Categories</span></li>
               <li onClick={handleProductDropdown} className='flex items-center gap-x-2 cursor-pointer relative'>
                 {/* <span>Products</span><FaChevronDown /> */}
-                <span>Products</span><ArrowDownIcon color='#ffffff' />
+                <span>Products</span><ArrowDownIcon className='fill-white' />
                 {/* ======== Product Dropdown ======== */}
 
                 {isProductDropdownOpen &&

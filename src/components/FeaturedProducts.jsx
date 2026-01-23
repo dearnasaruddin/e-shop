@@ -16,7 +16,7 @@ function SampleNextArrow(props) {
       className={`${className} !text-[#303030] !flex !justify-center !items-center !size-8 lg:!size-10  !rounded-full !bg-white lg:!bg-transparent !border !border-[#303030] !z-10 !text-[10px] !-right-3.5 lg:!-right-5 xl:!-right-10`}
       style={{ ...style }}
       onClick={onClick}
-    > <ArrowDownIcon rotate='270deg' /> </div>
+    > <ArrowDownIcon className='rotate-270' /> </div>
   );
 }
 
@@ -27,7 +27,7 @@ function SamplePrevArrow(props) {
       className={`${className} !text-[#303030] !flex !justify-center !items-center !size-8 lg:!size-10 !rounded-full !bg-white lg:!bg-transparent !border !border-[#303030] !z-10 !text-[10px] !-left-3.5 lg:!-left-5 xl:!-left-10`}
       style={{ ...style }}
       onClick={onClick}
-    ><ArrowDownIcon rotate='90deg' /></div>
+    ><ArrowDownIcon className='rotate-90' /></div>
   );
 }
 

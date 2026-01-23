@@ -52,7 +52,7 @@ const Pagination = ({ totalItems, itemPerPage, currentPage, onPageChange }) => {
 
     return (
         <div className='flex justify-center items-center lg:gap-x-9'>
-            <button onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1} className='size-8 lg:size-12 flex justify-center items-center rounded-sm cursor-pointer hover:bg-gray-200 lg:mx-2 disabled:hover:bg-transparent disabled:opacity-20 disabled:cursor-not-allowed'><ArrowDownIcon className='size-5 lg:size-8' rotate='90deg' /></button>
+            <button onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1} className='size-8 lg:size-12 flex justify-center items-center rounded-sm cursor-pointer hover:bg-gray-200 lg:mx-2 disabled:hover:bg-transparent disabled:opacity-20 disabled:cursor-not-allowed'><ArrowDownIcon className='size-5 lg:size-8 rotate-90' /></button>
             <div className='flex justify-center items-center lg:gap-x-7.5'>
                 <button onClick={() => onPageChange(1)} className={`size-8 lg:size-12 flex justify-center items-center rounded-sm font-poppins sm:font-semibold text-base md:text-lg lg:text-xl leading-7.5 text-secondary cursor-pointer ${currentPage == 1 ? 'bg-primary text-white' : 'hover:bg-gray-200'}`}>1</button>
                 {pageNumbers.map((pageNumber, index) => (
@@ -60,7 +60,7 @@ const Pagination = ({ totalItems, itemPerPage, currentPage, onPageChange }) => {
                 ))}
                 <button onClick={() => onPageChange(totalPages)} className={`size-8 lg:size-12 flex justify-center items-center rounded-sm font-poppins sm:font-semibold text-base md:text-lg lg:text-xl leading-7.5 text-secondary cursor-pointer ${currentPage == totalPages ? 'bg-primary text-white' : 'hover:bg-gray-200'}`}>{totalPages}</button>
             </div>
-            <button onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages} className='size-8 lg:size-12 flex justify-center items-center rounded-sm cursor-pointer hover:bg-gray-200 lg:mx-2 disabled:hover:bg-transparent disabled:opacity-20 disabled:cursor-not-allowed'><ArrowDownIcon className='size-5 lg:size-8' rotate='270deg' /></button>
+            <button onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages} className='size-8 lg:size-12 flex justify-center items-center rounded-sm cursor-pointer hover:bg-gray-200 lg:mx-2 disabled:hover:bg-transparent disabled:opacity-20 disabled:cursor-not-allowed'><ArrowDownIcon className='size-5 lg:size-8 rotate-270' /></button>
         </div>
     )
 }

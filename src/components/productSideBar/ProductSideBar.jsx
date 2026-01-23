@@ -41,7 +41,7 @@ const ProductSideBar = () => {
                 <div onClick={()=>handleSidebarDropdown('category')} className='flex items-center lg:gap-x-32.5 justify-between cursor-pointer'>
                     <h4 className='font-montserrat font-semibold lg:font-bold text-sm lg:text-xl leading-7.5 text-secondary'>Categories</h4>
                     {isCategoriesDropdownOpen ?
-                        <ArrowDownIcon rotate='-180deg' />
+                        <ArrowDownIcon className='-rotate-180' />
                         :
                         <ArrowDownIcon />
                     }
@@ -56,7 +56,7 @@ const ProductSideBar = () => {
                 <div onClick={()=>handleSidebarDropdown('brand')} className='flex items-center lg:gap-x-32.5 justify-between cursor-pointer'>
                     <h4 className='font-montserrat font-semibold lg:font-bold text-sm lg:text-xl leading-7.5 text-secondary'>Brands</h4>
                     {isBrandDropdownOpen ?
-                        <ArrowDownIcon rotate='-180deg' />
+                        <ArrowDownIcon className='-rotate-180' />
                         :
                         <ArrowDownIcon />
                     }
@@ -72,7 +72,7 @@ const ProductSideBar = () => {
                 <div onClick={()=>handleSidebarDropdown('price')} className='flex items-center lg:gap-x-32.5 justify-between cursor-pointer'>
                     <h4 className='font-montserrat font-semibold lg:font-bold text-sm lg:text-xl leading-7.5 text-secondary'>Price</h4>
                     {isPriceDropdownOpen ?
-                        <ArrowDownIcon rotate='-180deg' />
+                        <ArrowDownIcon className='-rotate-180' />
                         :
                         <ArrowDownIcon />
                     }

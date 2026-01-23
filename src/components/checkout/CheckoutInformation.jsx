@@ -92,7 +92,7 @@ const CheckoutInformation = () => {
                         <InputBox value={selectedCountry} label='Country' required={true} placeholder='Indonesia' handleInputValue={handleInputValue} />
 
                         {/* Countries Dropdown */}
-                        <span onClick={() => setActiveCountry(!activeCountry)} className='absolute max-md:top-4/7 lg:bottom-7 max-md:right-4 lg:right-6.5 cursor-pointer'><ArrowDownIcon width='24' height='24' /></span>
+                        <span onClick={() => setActiveCountry(!activeCountry)} className='absolute max-md:top-4/7 lg:bottom-7 max-md:right-4 lg:right-6.5 cursor-pointer'><ArrowDownIcon className='size-6' /></span>
                         {activeCountry &&
                             <ul ref={countryDropdownRef} className='max-h-56 py-1.5 absolute -bottom-52 right-6 z-10 font-montserrat text-secondary bg-white shadow-2xl border border-[#CBCBCB] rounded-md overflow-auto'>
                                 {countries.map((item, index) => <li onClick={() => handleSelectedCountry(item.countryName)} key={index} className='py-2.5 pl-5 pr-12 hover:bg-gray-300 cursor-pointer'>{item.countryName}</li>)}
@@ -104,7 +104,7 @@ const CheckoutInformation = () => {
                         <InputBox label='State' value={selectedState} required={true} placeholder='Kalimantan Timur' handleInputValue={handleInputValue} />
 
                         {/* State Dropdown */}
-                        <span onClick={() => setActiveState(!activeState)} className='absolute max-md:top-4/7 lg:bottom-7 max-md:right-4 lg:right-6.5 cursor-pointer'><ArrowDownIcon width='24' height='24' /></span>
+                        <span onClick={() => setActiveState(!activeState)} className='absolute max-md:top-4/7 lg:bottom-7 max-md:right-4 lg:right-6.5 cursor-pointer'><ArrowDownIcon className='size-6' /></span>
                         {activeState &&
                             <ul ref={stateDropdownRef} className={`max-h-56 absolute ${states.length > 0 ? '-bottom-52 right-6 py-1.5 border-[#CBCBCB] text-secondary overflow-auto' : '-bottom-8 lg:-bottom-6 right-8 lg:right-6 border-red-500 text-red-500 overflow-hidden'} z-10 font-montserrat  bg-white shadow-2xl border  rounded-md`}>
                                 {states.length > 0 ?
@@ -121,7 +121,7 @@ const CheckoutInformation = () => {
                         <InputBox label='City' value={selectedCity} required={true} placeholder='Samarinda' handleInputValue={handleInputValue} />
 
                         {/* City Dropdown */}
-                        <span onClick={() => setActiveCity(!activeCity)} className='absolute max-md:top-4/7 lg:bottom-7 max-md:right-4 lg:right-6.5 cursor-pointer'><ArrowDownIcon width='24' height='24' /></span>
+                        <span onClick={() => setActiveCity(!activeCity)} className='absolute max-md:top-4/7 lg:bottom-7 max-md:right-4 lg:right-6.5 cursor-pointer'><ArrowDownIcon className='size-6' /></span>
                         {activeCity &&
                             <ul ref={cityDropdownRef} className={`max-h-56 absolute ${selectedState ? '-bottom-52 right-6 py-1.5 border-[#CBCBCB] text-secondary overflow-auto' : '-bottom-8 lg:-bottom-6 right-8 lg:right-6 border-red-500 text-red-500 overflow-hidden'} z-10 font-montserrat  bg-white shadow-2xl border  rounded-md`}>
                                 {selectedState ?

@@ -33,11 +33,11 @@ const ProductLayout = ({ catagory = 'watch', title = 'Orange Watch 12 High Quali
   }, [availableQuantity])
 
   return (
-    <div onMouseEnter={handleHoverStart} onMouseLeave={handleHoverEnd} className={` ${springSale ? 'p-3 md:!p-10 bg-[#EAEAEA] hover:bg-white' : 'border border-[#CBCBCB] lg:border-transparent hover:border-[#CBCBCB]'} rounded-md sm:rounded-[10px]  duration-300 group cursor-pointer ${listView ? 'flex items-center gap-6 lg:gap-12 px-2 lg:px-12 py-1 lg:py-5' : 'px-2 lg:px-5.5 lg:pt-6 pb-2 lg:pb-11'} relative`}>
+    <div onMouseEnter={handleHoverStart} onMouseLeave={handleHoverEnd} className={` ${springSale ? 'p-3 md:p-5 xl:!p-10 bg-[#EAEAEA] hover:bg-white' : 'border border-[#CBCBCB] lg:border-transparent hover:border-[#CBCBCB]'} rounded-md sm:rounded-[10px]  duration-300 group cursor-pointer ${listView ? 'flex items-center gap-6 lg:gap-12 px-2 lg:px-12 py-1 lg:py-5' : 'px-2 lg:px-5.5 lg:pt-6 pb-2 lg:pb-11'} relative`}>
 
       {/* =========== Image & Discount part =========== */}
       <div className='relative'>
-        {discount && <span className={`absolute ${springSale ? 'size-10 md:size-25 flex justify-center items-center font-poppins font-semibold text-sm lg:text-2xl lg:leading-7.5 rounded-full top-0 right-0' : 'top-2 lg:-top-2 right-0 md:-right-2 font-montserrat font-semibold xl:font-bold text-sm lg:text-base leading-6 py-0.5 xl:py-2 px-2 xl:px-5 rounded-[5px]'} text-white bg-primary`}>{discount}%</span>}
+        {discount && <span className={`absolute ${springSale ? 'size-10 xl:size-25 flex justify-center items-center font-poppins font-semibold text-sm xl:text-2xl xl:leading-7.5 rounded-full top-0 right-0' : 'top-2 lg:-top-2 right-0 md:-right-2 font-montserrat font-semibold xl:font-bold text-sm lg:text-base leading-6 py-0.5 xl:py-2 px-2 xl:px-5 rounded-[5px]'} text-white bg-primary`}>{discount}%</span>}
         <img className='w-full' src={productImage ? productImage : 'images/productImage.webp'} alt={productImage ? productImage : 'productImage.webp'} />
 
       </div>
@@ -47,7 +47,7 @@ const ProductLayout = ({ catagory = 'watch', title = 'Orange Watch 12 High Quali
       <div className={`text-secondary ${!listView && 'lg:pt-3 xl:pt-10'}`} >
         <p className='font-montserrat font-normal text-xs md:text-sm uppercase leading-5 tracking-[2px] xl:tracking-[5px] lg:mb-2 xl:mb-4'>{catagory}</p>
 
-        <Link to={'/product-details'} className={`font-poppins font-normal sm:font-medium lg:font-semibold text-base xl:text-xl xl:leading-7.5 line-clamp-2 xl:line-clamp-none group-hover:text-primary group-hover:underline duration-300 ${newProduct && 'md:w-59'}`}>{title}</Link>
+        <Link to={'/product-details'} className={`font-poppins font-normal sm:font-medium lg:font-semibold text-base xl:text-xl xl:leading-7.5 line-clamp-2 xl:line-clamp-none group-hover:text-primary group-hover:underline duration-300 ${newProduct && 'xl:w-59'}`}>{title}</Link>
 
         {/* ===== Product Short Description for list view ===== */}
         {listView &&
@@ -72,9 +72,9 @@ const ProductLayout = ({ catagory = 'watch', title = 'Orange Watch 12 High Quali
 
         {/* ======= Stock part of Spring Sale ======= */}
         {springSale &&
-          <div className='w-full bg-[#E0E0E0] rounded-xl md:rounded-3xl overflow-hidden mt-2 md:mt-8 relative'>
+          <div className='w-full bg-[#E0E0E0] rounded-xl xl:rounded-3xl overflow-hidden mt-2 xl:mt-8 relative'>
             <div style={{ width: dynamicWidth + '%' }} className='h-full bg-primary group-hover:bg-secondary rounded-xl md:rounded-3xl absolute duration-300'></div>
-            <h4 className='font-montserrat font-semibold md:font-bold text-xs md:text-base text-center md:leading-6 text-white py-0.5 md:py-1 bg-transparent relative'>{hovertoShowQuantity ? hovertoShowQuantity + ' AVAILABLE' : 'LIMITED STOCK!'}</h4>
+            <h4 className='font-montserrat font-semibold xl:font-bold text-xs xl:text-base text-center xl:leading-6 text-white py-0.5 md:py-1 bg-transparent relative'>{hovertoShowQuantity ? hovertoShowQuantity + ' AVAILABLE' : 'LIMITED STOCK!'}</h4>
           </div>
         }
       </div>

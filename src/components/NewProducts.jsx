@@ -91,15 +91,15 @@ const NewProducts = () => {
                         </div>
                     </div>
                     {/* ======= Product Showcasing ======= */}
-                    <div className="flex flex-wrap md:flex-nowrap gap-1 md:gap-x-6">
+                    <div className="flex flex-wrap xl:flex-nowrap gap-1 md:gap-2.5 xl:gap-x-6">
                         {dummyProducts.map((item, index) => (
-                            <div key={index} className='max-sm:max-w-[49%] sm:max-w-[32.9%] lg:w-71'>
+                            <div key={index} className='max-sm:max-w-[49%] sm:max-w-[32.9%] md:max-w-[24%] lg:max-w-[19.2%] xl:w-71'>
                                 <ProductLayout catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} productImage={item.productImage} newProduct={true} />
                             </div>
                         ))}
                     </div>
                     {/* ======= Load More Button ======= */}
-                    <div className={`flex justify-center mt-6 md:mt-16 mb-8 md:mb-20 ${pathname == '/product-details' && 'hidden'}`}>
+                    <div className={`flex justify-center mt-6 xl:mt-16 mb-8 lg:mb-20 ${pathname == '/product-details' && 'hidden'}`}>
                         <Button content='Load More'  className='bg-transparent text-primary border border-primary' />
                     </div>
                 </div>
