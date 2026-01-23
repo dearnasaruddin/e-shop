@@ -73,10 +73,10 @@ const ProductDetailsPage = () => {
             <li><Link className='font-bold' to={'#'}>NexSUS ROCK Strix Scar 17 Gaming Laptop</Link></li>
           </ul>
 
-          <div className='flex max-sm:flex-wrap max-sm:gap-4 lg:gap-x-14 lg:mb-13'>
+          <div className='flex max-xl:flex-wrap max-sm:gap-4 lg:gap-x-14 lg:mb-13'>
             {/* ====== Product Images ====== */}
             <div>
-              <div className='w-[90vw] lg:w-208 lg:h-135 rounded-2xl lg:rounded-3xl lg:overflow-hidden relative'>
+              <div className='w-[90vw] md:w-[70vw] lg:w-208 lg:h-135 rounded-2xl lg:rounded-3xl lg:overflow-hidden relative'>
                 <span onClick={() => setActiveModal(true)}><EnlargeIcon className='size-5 sm:size-6 lg:size-8 absolute right-8 lg:right-6 top-2 cursor-pointer z-10' /></span>
                 <Slider {...settings} asNavFor={nav2} ref={slider => (sliderRef1 = slider)}>
                   <div>
@@ -159,14 +159,14 @@ const ProductDetailsPage = () => {
             <FacilityForDetailsPage />
             {/* Add to cart */}
             <div className='flex flex-wrap max-sm:justify-center max-sm:w-full items-center gap-x-6 lg:gap-x-21'>
-              <div className='flex lg:gap-19 items-center'>
+              <div className='flex gap-2 lg:gap-19 items-center'>
                 <button onClick={() => handleQuantity('minus')} className='lg:size-14 rounded-full hover:bg-[#F4F4F4] text-xl lg:text-2xl flex items-center justify-center cursor-pointer'><FiMinus /></button>
-                <h5 className='w-10 max-sm:text-center font-poppins font-semibold text-xl lg:text-4xl lg:leading-11 text-secondary'>{quantity}</h5>
+                <h5 className='w-10 max-xl:text-center font-poppins font-semibold text-xl lg:text-4xl lg:leading-11 text-secondary'>{quantity}</h5>
                 <button onClick={() => handleQuantity('plus')} className='lg:size-14 rounded-full hover:bg-[#F4F4F4] text-xl lg:text-2xl flex items-center justify-center cursor-pointer'><FiPlus /></button>
               </div>
               <div className='flex items-center gap-x-4'>
                 <Button content='Buy Now' />
-                <div className='py-1 max-sm:px-2 lg:p-4 border rounded-md lg:rounded-[10px] border-primary cursor-pointer'><AddToCartIcon className='size-7' color='#FF624c' /></div>
+                <div className='py-1 max-lg:px-2 lg:p-4 border rounded-md lg:rounded-[10px] border-primary cursor-pointer'><AddToCartIcon className='size-7' color='#FF624c' /></div>
               </div>
 
             </div>

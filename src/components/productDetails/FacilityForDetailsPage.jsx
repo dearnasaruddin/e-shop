@@ -4,7 +4,7 @@ import SecurityIcon from '../../icons/SecurityIcon'
 
 const FacilityForDetailsPage = () => {
     return (
-        <div className="flex flex-wrap max-sm:gap-4 lg:gap-x-12 max-lg:justify-center items-center font-montserrat font-normal text-sm lg:text-base leading-6 text-secondary">
+        <div className="flex flex-wrap max-lg:gap-4 lg:gap-x-12 max-lg:justify-center items-center font-montserrat font-normal text-sm lg:text-base leading-6 text-secondary">
             <div className='flex items-center gap-x-2 lg:gap-x-6'>
                 <DeliveryIcon />
                 <div>
