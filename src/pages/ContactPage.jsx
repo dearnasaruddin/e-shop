@@ -12,7 +12,7 @@ const ContactPage = () => {
     <div className='mb-10 lg:mb-20'>
       <Container>
         <div className='mt-4 lg:mt-8 mb-4 lg:mb-16 rounded-2xl overflow-hidden'>
-          <iframe className='w-full max-sm:h-50 sm:h-70 lg:h-150' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1009.297893546715!2d-73.831222!3d40.7622149!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2600feab8eaf3%3A0xf2c8bcc288c78f3!2s123%20Main%20St%2C%20Queens%2C%20NY%2010001%2C%20USA!5e1!3m2!1sen!2sbd!4v1751622140604!5m2!1sen!2sbd" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          <iframe className='w-full max-sm:h-50 sm:h-70 lg:h-90 xl:h-150' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1009.297893546715!2d-73.831222!3d40.7622149!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2600feab8eaf3%3A0xf2c8bcc288c78f3!2s123%20Main%20St%2C%20Queens%2C%20NY%2010001%2C%20USA!5e1!3m2!1sen!2sbd!4v1751622140604!5m2!1sen!2sbd" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div>
           <ul className='flex gap-x-6 lg:gap-x-9.5 font-montserrat font-normal text-base leading-6 mb-4 lg:mb-12 lg:mt-16'>
@@ -26,7 +26,7 @@ const ContactPage = () => {
               <h1 className='font-poppins text-3xl lg:text-4xl lg:leading-11.5 text-secondary'>Contact Us</h1>
               <p className='font-montserrat font-normal text-base max-lg:max-w-60 lg:text-xl lg:leading-7.5 text-secondary mt-3 mb-6 lg:mb-12'>Have any questions for us? Don’t hesitate to contact us.</p>
               <div>
-                <div className='mb-4 lg:mb-8 lg:w-217'>
+                <div className='mb-4 lg:mb-8 xl:w-217'>
                   <InputBox label='Name' placeholder='Amelia Robert Watson' required={true} />
                   <div className='flex gap-x-5 gap-y-3 my-3 lg:my-8 flex-wrap'>
                     <div className='grow'>
