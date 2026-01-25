@@ -18,7 +18,7 @@ const FooterTop = () => {
                     </div>
                 </div>
                 :
-                <div className={`pt-8 pb-10 lg:py-28.5  ${location.pathname == '/product-list' ? 'bg-[linear-gradient(270deg,_rgba(244,244,244,1)_37%,_rgba(217,217,217,1)_52%)] max-lg:px-5 lg:pr-22.5' : 'bg-[linear-gradient(90deg,_rgba(244,244,244,1)_37%,_rgba(217,217,217,1)_52%)] pl-5 lg:pl-25 pr-5 lg:pr-0'} rounded-2xl lg:rounded-3xl`}>
+                <div className={`pt-8 pb-10 lg:py-28.5  ${location.pathname == '/product-list' ? 'bg-[linear-gradient(270deg,_rgba(244,244,244,1)_37%,_rgba(217,217,217,1)_52%)] max-lg:px-5 lg:pr-8 xl:pr-22.5' : 'bg-[linear-gradient(90deg,_rgba(244,244,244,1)_37%,_rgba(217,217,217,1)_52%)] pl-5 lg:pl-25 pr-5 lg:pr-0'} rounded-2xl lg:rounded-3xl`}>
                     <div className={`${location.pathname == '/product-list' && 'max-w-123.5 ml-auto'}`}>
                         <h3 className='md:max-w-90 font-poppins font-semibold text-2xl lg:text-4xl lg:leading-11.5 text-secondary'>{location.pathname == '/product-details' || location.pathname == '/contact' ? 'Get Up-to-Date Gadget Technology' : 'Get Our Updates'}</h3>
                         <p className={`md:max-w-100 lg:max-w-118 font-montserrat font-normal text-base lg:text-xl lg:leading-7.5 text-secondary ${location.pathname == '/' || location.pathname == '/product-list' ? 'mt-4 mb-5 lg:mb-8' : 'mt-3 lg:mt-6 mb-5 lg:mb-12'}`}>Browse our wide selection of electronics and find the perfect promo for you from newsletter.</p>

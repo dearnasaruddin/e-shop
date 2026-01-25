@@ -34,7 +34,7 @@ const ProductSideBar = () => {
     }
 
     return (
-        <div className='w-full max-lg:flex max-lg:gap-6 lg:p-12 lg:rounded-3xl lg:bg-[#F4F4F4]'>
+        <div className='w-full max-lg:flex max-lg:gap-6 lg:p-6 xl:p-12 lg:rounded-3xl lg:bg-[#F4F4F4]'>
 
             {/* Categories */}
             <div>

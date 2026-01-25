@@ -51,7 +51,7 @@ const ProductLayout = ({ catagory = 'watch', title = 'Orange Watch 12 High Quali
 
         {/* ===== Product Short Description for list view ===== */}
         {listView &&
-          <p className='max-sm:hidden font-montserrat max-w-150 mt-1 leading-6'>consectetur adipisicing elit. Selaborum maiores repellendus aliquam sit modi vel voluptatum inventore ea excepturi magnam dicta!</p>
+          <p className='max-sm:hidden font-montserrat max-w-150 mt-1 leading-6 lg:max-xl:text-sm '>consectetur adipisicing elit. Selaborum maiores repellendus aliquam sit modi vel voluptatum inventore ea excepturi magnam dicta!</p>
         }
 
         {/* ==== Rating ==== */}
@@ -81,10 +81,10 @@ const ProductLayout = ({ catagory = 'watch', title = 'Orange Watch 12 High Quali
 
       {/* ========= Cart, wishlist & Share Buttons ========= */}
       {!springSale &&
-        <ul className={`flex gap-2 lg:gap-4.5 max-md:hidden  ${listView ? 'flex-col justify-center ml-auto' : 'group-hover:scale-100 absolute top-28 lg:top-45.5 left-1/2 -translate-x-1/2 scale-0'} duration-300`}>
-          <li className='size-8 lg:size-12.5 bg-white border border-primary rounded-full flex justify-center items-center text-xl text-primary hover:bg-primary hover:text-white duration-300 cursor-pointer iconParent'><AddToCartIcon color='#FF624C' /></li>
-          <li className='size-8 lg:size-12.5 bg-white border border-primary rounded-full flex justify-center items-center text-xl text-primary hover:bg-primary hover:text-white duration-300 cursor-pointer'><LuHeart /></li>
-          <li className='size-8 lg:size-12.5 bg-white border border-primary rounded-full flex justify-center items-center text-xl text-primary hover:bg-primary hover:text-white duration-300 cursor-pointer'><GoShareAndroid /></li>
+        <ul className={`flex gap-2 xl:gap-4.5 max-md:hidden  ${listView ? 'flex-col justify-center ml-auto' : 'group-hover:scale-100 absolute top-28 lg:top-45.5 left-1/2 -translate-x-1/2 scale-0'} duration-300`}>
+          <li className='size-8 lg:size-10 xl:size-12.5 bg-white border border-primary rounded-full flex justify-center items-center text-xl text-primary hover:bg-primary hover:text-white duration-300 cursor-pointer iconParent'><AddToCartIcon color='#FF624C' /></li>
+          <li className='size-8 lg:size-10 xl:size-12.5 bg-white border border-primary rounded-full flex justify-center items-center text-xl text-primary hover:bg-primary hover:text-white duration-300 cursor-pointer'><LuHeart /></li>
+          <li className='size-8 lg:size-10 xl:size-12.5 bg-white border border-primary rounded-full flex justify-center items-center text-xl text-primary hover:bg-primary hover:text-white duration-300 cursor-pointer'><GoShareAndroid /></li>
         </ul>
       }
     </div>

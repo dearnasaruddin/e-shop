@@ -85,7 +85,7 @@ const ProductListPage = () => {
   return (
     <div className='mt-4 lg:mt-16 mb-10 lg:mb-20'>
       <Container>
-        <div className='flex gap-x-6.5'>
+        <div className='flex gap-x-6.5 lg:max-xl:gap-x-3'>
           {/* ================ LeftSideBar for desktop ================ */}
           <div className='max-lg:hidden lg:max-w-89'>
             <ProductSideBar />
@@ -98,18 +98,18 @@ const ProductListPage = () => {
               <h2 className='font-poppins font-semibold text-3xl md:text-4xl lg:leading-11.5 text-secondary'>Products</h2>
               <div className='lg:flex items-center justify-between mt-2 lg:mt-4 mb-4 lg:mb-12'>
                 <p className='font-montserrat font-normal text-base leading-6 text-secondary'>Showing {(currentPage * itemPerPage) - itemPerPage + 1} - {currentPage * itemPerPage} of {dummyProductList.length} results.</p>
-                
+                {/* <span className='hidden lg:max-xl:inline-block h-8 w-0.5 bg-[#CBCBCB]'></span> */}
                 {/* ================ Left sidebar in middle for Mobile ================ */}
                 <div className='lg:hidden'>
                   <ProductSideBar />
                 </div>
 
-                <div className='flex max-sm:justify-between items-center lg:gap-x-12.5'>
+                <div className='flex max-sm:justify-between items-center lg:gap-x-3 xl:gap-x-12.5'>
                   {/* ========== Filter option ========== */}
-                  <div className='relative lg:after:w-[1px] lg:after:h-8 after:bg-[#CBCBCB] after:absolute after:top-1/2 after:-right-6  after:-translate-1/2'>
-                    <div className='flex items-center lg:gap-x-4'>
+                  <div className='relative lg:after:w-[1px] lg:after:h-8 after:bg-[#CBCBCB] after:absolute after:top-1/2 lg:after:-right-1.5 xl:after:-right-6  after:-translate-1/2'>
+                    <div className='flex items-center lg:gap-1 xl:gap-x-4'>
                       <p className='font-montserrat font-normal text-base leading-6 text-secondary max-sm:hidden'>Sort by</p>
-                      <div className=' lg:w-38 relative cursor-pointer'>
+                      <div className='xl:w-38 relative cursor-pointer'>
                         {/* <select
                                     className='hidden'
                                     name="country"
@@ -125,7 +125,7 @@ const ProductListPage = () => {
                                 </select> */}
 
                         {/* ================ Custom Dropdown ================ */}
-                        <div onClick={() => setIsFilterDropdownOpen(!isFilterDropdownOpen)} className="relative flex justify-between items-center gap-x-1 lg:gap-x-2 capitalize">
+                        <div onClick={() => setIsFilterDropdownOpen(!isFilterDropdownOpen)} className="relative flex justify-between items-center gap-x-1 xl:gap-x-2 capitalize">
                           {filterDropdownText ?
                             <>
                               <span className='font-montserrat font-semibold lg:font-bold text-sm lg:text-base leading-6 text-primary'>{filterDropdownText}</span>
@@ -152,9 +152,9 @@ const ProductListPage = () => {
 
 
                   {/* ========== Filter by price option ========== */}
-                  <div className='relative lg:after:w-[1px] lg:after:h-8 after:bg-[#CBCBCB] after:absolute after:top-1/2 after:-right-6 after:-translate-y-1/2'>
+                  <div className='relative lg:after:w-[1px] lg:after:h-8 after:bg-[#CBCBCB] after:absolute after:top-1/2 lg:after:-right-1.5 xl:after:-right-6 after:-translate-y-1/2'>
 
-                    <div className='lg:w-54 relative cursor-pointer'>
+                    <div className='xl:w-54 relative cursor-pointer'>
                       {/* <select
                                     className='hidden'
                                     name="country"
@@ -171,7 +171,7 @@ const ProductListPage = () => {
 
 
                       {/* ================ Custom Dropdown ================ */}
-                      <div onClick={() => setIsPriceDropdownOpen(!isPriceDropdownOpen)} className="relative flex justify-between items-center gap-x-1 lg:gap-x-2 capitalize">
+                      <div onClick={() => setIsPriceDropdownOpen(!isPriceDropdownOpen)} className="relative flex justify-between items-center gap-x-1 xl:gap-x-2 capitalize">
                         {priceDropdownText ?
                           <>
                             <span className='font-montserrat font-semibold lg:font-bold text-sm lg:text-base leading-6 text-primary'>{priceDropdownText}</span>
@@ -204,10 +204,10 @@ const ProductListPage = () => {
 
             {/* ================= Product Showcasing ================= */}
             <div className='w-full'>
-              <div className='flex max-sm:gap-1 flex-wrap'>
+              <div className='flex max-sm:gap-1 sm:max-lg:gap-2 lg:max-xl:gap-1 max-xl:justify-between flex-wrap'>
                 {currentProducts.map((item) => (
                   gridView ?
-                    <div key={item.id} className='max-w-[49%] lg:max-w-71'>
+                    <div key={item.id} className='max-w-[49%] sm:max-w-[32.5%] xl:max-w-71'>
                       <ProductLayout productImage={item.productImage} catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} />
                     </div>
                     :
