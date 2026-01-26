@@ -93,7 +93,7 @@ const MiddleBar = () => {
               </Link>
 
               {/* ======= User ======= */}
-              <div className='flex items-center gap-x-3 sm:gap-x-2 lg:gap-x-5.5 cursor-pointer'>
+              <Link to={'/registration'} className='flex items-center gap-x-3 sm:gap-x-2 lg:gap-x-5.5 cursor-pointer'>
                 <div>
                   <AiOutlineUser className='text-[34px] sm:max-md:text-3xl' />
                 </div>
@@ -101,7 +101,7 @@ const MiddleBar = () => {
                   <p className='text-sm lg:text-base lg:leading-6'>User</p>
                   <span className='font-bold text-sm lg:text-base lg:leading-6'>Account</span>
                 </div>
-              </div>
+              </Link>
             </div>
 
           </div>

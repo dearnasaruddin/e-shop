@@ -9,7 +9,7 @@ const FooterTop = () => {
 
     return (
         <Container>
-            {location.pathname == '/cart' ?
+            {location.pathname == '/cart' || location.pathname == '/registration' ?
                 <div className='lg:pb-4.5 pt-4 lg:pt-20'>
                     <h3 className='font-poppins font-semibold text-2xl max-sm:max-w-50 max-sm:mx-auto lg:text-4xl lg:leading-11.5 text-secondary mb-6 lg:mb-14 text-center'>Subscribe to get our updates</h3>
                     <div className='flex justify-center gap-x-4'>

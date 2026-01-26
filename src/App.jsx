@@ -8,6 +8,7 @@ import ProductDetailsPage from './pages/ProductDetailsPage';
 import ProductListPage from './pages/ProductListPage';
 import CommonLayout from './components/commonLayouts/CommonLayout';
 import CartPage from './pages/CartPage';
+import RegistrationPage from './pages/RegistationPage';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     <Routes>
       <Route path="/" element={<CommonLayout />}>
         <Route path="/" element={<HomePage />} />
+        <Route path="/registration" element={<RegistrationPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/contact" element={<ContactPage />} />
