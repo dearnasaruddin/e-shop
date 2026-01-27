@@ -19,8 +19,8 @@ const CartPage = () => {
                         <h1 className='font-poppins font-bold text-3xl lg:text-[56px] lg:leading-17 text-secondary max-lg:mb-6'>Your Cart</h1>
                         <div className='max-lg:hidden flex max-xl:justify-between py-3 lg:py-8 pl-4 lg:pl-10 xl:pl-14 max-lg:pr-4 lg:max-xl:pr-10 bg-[#F4F4F4] font-montserrat font-bold text-base leading-6 uppercase text-secondary rounded-lg lg:rounded-2xl mt-7 mb-8'>
                             <h6 className='lg:max-xl:grow-2'>PRODUCT</h6>
-                            <h6 className='xl:ml-152 grow-1'>PRICE</h6>
-                            <h6 className='xl:ml-42.5 grow-1'>QTY</h6>
+                            <h6 className='xl:ml-152 lg:max-xl:grow-1'>PRICE</h6>
+                            <h6 className='xl:ml-42.5 lg:max-xl:grow-1'>QTY</h6>
                             <h6 className='xl:ml-51'>TOTAL</h6>
                         </div>
                         <CartItem />
