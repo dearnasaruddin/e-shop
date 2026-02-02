@@ -91,9 +91,9 @@ const NewProducts = () => {
                         </div>
                     </div>
                     {/* ======= Product Showcasing ======= */}
-                    <div className="flex flex-wrap xl:flex-nowrap gap-1 md:gap-2.5 xl:gap-x-6">
+                    <div className="flex flex-wrap xl:flex-nowrap xl:justify-center gap-1 md:gap-2.5 2xl:gap-x-6">
                         {dummyProducts.map((item, index) => (
-                            <div key={index} className='max-sm:max-w-[49%] sm:max-w-[32.9%] md:max-w-[24%] lg:max-w-[19.2%] xl:w-71'>
+                            <div key={index} className='max-sm:max-w-[49%] sm:max-w-[32.9%] md:max-w-[24%] lg:max-w-[19.2%] xl:w-[18.95%] 2xl:w-71'>
                                 <ProductLayout catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} productImage={item.productImage} newProduct={true} />
                             </div>
                         ))}

@@ -6,7 +6,7 @@ const OfferSection = () => {
     return (
         <div className='my-8 lg:my-20'>
             <Container>
-                <div className='sm:flex sm:max-xl:gap-4 justify-between items-center max-sm:space-y-3'>
+                <div className='sm:flex sm:max-2xl:gap-4 justify-between items-center max-sm:space-y-3'>
                     <div>
                         <Link to={'/product-list'}><img src="images/offerOneImage.webp" alt="offerOneImage.webp" /></Link>
                     </div>

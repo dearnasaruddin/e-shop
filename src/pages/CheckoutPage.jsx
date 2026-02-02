@@ -46,7 +46,7 @@ const CheckoutPage = () => {
         </div>
 
         <div className='mb-6 lg:mb-20'>
-          <div className='flex max-md:justify-center justify-between gap-8 sm:max-lg:gap-6 lg:gap-14 max-sm:flex-wrap'>
+          <div className='flex max-md:justify-center justify-between gap-8 sm:max-xl:gap-6 xl:gap-14 max-sm:flex-wrap'>
             <div>
               {activeOption == 'information' &&
                 <CheckoutInformation />

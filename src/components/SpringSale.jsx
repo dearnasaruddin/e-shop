@@ -59,12 +59,12 @@ const SpringSale = () => {
     return (
         <section id='spring-sale' className='pt-10 pb-14 md:py-16 bg-[#F4F4F4]'>
             <Container>
-                <div className='md:flex gap-x-6 xl:gap-x-32'>
+                <div className='md:flex max-2xl:justify-between gap-x-6 2xl:gap-x-32'>
 
                     {/* ========== Counter / Timer ========== */}
                     <div className='xl:mt-42.5'>
-                        <h2 className='font-poppins font-bold text-4xl xl:text-[56px] xl:leading-17 text-secondary'>Spring Sale</h2>
-                        <div className='flex items-center gap-x-1 xxs:gap-x-2.5 xl:gap-x-6 mt-4 xl:mt-10 md:mb-6 xl:mb-18'>
+                        <h2 className='font-poppins font-bold text-4xl 2xl:text-[56px] xl:leading-17 text-secondary'>Spring Sale</h2>
+                        <div className='flex items-center gap-x-1 xxs:gap-x-2.5 2xl:gap-x-6 mt-4 xl:mt-10 md:mb-6 xl:mb-18'>
                             <div className='text-center'>
                                 <h3 className='font-poppins font-semibold text-2xl lg:text-4xl leading-11.5 text-primary'>{days}</h3>
                                 <p className='font-montserrat font-normal text-base leading-6 text-secondary lg:mt-2'>Days</p>
@@ -94,13 +94,13 @@ const SpringSale = () => {
                     </div>
 
                     {/* ========== Product Slider ========== */}
-                    <div className='w-full md:max-w-4/7 xl:max-w-248 md:pl-0.5 xl:pr-4.5'>
+                    <div className='w-full md:max-w-4/7 xl:max-w-5/7 2xl:max-w-248 md:pl-0.5 md:pr-4.5'>
                         <Slider className='springSale' {...settings}>
                             {dummyProducts.map((item, index) => (
 
                                 item.discount &&
                                 <div className='md:max-w-116'>
-                                    <div className='mx-1 xl:mx-0'>
+                                    <div className='mx-1 2xl:mx-0'>
                                         <ProductLayout key={index} catagory={item.catagory} title={item.title} rating={item.rating} totalRating={item.totalRating} price={item.price} discount={item.discount} originalPrice={item.originalPrice} productImage={item.productImage} springSale={true} availableQuantity={item.availableQuantity} />
                                     </div>
                                 </div>

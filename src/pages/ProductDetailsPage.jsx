@@ -130,9 +130,9 @@ const ProductDetailsPage = () => {
                 </div>
                 <span className='font-montserrat font-normal lg:text-xl lg:leading-7.5'>( 142 )</span>
               </div>
-              <h1 className='font-poppins font-semibold text-lg sm:text-2xl lg:text-4xl lg:leading-11.5 text-secondary sm:mt-4 pb-2 lg:pb-6 border-b border-[#CBCBCB]'>NexSUS ROCK Strix Scar 17 Gaming Laptop 15.7” 1TB SSD 16GB RAM Pro</h1>
+              <h1 className='max-w-158 font-poppins font-semibold text-lg sm:text-2xl lg:text-3xl 2xl:text-4xl lg:leading-11.5 text-secondary sm:mt-4 pb-2 lg:pb-6 border-b border-[#CBCBCB]'>NexSUS ROCK Strix Scar 17 Gaming Laptop 15.7” 1TB SSD 16GB RAM Pro</h1>
               <div className='flex gap-x-2 lg:gap-x-4.5 mt-2 lg:mt-6 lg:mb-12'>
-                <p className='font-poppins font-bold text-primary text-2xl lg:text-[56px] lg:leading-17'>$2,999.99</p>
+                <p className='font-poppins font-bold text-primary text-2xl lg:text-4xl 2xl:text-[56px] lg:leading-17'>$2,999.99</p>
                 <span className='self-end font-montserrat font-normal text-sm lg:text-xl lg:leading-7.5 text-[#979797] line-through mb-4'>$5,499.99</span>
               </div>
               <ul className='font-poppins font-normal lg:space-y-4 lg:mb-4 text-base sm:text-lg lg:text-xl lg:leading-7.5 text-secondary'>
