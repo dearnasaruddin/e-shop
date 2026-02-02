@@ -27,7 +27,7 @@ const CheckoutPayment = () => {
     return (
 
         <div >
-            <h2 className="font-poppins font-semibold text-2xl lg:text-4xl leading-11.5 text-secondary mb-4 lg:mb-10">Payment Method</h2>
+            <h2 className="font-poppins font-semibold max-xxs:text-xl xxs:text-2xl lg:text-4xl leading-11.5 text-secondary mb-4 lg:mb-10">Payment Method</h2>
             <div className="flex flex-col gap-4 lg:gap-8">
                 {paymentMethods.map((item) => (
                     <label

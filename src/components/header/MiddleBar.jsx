@@ -57,7 +57,7 @@ const MiddleBar = () => {
             <Link to={'/'} className='sm:hidden' ><img src="/whiteLogo.svg" alt="whiteLogo.svg" /></Link>
           </div>
 
-          <div className='flex items-center gap-x-4 md:gap-x-12'>
+          <div className='flex items-center max-xxs:gap-x-2 xxs:gap-x-4 md:gap-x-12'>
             {/* ======= Bar ======= */}
             <span onClick={handleNavSideBar} className='inline-block sm:hidden cursor-pointer'>
               <HiBars3 className='text-[34px]' />
@@ -77,7 +77,7 @@ const MiddleBar = () => {
 
             </div>
 
-            <div className='flex items-center gap-x-4 md:gap-x-6 lg:gap-x-22.5'>
+            <div className='flex items-center max-xxs:gap-x-2 xxs:gap-x-4 md:gap-x-6 lg:gap-x-22.5'>
               {/* ======= Cart ======= */}
               <Link to={'/cart'} className='flex items-center gap-x-3 lg:gap-x-5 relative after:absolute sm:after:w-[1px] sm:after:h-8 after:top-1/2 after:-right-2.5 md:after:-right-3 lg:after:-right-11 after:-translate-y-1/2 after:translate-x-1/2 after:bg-[#979797] cursor-pointer'>
                 <div className='max-sm:hidden'>

@@ -66,7 +66,7 @@ const CheckoutInformation = () => {
 
     return (
         < div >
-            <h3 className='font-poppins font-semibold text-2xl lg:text-4xl leading-11.5 text-secondary mb-4 lg:mb-10' > Billing Details</h3 >
+            <h3 className='font-poppins font-semibold max-xxs:text-xl xxs:text-2xl lg:text-4xl leading-11.5 text-secondary mb-4 lg:mb-10' > Billing Details</h3 >
             <div className='w-auto lg:w-216'>
                 <div className='flex gap-x-4 flex-wrap'>
                     <div className='grow'>

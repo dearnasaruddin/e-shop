@@ -76,7 +76,7 @@ const ProductDetailsPage = () => {
           <div className='flex max-xl:flex-wrap max-sm:gap-4 lg:gap-x-14 lg:mb-13'>
             {/* ====== Product Images ====== */}
             <div>
-              <div className='w-[90vw] md:w-[70vw] lg:w-208 lg:h-135 rounded-2xl lg:rounded-3xl lg:overflow-hidden relative'>
+              <div className='max-xxs:w-[80dvw] xxs:w-[90dvw] md:w-[70dvw] lg:w-208 lg:h-135 rounded-2xl lg:rounded-3xl lg:overflow-hidden relative'>
                 <span onClick={() => setActiveModal(true)}><EnlargeIcon className='size-5 sm:size-6 lg:size-8 absolute right-8 lg:right-6 top-2 cursor-pointer z-10' /></span>
                 <Slider {...settings} asNavFor={nav2} ref={slider => (sliderRef1 = slider)}>
                   <div>

@@ -20,27 +20,27 @@ const CheckoutPage = () => {
           <li><Link className='font-bold' to={'/checkout'}>Checkout</Link></li>
         </ul>
         <div className='mb-8 lg:mb-20'>
-          <h1 className=' font-poppins font-bold text-3xl lg:text-[56px] lg:leading-17 text-secondary text-center mb-4 lg:mb-9'>Checkout</h1>
+          <h1 className=' font-poppins font-bold max-xxs:text-2xl xxs:text-3xl lg:text-[56px] lg:leading-17 text-secondary text-center mb-4 lg:mb-9'>Checkout</h1>
 
           {/* ========== Checkout page Options ========== */}
           <div className='flex gap-x-4 lg:gap-x-16 items-center justify-center'>
             <div className='flex items-center gap-x-1 lg:gap-x-4'>
               {activeOption == 'information' &&
-                <div className='size-8 lg:size-12.5 flex justify-center items-center rounded-full bg-primary font-montserrat font-semibold lg:font-bold text-sm sm:text-base leading-6 text-white'>01</div>
+                <div className='max-xxs:size-6 xxs:size-8 lg:size-12.5 flex justify-center items-center rounded-full bg-primary font-montserrat font-semibold lg:font-bold max-xxs:text-xs xxs:text-sm sm:text-base leading-6 text-white'>01</div>
               }
-              <h5 onClick={() => setActiveOption('information')} className={`font-poppins font-semibold text-lg lg:text-2xl leading-7.5  mb-0.5 ${activeOption == 'information' ? 'relative after:absolute after:-bottom-1 lg:after:-bottom-2 after:left-0 after:h-1 after:w-full after:bg-primary text-secondary' : 'text-[#CBCBCB]'} cursor-pointer`}>Information</h5>
+              <h5 onClick={() => setActiveOption('information')} className={`font-poppins font-semibold max-xxs:text-sm xxs:text-lg lg:text-2xl leading-7.5  mb-0.5 ${activeOption == 'information' ? 'relative after:absolute max-xxs:after:-bottom-0.5 xxs:after:-bottom-1 lg:after:-bottom-2 after:left-0 max-xxs:after:h-0.5 xxs:after:h-1 after:w-full after:bg-primary text-secondary' : 'text-[#CBCBCB]'} cursor-pointer`}>Information</h5>
             </div>
             <div className='flex items-center gap-x-1 lg:gap-x-4'>
               {activeOption == 'shipping' &&
-                <div className='size-8 lg:size-12.5 flex justify-center items-center rounded-full bg-primary font-montserrat font-semibold lg:font-bold text-sm sm:text-base leading-6 text-white'>02</div>
+                <div className='max-xxs:size-6 xxs:size-8 lg:size-12.5 flex justify-center items-center rounded-full bg-primary font-montserrat font-semibold lg:font-bold max-xxs:text-xs xxs:text-sm sm:text-base leading-6 text-white'>02</div>
               }
-              <h5 onClick={() => setActiveOption('shipping')} className={`font-poppins font-semibold text-lg lg:text-2xl leading-7.5  mb-0.5 ${activeOption == 'shipping' ? 'relative after:absolute after:-bottom-1 lg:after:-bottom-2 after:left-0 after:h-1 after:w-full after:bg-primary text-secondary' : 'text-[#CBCBCB]'} cursor-pointer`}>Shipping</h5>
+              <h5 onClick={() => setActiveOption('shipping')} className={`font-poppins font-semibold max-xxs:text-sm xxs:text-lg lg:text-2xl leading-7.5  mb-0.5 ${activeOption == 'shipping' ? 'relative after:absolute max-xxs:after:-bottom-0.5 xxs:after:-bottom-1 lg:after:-bottom-2 after:left-0 max-xxs:after:h-0.5 xxs:after:h-1 after:w-full after:bg-primary text-secondary' : 'text-[#CBCBCB]'} cursor-pointer`}>Shipping</h5>
             </div>
             <div className='flex items-center gap-x-1 lg:gap-x-4'>
               {activeOption == 'payment' &&
-                <div className='size-8 lg:size-12.5 flex justify-center items-center rounded-full bg-primary font-montserrat font-semibold lg:font-bold text-sm sm:text-base leading-6 text-white'>03</div>
+                <div className='max-xxs:size-6 xxs:size-8 lg:size-12.5 flex justify-center items-center rounded-full bg-primary font-montserrat font-semibold lg:font-bold max-xxs:text-xs xxs:text-sm sm:text-base leading-6 text-white'>03</div>
               }
-              <h5 onClick={() => setActiveOption('payment')} className={`font-poppins font-semibold text-lg lg:text-2xl leading-7.5  mb-0.5 ${activeOption == 'payment' ? 'relative after:absolute after:-bottom-1 lg:after:-bottom-2 after:left-0 after:h-1 after:w-full after:bg-primary text-secondary' : 'text-[#CBCBCB]'} cursor-pointer`}>Payment</h5>
+              <h5 onClick={() => setActiveOption('payment')} className={`font-poppins font-semibold max-xxs:text-sm xxs:text-lg lg:text-2xl leading-7.5  mb-0.5 ${activeOption == 'payment' ? 'relative after:absolute max-xxs:after:-bottom-0.5 xxs:after:-bottom-1 lg:after:-bottom-2 after:left-0 max-xxs:after:h-0.5 xxs:after:h-1 after:w-full after:bg-primary text-secondary' : 'text-[#CBCBCB]'} cursor-pointer`}>Payment</h5>
             </div>
           </div>
         </div>

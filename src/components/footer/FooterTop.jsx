@@ -12,7 +12,7 @@ const FooterTop = () => {
             {location.pathname == '/cart' || location.pathname == '/registration' ?
                 <div className='lg:pb-4.5 pt-4 lg:pt-20'>
                     <h3 className='font-poppins font-semibold text-2xl max-sm:max-w-50 max-sm:mx-auto lg:text-4xl lg:leading-11.5 text-secondary mb-6 lg:mb-14 text-center'>Subscribe to get our updates</h3>
-                    <div className='flex justify-center gap-x-4'>
+                    <div className='flex justify-center max-xxs:flex-wrap max-xxs:gap-y-3 xxs:gap-x-4'>
                         <input type="email" name="" id="" className='lg:w-201.5 border border-[#CBCBCB] p-2 lg:py-5.5 lg:px-10 rounded-sm sm:rounded-[10px] font-montserrat font-normal text-sm lg:text-base leading-6 text-[#646464]' placeholder='Enter your email address ...' />
                         <Button content='Subscribe' className='py-2.5 lg:py-5' />
                     </div>
